@@ -6,11 +6,11 @@ export default function Home() {
       {/* Subtle background gradient */}
       <div className="absolute inset-0 bg-gradient-to-b from-gray-50 via-white to-gray-50" />
 
-      {/* Content - Google-style centered */}
-      <div className="relative z-10 flex flex-col items-center justify-center min-h-screen px-4">
+      {/* Content - aligned to top */}
+      <div className="relative z-10 flex flex-col items-center justify-start min-h-screen px-4 pt-16">
         {/* Logo/Title Area - Similar to Google logo positioning */}
-        <div className="mb-8">
-          <h1 className="text-6xl md:text-7xl font-light tracking-tight text-center">
+        <div className="mb-8 flex flex-col items-center">
+          <h1 className="text-7xl md:text-8xl font-light tracking-tight text-center">
             <span className="text-[#4285f4]">A</span>
             <span className="text-[#ea4335]">W</span>
             <span className="text-[#fbbc04]">S</span>
@@ -19,6 +19,7 @@ export default function Home() {
             <span className="text-[#ea4335]">L</span>
             <span className="text-[#4285f4]">I</span>
           </h1>
+          <span className="text-xs text-gray-400 mt-2 font-mono">v2.32.12</span>
         </div>
 
         {/* Search Component - 60% screen width */}
