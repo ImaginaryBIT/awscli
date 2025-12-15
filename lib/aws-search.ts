@@ -62,7 +62,7 @@ export function searchAWSCommands(query: string): SearchResult[] {
 
     // Special case: if user types just "aws", show list of services
     if (trimmedQuery === '' || query.trim().toLowerCase() === 'aws') {
-        return awsServices.slice(0, 50).map(service => ({
+        return awsServices.slice(0, 100).map(service => ({
             displayText: `aws ${service.name}`,
             fullCommand: `aws ${service.name}`,
             service: service.name,
@@ -76,7 +76,7 @@ export function searchAWSCommands(query: string): SearchResult[] {
 
     // If exact service match, show only that service's commands
     if (exactServiceMatch) {
-        return exactServiceMatch.commands.slice(0, 50).map(cmd => ({
+        return exactServiceMatch.commands.slice(0, 100).map(cmd => ({
             displayText: `aws ${exactServiceMatch.name} ${cmd.name}`,
             fullCommand: `aws ${exactServiceMatch.name} ${cmd.name}`,
             service: exactServiceMatch.name,
@@ -95,7 +95,7 @@ export function searchAWSCommands(query: string): SearchResult[] {
         const commandQuery = queryParts.slice(1).join(' ');
         const serviceResults = fuse.search(commandQuery).filter(r => r.item.service === matchingService.name);
         return serviceResults
-            .slice(0, 50)
+            .slice(0, 100)
             .map(result => ({
                 ...result.item,
                 score: result.score
@@ -105,9 +105,9 @@ export function searchAWSCommands(query: string): SearchResult[] {
     // Use Fuse.js for fuzzy search across all services
     const results = fuse.search(trimmedQuery);
 
-    // Convert Fuse results to our format and limit to 50
+    // Convert Fuse results to our format and limit to 100
     return results
-        .slice(0, 50)
+        .slice(0, 100)
         .map(result => ({
             ...result.item,
             score: result.score
