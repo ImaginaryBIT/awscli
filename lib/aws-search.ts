@@ -35,18 +35,17 @@ const searchableCommands = buildSearchableCommands();
 
 const fuse = new Fuse(searchableCommands, {
     keys: [
-        { name: 'service', weight: 0.5 },        // Prioritize service name matches
-        { name: 'command', weight: 0.3 },        // Then command name matches
-        { name: 'displayText', weight: 0.2 }     // Finally full text matches
+        { name: 'command', weight: 0.6 },        // Prioritize command name matches most
+        { name: 'service', weight: 0.3 },        // Then service name matches
+        { name: 'displayText', weight: 0.1 }     // Finally full text matches
     ],
-    threshold: 0.3,              // Stricter matching (was 0.4)
-    distance: 50,                // Shorter distance for tighter matching (was 100)
+    threshold: 0.4,              // More lenient for fuzzy matching
+    distance: 100,               // Allow matches further in the string
     minMatchCharLength: 2,
     includeScore: true,
-    ignoreLocation: false,       // Prioritize matches at beginning (was true)
-    findAllMatches: false,       // Stop after first match
-    useExtendedSearch: false,
-    location: 0                  // Start matching from beginning of string
+    ignoreLocation: true,        // Don't require matches at beginning
+    findAllMatches: false,
+    useExtendedSearch: false
 });
 
 export function searchAWSCommands(query: string): SearchResult[] {
@@ -54,10 +53,15 @@ export function searchAWSCommands(query: string): SearchResult[] {
         return [];
     }
 
-    const trimmedQuery = query.trim().toLowerCase();
+    let trimmedQuery = query.trim().toLowerCase();
+
+    // Remove 'aws' prefix if present
+    if (trimmedQuery.startsWith('aws ')) {
+        trimmedQuery = trimmedQuery.substring(4).trim();
+    }
 
     // Special case: if user types just "aws", show list of services
-    if (trimmedQuery === 'aws') {
+    if (trimmedQuery === '' || query.trim().toLowerCase() === 'aws') {
         return awsServices.slice(0, 50).map(service => ({
             displayText: `aws ${service.name}`,
             fullCommand: `aws ${service.name}`,
@@ -67,10 +71,8 @@ export function searchAWSCommands(query: string): SearchResult[] {
         }));
     }
 
-    // Check if query matches a service name exactly or starts with it
+    // Check if query matches a service name exactly
     const exactServiceMatch = awsServices.find(s => s.name === trimmedQuery);
-    const servicePrefix = trimmedQuery.split(' ')[0];
-    const matchingService = awsServices.find(s => s.name === servicePrefix);
 
     // If exact service match, show only that service's commands
     if (exactServiceMatch) {
@@ -83,20 +85,28 @@ export function searchAWSCommands(query: string): SearchResult[] {
         }));
     }
 
-    // Use Fuse.js for fuzzy search
-    const results = fuse.search(trimmedQuery);
+    // Check if query starts with a service name (e.g., "ec2 describe" or "ec2 security")
+    const queryParts = trimmedQuery.split(' ');
+    const firstPart = queryParts[0];
+    const matchingService = awsServices.find(s => s.name === firstPart);
 
-    // Filter results: if query matches a service name, only show commands from that service
-    let filteredResults = results;
-    if (matchingService) {
-        filteredResults = results.filter(r => r.item.service === matchingService.name);
-    } else {
-        // For non-service queries, filter out very weak matches (score > 0.5)
-        filteredResults = results.filter(r => (r.score || 0) < 0.5);
+    // If query starts with service name, search within that service only
+    if (matchingService && queryParts.length > 1) {
+        const commandQuery = queryParts.slice(1).join(' ');
+        const serviceResults = fuse.search(commandQuery).filter(r => r.item.service === matchingService.name);
+        return serviceResults
+            .slice(0, 50)
+            .map(result => ({
+                ...result.item,
+                score: result.score
+            }));
     }
 
+    // Use Fuse.js for fuzzy search across all services
+    const results = fuse.search(trimmedQuery);
+
     // Convert Fuse results to our format and limit to 50
-    return filteredResults
+    return results
         .slice(0, 50)
         .map(result => ({
             ...result.item,
