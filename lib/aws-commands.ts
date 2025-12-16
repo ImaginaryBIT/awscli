@@ -46310,6 +46310,814 @@ export const awsServices: Service[] = [
     "description": "Amazon Lightsail",
     "commands": [
       {
+        "name": "allocate-static-ip",
+        "description": "allocate-static-ip command",
+        "parameters": [
+          {
+            "name": "--static-ip-name <value>",
+            "description": "--static-ip-name (string) [required] The name of the static IP address. Constraints: +\bo pattern: \\w[\\w\\-]*\\w"
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          }
+        ]
+      },
+      {
+        "name": "attach-certificate-to-distribution",
+        "description": "attach-certificate-to-distribution command",
+        "parameters": [
+          {
+            "name": "--distribution-name <value>",
+            "description": "--distribution-name (string) [required] The name of the distribution that the certificate will be attached to. Use the GetDistributions action to get a list of distribution names that you can specify. Constraints: +\bo pattern: \\w[\\w\\-]*\\w"
+          },
+          {
+            "name": "--certificate-name <value>",
+            "description": "--certificate-name (string) [required] The name of the certificate to attach to a distribution. Only certificates with a status of ISSUED can be attached to a distribution. Use the GetCertificates action to get a list of certificate names that you..."
+          },
+          {
+            "name": "--certificate-name <value>",
+            "description": "--certificate-name (string) [required] The name of the certificate to attach to a distribution. Only certificates with a status of ISSUED can be attached to a distribution. Use the GetCertificates action to get a list of certificate names that you..."
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          }
+        ]
+      },
+      {
+        "name": "attach-disk",
+        "description": "attach-disk command",
+        "parameters": [
+          {
+            "name": "--disk-name <value>",
+            "description": "--disk-name (string) [required] The unique Lightsail disk name (my-disk ). Constraints: +\bo pattern: \\w[\\w\\-]*\\w"
+          },
+          {
+            "name": "--instance-name <value>",
+            "description": "--instance-name (string) [required] The name of the Lightsail instance where you want to utilize the storage disk. Constraints: +\bo pattern: \\w[\\w\\-]*\\w"
+          },
+          {
+            "name": "--disk-path <value>",
+            "description": "--disk-path (string) [required] The disk path to expose to the instance (/dev/xvdf ). Constraints: +\bo pattern: .*\\S.*"
+          },
+          {
+            "name": "--auto-mounting | --no-auto-mounting",
+            "description": "--auto-mounting | --no-auto-mounting (boolean) A Boolean value used to determine the automatic mounting of a storage volume to a virtual computer. The default value is False . WARNING:"
+          },
+          {
+            "name": "--auto-mounting | --no-auto-mounting",
+            "description": "--auto-mounting | --no-auto-mounting (boolean) A Boolean value used to determine the automatic mounting of a storage volume to a virtual computer. The default value is False . WARNING:"
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          }
+        ]
+      },
+      {
+        "name": "attach-instances-to-load-balancer",
+        "description": "attach-instances-to-load-balancer command",
+        "parameters": [
+          {
+            "name": "--load-balancer-name <value>",
+            "description": "--load-balancer-name (string) [required] The name of the load balancer. Constraints: +\bo pattern: \\w[\\w\\-]*\\w"
+          },
+          {
+            "name": "--instance-names <value>",
+            "description": "--instance-names (list) [required] An array of strings representing the instance name(s) you want to attach to your load balancer. An instance must be running before you can attach it to your load balancer. There are no additional limits on the nu..."
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          }
+        ]
+      },
+      {
+        "name": "attach-load-balancer-tls-certificate",
+        "description": "attach-load-balancer-tls-certificate command",
+        "parameters": [
+          {
+            "name": "--load-balancer-name <value>",
+            "description": "--load-balancer-name (string) [required] The name of the load balancer to which you want to associate the SSL/TLS certificate. Constraints: +\bo pattern: \\w[\\w\\-]*\\w"
+          },
+          {
+            "name": "--certificate-name <value>",
+            "description": "--certificate-name (string) [required] The name of your SSL/TLS certificate. Constraints: +\bo pattern: \\w[\\w\\-]*\\w"
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          }
+        ]
+      },
+      {
+        "name": "attach-static-ip",
+        "description": "attach-static-ip command",
+        "parameters": [
+          {
+            "name": "--static-ip-name <value>",
+            "description": "--static-ip-name (string) [required] The name of the static IP. Constraints: +\bo pattern: \\w[\\w\\-]*\\w"
+          },
+          {
+            "name": "--instance-name <value>",
+            "description": "--instance-name (string) [required] The instance name to which you want to attach the static IP address. Constraints: +\bo pattern: \\w[\\w\\-]*\\w"
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          }
+        ]
+      },
+      {
+        "name": "close-instance-public-ports",
+        "description": "close-instance-public-ports command",
+        "parameters": [
+          {
+            "name": "--port-info <value>",
+            "description": "--port-info (structure) [required] An object to describe the ports to close for the specified instance. fromPort -> (integer) toPort -> (integer) protocol -> (string) cidrs -> (list) ipv6Cidrs -> (list) cidrListAliases -> (list) Shorthand Syntax: ..."
+          },
+          {
+            "name": "--port-info <value>",
+            "description": "--port-info (structure) [required] An object to describe the ports to close for the specified instance. fromPort -> (integer) toPort -> (integer) protocol -> (string) cidrs -> (list) ipv6Cidrs -> (list) cidrListAliases -> (list) Shorthand Syntax: ..."
+          },
+          {
+            "name": "--port-info <value>",
+            "description": "--port-info (structure) [required] An object to describe the ports to close for the specified instance. fromPort -> (integer) toPort -> (integer) protocol -> (string) cidrs -> (list) ipv6Cidrs -> (list) cidrListAliases -> (list) Shorthand Syntax: ..."
+          },
+          {
+            "name": "--instance-name <value>",
+            "description": "--instance-name (string) [required] The name of the instance for which to close ports. Constraints: +\bo pattern: \\w[\\w\\-]*\\w"
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          }
+        ]
+      },
+      {
+        "name": "copy-snapshot",
+        "description": "copy-snapshot command",
+        "parameters": [
+          {
+            "name": "--source-snapshot-name <value>",
+            "description": "--source-snapshot-name (string) The name of the source manual snapshot to copy. Constraint: +\bo Define this parameter only when copying a manual snapshot as Constraints: +\bo pattern: \\w[\\w\\-]*\\w"
+          },
+          {
+            "name": "--source-resource-name <value>",
+            "description": "--source-resource-name (string) The name of the source instance or disk from which the source automatic snapshot was created. Constraint: +\bo Define this parameter only when copying an automatic snapshot as a"
+          },
+          {
+            "name": "--restore-date <value>",
+            "description": "--restore-date (string) The date of the source automatic snapshot to copy. Use the get auto snapshots operation to identify the dates of the available automatic snapshots. Constraints: +\bo Must be specified in YYYY-MM-DD format. +\bo This parameter..."
+          },
+          {
+            "name": "--no-use-latest-restorable-auto-snapshot | --no-no-use-latest-restorable-auto-snapshot",
+            "description": "--no-use-latest-restorable-auto-snapshot (boolean) A Boolean value to indicate whether to use the latest available automatic snapshot of the specified source instance or disk. Constraints: +\bo This parameter cannot be defined together with the res..."
+          },
+          {
+            "name": "--target-snapshot-name <value>",
+            "description": "--target-snapshot-name (string) [required] The name of the new manual snapshot to be created as a copy. Constraints: +\bo pattern: \\w[\\w\\-]*\\w"
+          },
+          {
+            "name": "--source-region <value>",
+            "description": "--source-region (string) [required] The Amazon Web Services Region where the source manual or automatic snapshot is located. Possible values: +\bo us-east-1 +\bo us-east-2 +\bo us-west-1 +\bo us-west-2 +\bo eu-west-1 +\bo eu-west-2 +\bo eu-west-3 +\bo eu-..."
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          }
+        ]
+      },
+      {
+        "name": "create-bucket",
+        "description": "create-bucket command",
+        "parameters": [
+          {
+            "name": "--bucket-name <value>",
+            "description": "--bucket-name (string) [required] The name for the bucket. For more information about bucket names, see _\bB_\bu_\bc_\bk_\be_\bt _\bn_\ba_\bm_\bi_\bn_\bg _\br_\bu_\bl_\be_\bs _\bi_\bn _\bA_\bm_\ba_\bz_\bo_\bn _\bL_\bi_\bg_\bh_\bt_\bs_\ba_\bi_\bl in the _\bA_\bm_\ba_\bz_\bo_\bn _\bL_\bi_\bg..."
+          },
+          {
+            "name": "--bundle-id <value>",
+            "description": "--bundle-id (string) [required] The ID of the bundle to use for the bucket. A bucket bundle specifies the monthly cost, storage space, and data transfer quota for a bucket. Use the _\bG_\be_\bt_\bB_\bu_\bc_\bk_\be_\bt_\bB_\bu_\bn_\bd_\bl_\be_\bs action to get a l..."
+          },
+          {
+            "name": "--tags <value>",
+            "description": "--tags (list) The tag keys and optional values to add to the bucket during creation. Use the _\bT_\ba_\bg_\bR_\be_\bs_\bo_\bu_\br_\bc_\be action to tag the bucket after it's created. (structure) Shorthand Syntax: key=string,value=string ... JSON Syntax: [ ]"
+          },
+          {
+            "name": "--enable-object-versioning | --no-enable-object-versioning",
+            "description": "--enable-object-versioning | --no-enable-object-versioning (boolean) A Boolean value that indicates whether to enable versioning of objects in the bucket. For more information about versioning, see _\bE_\bn_\ba_\bb_\bl_\bi_\bn_\bg _\ba_\bn_\bd _\bs_\bu_\bs_\bp_\b..."
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          }
+        ]
+      },
+      {
+        "name": "create-bucket-access-key",
+        "description": "create-bucket-access-key command",
+        "parameters": [
+          {
+            "name": "--bucket-name <value>",
+            "description": "--bucket-name (string) [required] The name of the bucket that the new access key will belong to, and grant access to. Constraints: +\bo min: 3 +\bo max: 54 +\bo pattern: ^[a-z0-9][a-z0-9-]{1,52}[a-z0-9]$"
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          }
+        ]
+      },
+      {
+        "name": "create-certificate",
+        "description": "create-certificate command",
+        "parameters": [
+          {
+            "name": "--certificate-name <value>",
+            "description": "--certificate-name (string) [required] The name for the certificate."
+          },
+          {
+            "name": "--domain-name <value>",
+            "description": "--domain-name (string) [required] The domain name (example.com ) for the certificate."
+          },
+          {
+            "name": "--subject-alternative-names <value>",
+            "description": "--subject-alternative-names (list) An array of strings that specify the alternate domains (example2.com ) and subdomains (blog.example.com ) for the certificate. You can specify a maximum of nine alternate domains (in addition to the primary domai..."
+          },
+          {
+            "name": "--tags <value>",
+            "description": "--tags (list) The tag keys and optional values to add to the certificate during create. Use the TagResource action to tag a resource after it's created. (structure) Shorthand Syntax: key=string,value=string ... JSON Syntax: [ ]"
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          }
+        ]
+      },
+      {
+        "name": "create-cloud-formation-stack",
+        "description": "create-cloud-formation-stack command",
+        "parameters": [
+          {
+            "name": "--instances <value>",
+            "description": "--instances (list) [required] An array of parameters that will be used to create the new Amazon EC2 instance. You can only pass one instance entry at a time in this array. You will get an invalid parameter error if you pass more than one instance ..."
+          },
+          {
+            "name": "--instances <value>",
+            "description": "--instances (list) [required] An array of parameters that will be used to create the new Amazon EC2 instance. You can only pass one instance entry at a time in this array. You will get an invalid parameter error if you pass more than one instance ..."
+          },
+          {
+            "name": "--instances <value>",
+            "description": "--instances (list) [required] An array of parameters that will be used to create the new Amazon EC2 instance. You can only pass one instance entry at a time in this array. You will get an invalid parameter error if you pass more than one instance ..."
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          }
+        ]
+      },
+      {
+        "name": "create-contact-method",
+        "description": "create-contact-method command",
+        "parameters": [
+          {
+            "name": "--protocol <value>",
+            "description": "--protocol (string) [required] The protocol of the contact method, such as Email or SMS (text messaging). The SMS protocol is supported only in the following Amazon Web Services Regions. +\bo US East (N. Virginia) (us-east-1 ) +\bo US West (Oregon) ..."
+          },
+          {
+            "name": "--contact-endpoint <value>",
+            "description": "--contact-endpoint (string) [required] The destination of the contact method, such as an email address or a mobile phone number. Use the E.164 format when specifying a mobile phone number. E.164 is a standard for the phone number structure used fo..."
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          }
+        ]
+      },
+      {
+        "name": "create-container-service",
+        "description": "create-container-service command",
+        "parameters": [
+          {
+            "name": "--service-name <value>",
+            "description": "--service-name (string) [required] The name for the container service. The name that you specify for your container service will make up part of its default domain. The default domain of a container service is typically https://<ServiceName>.<Rand..."
+          },
+          {
+            "name": "--power <value>",
+            "description": "--power (string) [required] The power specification for the container service. The power specifies the amount of memory, vCPUs, and base monthly cost of each node of the container service. The power and scale of a container service makes up its co..."
+          },
+          {
+            "name": "--scale <value>",
+            "description": "--scale (integer) [required] The scale specification for the container service. The scale specifies the allocated compute nodes of the container service. The power and scale of a container service makes up its configured capacity. To determine the..."
+          },
+          {
+            "name": "--tags <value>",
+            "description": "--tags (list) The tag keys and optional values to add to the container service during create. Use the TagResource action to tag a resource after it's created. For more information about tags in Lightsail, see the _\bA_\bm_\ba_\bz_\bo_\bn _\bL_\bi_\bg_\bh_\bt..."
+          },
+          {
+            "name": "--public-domain-names <value>",
+            "description": "--public-domain-names (map) The public domain names to use with the container service, such as example.com and www.example.com . You can specify up to four public domain names for a container service. The domain names that you specify are used whe..."
+          },
+          {
+            "name": "--public-domain-names <value>",
+            "description": "--public-domain-names (map) The public domain names to use with the container service, such as example.com and www.example.com . You can specify up to four public domain names for a container service. The domain names that you specify are used whe..."
+          },
+          {
+            "name": "--deployment <value>",
+            "description": "--deployment (structure) An object that describes a deployment for the container service. A deployment specifies the containers that will be launched on the container service and their settings, such as the ports to open, the environment variables..."
+          },
+          {
+            "name": "--private-registry-access <value>",
+            "description": "--private-registry-access (structure) An object to describe the configuration for the container service to access private container image repositories, such as Amazon Elastic Container Registry (Amazon ECR) private repositories. For more informati..."
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          }
+        ]
+      },
+      {
+        "name": "create-container-service-deployment",
+        "description": "create-container-service-deployment command",
+        "parameters": [
+          {
+            "name": "--service-name <value>",
+            "description": "--service-name (string) [required] The name of the container service for which to create the deployment. Constraints: +\bo min: 1 +\bo max: 63 +\bo pattern: ^[a-z0-9]{1,2}|[a-z0-9][a-z0-9-]+[a-z0-9]$"
+          },
+          {
+            "name": "--containers <value>",
+            "description": "--containers (map) An object that describes the settings of the containers that will be launched on the container service. key -> (string) value -> (structure) Shorthand Syntax: KeyName1=image=string,command=string,string,environment={KeyName1=str..."
+          },
+          {
+            "name": "--public-endpoint <value>",
+            "description": "--public-endpoint (structure) An object that describes the settings of the public endpoint for the container service. containerName -> (string) [required] containerPort -> (integer) [required] healthCheck -> (structure) Shorthand Syntax: container..."
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          }
+        ]
+      },
+      {
+        "name": "create-container-service-registry-login",
+        "description": "create-container-service-registry-login command",
+        "parameters": [
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          }
+        ]
+      },
+      {
+        "name": "create-disk",
+        "description": "create-disk command",
+        "parameters": [
+          {
+            "name": "--disk-name <value>",
+            "description": "--disk-name (string) [required] The unique Lightsail disk name (my-disk ). Constraints: +\bo pattern: \\w[\\w\\-]*\\w"
+          },
+          {
+            "name": "--availability-zone <value>",
+            "description": "--availability-zone (string) [required] The Availability Zone where you want to create the disk (us-east-2a ). Use the same Availability Zone as the Lightsail instance to which you want to attach the disk. Use the get regions operation to list the..."
+          },
+          {
+            "name": "--size-in-gb <value>",
+            "description": "--size-in-gb (integer) [required] The size of the disk in GB (32 )."
+          },
+          {
+            "name": "--tags <value>",
+            "description": "--tags (list) The tag keys and optional values to add to the resource during create. Use the TagResource action to tag a resource after it's created. (structure) Shorthand Syntax: key=string,value=string ... JSON Syntax: [ ]"
+          },
+          {
+            "name": "--add-ons <value>",
+            "description": "--add-ons (list) An array of objects that represent the add-ons to enable for the new disk. (structure) Shorthand Syntax: addOnType=string,autoSnapshotAddOnRequest={snapshotTimeOfDay=string},stopInstanceOnIdleRequest={threshold=string,duration=str..."
+          },
+          {
+            "name": "--add-ons <value>",
+            "description": "--add-ons (list) An array of objects that represent the add-ons to enable for the new disk. (structure) Shorthand Syntax: addOnType=string,autoSnapshotAddOnRequest={snapshotTimeOfDay=string},stopInstanceOnIdleRequest={threshold=string,duration=str..."
+          },
+          {
+            "name": "--add-ons <value>",
+            "description": "--add-ons (list) An array of objects that represent the add-ons to enable for the new disk. (structure) Shorthand Syntax: addOnType=string,autoSnapshotAddOnRequest={snapshotTimeOfDay=string},stopInstanceOnIdleRequest={threshold=string,duration=str..."
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          }
+        ]
+      },
+      {
+        "name": "create-disk-from-snapshot",
+        "description": "create-disk-from-snapshot command",
+        "parameters": [
+          {
+            "name": "--disk-name <value>",
+            "description": "--disk-name (string) [required] The unique Lightsail disk name (my-disk ). Constraints: +\bo pattern: \\w[\\w\\-]*\\w"
+          },
+          {
+            "name": "--disk-snapshot-name <value>",
+            "description": "--disk-snapshot-name (string) The name of the disk snapshot (my-snapshot ) from which to create the new storage disk. Constraint: +\bo This parameter cannot be defined together with the source disk Constraints: +\bo pattern: \\w[\\w\\-]*\\w"
+          },
+          {
+            "name": "--availability-zone <value>",
+            "description": "--availability-zone (string) [required] The Availability Zone where you want to create the disk (us-east-2a ). Choose the same Availability Zone as the Lightsail instance where you want to create the disk. Use the GetRegions operation to list the ..."
+          },
+          {
+            "name": "--size-in-gb <value>",
+            "description": "--size-in-gb (integer) [required] The size of the disk in GB (32 )."
+          },
+          {
+            "name": "--tags <value>",
+            "description": "--tags (list) The tag keys and optional values to add to the resource during create. Use the TagResource action to tag a resource after it's created. (structure) Shorthand Syntax: key=string,value=string ... JSON Syntax: [ ]"
+          },
+          {
+            "name": "--add-ons <value>",
+            "description": "--add-ons (list) An array of objects that represent the add-ons to enable for the new disk. (structure) Shorthand Syntax: addOnType=string,autoSnapshotAddOnRequest={snapshotTimeOfDay=string},stopInstanceOnIdleRequest={threshold=string,duration=str..."
+          },
+          {
+            "name": "--add-ons <value>",
+            "description": "--add-ons (list) An array of objects that represent the add-ons to enable for the new disk. (structure) Shorthand Syntax: addOnType=string,autoSnapshotAddOnRequest={snapshotTimeOfDay=string},stopInstanceOnIdleRequest={threshold=string,duration=str..."
+          },
+          {
+            "name": "--add-ons <value>",
+            "description": "--add-ons (list) An array of objects that represent the add-ons to enable for the new disk. (structure) Shorthand Syntax: addOnType=string,autoSnapshotAddOnRequest={snapshotTimeOfDay=string},stopInstanceOnIdleRequest={threshold=string,duration=str..."
+          },
+          {
+            "name": "--source-disk-name <value>",
+            "description": "--source-disk-name (string) The name of the source disk from which the source automatic snapshot was created. Constraints: +\bo This parameter cannot be defined together with the disk snapshot +\bo Define this parameter only when creating a new disk..."
+          },
+          {
+            "name": "--restore-date <value>",
+            "description": "--restore-date (string) The date of the automatic snapshot to use for the new disk. Use the get auto snapshots operation to identify the dates of the available automatic snapshots. Constraints: +\bo Must be specified in YYYY-MM-DD format. +\bo This ..."
+          },
+          {
+            "name": "--no-use-latest-restorable-auto-snapshot | --no-no-use-latest-restorable-auto-snapshot",
+            "description": "--no-use-latest-restorable-auto-snapshot (boolean) A Boolean value to indicate whether to use the latest available automatic snapshot. Constraints: +\bo This parameter cannot be defined together with the restore date +\bo Define this parameter only ..."
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          }
+        ]
+      },
+      {
+        "name": "create-disk-snapshot",
+        "description": "create-disk-snapshot command",
+        "parameters": [
+          {
+            "name": "--disk-name <value>",
+            "description": "--disk-name (string) The unique name of the source disk (Disk-Virginia-1 ). NOTE: Constraints: +\bo pattern: \\w[\\w\\-]*\\w"
+          },
+          {
+            "name": "--disk-name <value>",
+            "description": "--disk-name (string) The unique name of the source disk (Disk-Virginia-1 ). NOTE: Constraints: +\bo pattern: \\w[\\w\\-]*\\w"
+          },
+          {
+            "name": "--disk-snapshot-name <value>",
+            "description": "--disk-snapshot-name (string) [required] The name of the destination disk snapshot (my-disk-snapshot ) based on the source disk. Constraints: +\bo pattern: \\w[\\w\\-]*\\w"
+          },
+          {
+            "name": "--instance-name <value>",
+            "description": "--instance-name (string) The unique name of the source instance (Amazon_Linux-512MB-Virginia-1 ). When this is defined, a snapshot of the instance's system volume is created. NOTE: Constraints: +\bo pattern: \\w[\\w\\-]*\\w"
+          },
+          {
+            "name": "--instance-name <value>",
+            "description": "--instance-name (string) The unique name of the source instance (Amazon_Linux-512MB-Virginia-1 ). When this is defined, a snapshot of the instance's system volume is created. NOTE: Constraints: +\bo pattern: \\w[\\w\\-]*\\w"
+          },
+          {
+            "name": "--tags <value>",
+            "description": "--tags (list) The tag keys and optional values to add to the resource during create. Use the TagResource action to tag a resource after it's created. (structure) Shorthand Syntax: key=string,value=string ... JSON Syntax: [ ]"
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          }
+        ]
+      },
+      {
+        "name": "create-distribution",
+        "description": "create-distribution command",
+        "parameters": [
+          {
+            "name": "--distribution-name <value>",
+            "description": "--distribution-name (string) [required] The name for the distribution. Constraints: +\bo pattern: \\w[\\w\\-]*\\w"
+          },
+          {
+            "name": "--origin <value>",
+            "description": "--origin (structure) [required] An object that describes the origin resource for the distribution, such as a Lightsail instance, bucket, or load balancer. The distribution pulls, caches, and serves content from the origin. name -> (string) regionN..."
+          },
+          {
+            "name": "--default-cache-behavior <value>",
+            "description": "--default-cache-behavior (structure) [required] An object that describes the default cache behavior for the distribution. behavior -> (string) Shorthand Syntax: behavior=string JSON Syntax: { }"
+          },
+          {
+            "name": "--cache-behavior-settings <value>",
+            "description": "--cache-behavior-settings (structure) An object that describes the cache behavior settings for the distribution. defaultTTL -> (long) minimumTTL -> (long) maximumTTL -> (long) allowedHTTPMethods -> (string) cachedHTTPMethods -> (string) forwardedC..."
+          },
+          {
+            "name": "--cache-behavior-settings <value>",
+            "description": "--cache-behavior-settings (structure) An object that describes the cache behavior settings for the distribution. defaultTTL -> (long) minimumTTL -> (long) maximumTTL -> (long) allowedHTTPMethods -> (string) cachedHTTPMethods -> (string) forwardedC..."
+          },
+          {
+            "name": "--cache-behaviors <value>",
+            "description": "--cache-behaviors (list) An array of objects that describe the per-path cache behavior for the distribution. (structure) Shorthand Syntax: path=string,behavior=string ... JSON Syntax: [ ]"
+          },
+          {
+            "name": "--bundle-id <value>",
+            "description": "--bundle-id (string) [required] The bundle ID to use for the distribution. A distribution bundle describes the specifications of your distribution, such as the monthly cost and monthly network transfer quota. Use the GetDistributionBundles action ..."
+          },
+          {
+            "name": "--ip-address-type <value>",
+            "description": "--ip-address-type (string) The IP address type for the distribution. The possible values are ipv4 for IPv4 only, and dualstack for IPv4 and IPv6. The default value is dualstack . Possible values: +\bo dualstack +\bo ipv4 +\bo ipv6"
+          },
+          {
+            "name": "--tags <value>",
+            "description": "--tags (list) The tag keys and optional values to add to the distribution during create. Use the TagResource action to tag a resource after it's created. (structure) Shorthand Syntax: key=string,value=string ... JSON Syntax: [ ]"
+          },
+          {
+            "name": "--certificate-name <value>",
+            "description": "--certificate-name (string) The name of the SSL/TLS certificate that you want to attach to the distribution. Use the _\bG_\be_\bt_\bC_\be_\br_\bt_\bi_\bf_\bi_\bc_\ba_\bt_\be_\bs action to get a list of certificate names that you can specify. Constraints: +\bo pat..."
+          },
+          {
+            "name": "--viewer-minimum-tls-protocol-version <value>",
+            "description": "--viewer-minimum-tls-protocol-version (string) The minimum TLS protocol version for the SSL/TLS certificate. Possible values: +\bo TLSv1.1_2016 +\bo TLSv1.2_2018 +\bo TLSv1.2_2019 +\bo TLSv1.2_2021"
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          }
+        ]
+      },
+      {
+        "name": "create-domain",
+        "description": "create-domain command",
+        "parameters": [
+          {
+            "name": "--domain-name <value>",
+            "description": "--domain-name (string) [required] The domain name to manage (example.com )."
+          },
+          {
+            "name": "--tags <value>",
+            "description": "--tags (list) The tag keys and optional values to add to the resource during create. Use the TagResource action to tag a resource after it's created. (structure) Shorthand Syntax: key=string,value=string ... JSON Syntax: [ ]"
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          }
+        ]
+      },
+      {
+        "name": "create-domain-entry",
+        "description": "create-domain-entry command",
+        "parameters": [
+          {
+            "name": "--domain-name <value>",
+            "description": "--domain-name (string) [required] The domain name (example.com ) for which you want to create the domain entry."
+          },
+          {
+            "name": "--domain-entry <value>",
+            "description": "--domain-entry (structure) [required] An array of key-value pairs containing information about the domain entry request. id -> (string) name -> (string) target -> (string) isAlias -> (boolean) type -> (string) options -> (map) Shorthand Syntax: id..."
+          },
+          {
+            "name": "--domain-entry <value>",
+            "description": "--domain-entry (structure) [required] An array of key-value pairs containing information about the domain entry request. id -> (string) name -> (string) target -> (string) isAlias -> (boolean) type -> (string) options -> (map) Shorthand Syntax: id..."
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          }
+        ]
+      },
+      {
+        "name": "create-gui-session-access-details",
+        "description": "create-gui-session-access-details command",
+        "parameters": [
+          {
+            "name": "--resource-name <value>",
+            "description": "--resource-name (string) [required] The resource name. Constraints: +\bo pattern: \\w[\\w\\-]*\\w"
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          }
+        ]
+      },
+      {
+        "name": "create-instance-snapshot",
+        "description": "create-instance-snapshot command",
+        "parameters": [
+          {
+            "name": "--instance-snapshot-name <value>",
+            "description": "--instance-snapshot-name (string) [required] The name for your new snapshot. Constraints: +\bo pattern: \\w[\\w\\-]*\\w"
+          },
+          {
+            "name": "--instance-name <value>",
+            "description": "--instance-name (string) [required] The Lightsail instance on which to base your snapshot. Constraints: +\bo pattern: \\w[\\w\\-]*\\w"
+          },
+          {
+            "name": "--tags <value>",
+            "description": "--tags (list) The tag keys and optional values to add to the resource during create. Use the TagResource action to tag a resource after it's created. (structure) Shorthand Syntax: key=string,value=string ... JSON Syntax: [ ]"
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          }
+        ]
+      },
+      {
         "name": "create-instances",
         "description": "Creates instances",
         "parameters": [
@@ -46364,6 +47172,2134 @@ export const awsServices: Service[] = [
         ]
       },
       {
+        "name": "create-instances-from-snapshot",
+        "description": "create-instances-from-snapshot command",
+        "parameters": [
+          {
+            "name": "--instance-names <value>",
+            "description": "--instance-names (list) [required] The names for your new instances. (string) Syntax: \"string\" \"string\" ..."
+          },
+          {
+            "name": "--attached-disk-mapping <value>",
+            "description": "--attached-disk-mapping (map) An object containing information about one or more disk mappings. key -> (string) value -> (list) Shorthand Syntax: KeyName1=[{originalDiskPath=string,newDiskName=string},{originalDiskPath=string,newDiskName=string}],..."
+          },
+          {
+            "name": "--availability-zone <value>",
+            "description": "--availability-zone (string) [required] The Availability Zone where you want to create your instances. Use the following formatting: us-east-2a (case sensitive). You can get a list of Availability Zones by using the _\bg_\be_\bt _\br_\be_\bg_\bi_\bo_\bn_\bs..."
+          },
+          {
+            "name": "--instance-snapshot-name <value>",
+            "description": "--instance-snapshot-name (string) The name of the instance snapshot on which you are basing your new instances. Use the get instance snapshots operation to return information about your existing snapshots. Constraint: +\bo This parameter cannot be ..."
+          },
+          {
+            "name": "--bundle-id <value>",
+            "description": "--bundle-id (string) [required] The bundle of specification information for your virtual private server (or _\bi_\bn_\bs_\bt_\ba_\bn_\bc_\be ), including the pricing plan (micro_x_x ). Constraints: +\bo pattern: .*\\S.*"
+          },
+          {
+            "name": "--user-data <value>",
+            "description": "--user-data (string) You can create a launch script that configures a server with additional user data. For example, apt-get -y update . NOTE:"
+          },
+          {
+            "name": "--user-data <value>",
+            "description": "--user-data (string) You can create a launch script that configures a server with additional user data. For example, apt-get -y update . NOTE:"
+          },
+          {
+            "name": "--key-pair-name <value>",
+            "description": "--key-pair-name (string) The name for your key pair. Constraints: +\bo pattern: \\w[\\w\\-]*\\w"
+          },
+          {
+            "name": "--tags <value>",
+            "description": "--tags (list) The tag keys and optional values to add to the resource during create. Use the TagResource action to tag a resource after it's created. (structure) Shorthand Syntax: key=string,value=string ... JSON Syntax: [ ]"
+          },
+          {
+            "name": "--add-ons <value>",
+            "description": "--add-ons (list) An array of objects representing the add-ons to enable for the new instance. (structure) Shorthand Syntax: addOnType=string,autoSnapshotAddOnRequest={snapshotTimeOfDay=string},stopInstanceOnIdleRequest={threshold=string,duration=s..."
+          },
+          {
+            "name": "--add-ons <value>",
+            "description": "--add-ons (list) An array of objects representing the add-ons to enable for the new instance. (structure) Shorthand Syntax: addOnType=string,autoSnapshotAddOnRequest={snapshotTimeOfDay=string},stopInstanceOnIdleRequest={threshold=string,duration=s..."
+          },
+          {
+            "name": "--add-ons <value>",
+            "description": "--add-ons (list) An array of objects representing the add-ons to enable for the new instance. (structure) Shorthand Syntax: addOnType=string,autoSnapshotAddOnRequest={snapshotTimeOfDay=string},stopInstanceOnIdleRequest={threshold=string,duration=s..."
+          },
+          {
+            "name": "--ip-address-type <value>",
+            "description": "--ip-address-type (string) The IP address type for the instance. The possible values are ipv4 for IPv4 only, ipv6 for IPv6 only, and dualstack for IPv4 and IPv6. The default value is dualstack . Possible values: +\bo dualstack +\bo ipv4 +\bo ipv6"
+          },
+          {
+            "name": "--source-instance-name <value>",
+            "description": "--source-instance-name (string) The name of the source instance from which the source automatic snapshot was created. Constraints: +\bo This parameter cannot be defined together with the instance +\bo Define this parameter only when creating a new i..."
+          },
+          {
+            "name": "--restore-date <value>",
+            "description": "--restore-date (string) The date of the automatic snapshot to use for the new instance. Use the get auto snapshots operation to identify the dates of the available automatic snapshots. Constraints: +\bo Must be specified in YYYY-MM-DD format. +\bo T..."
+          },
+          {
+            "name": "--no-use-latest-restorable-auto-snapshot | --no-no-use-latest-restorable-auto-snapshot",
+            "description": "--no-use-latest-restorable-auto-snapshot (boolean) A Boolean value to indicate whether to use the latest available automatic snapshot. Constraints: +\bo This parameter cannot be defined together with the restore date +\bo Define this parameter only ..."
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          }
+        ]
+      },
+      {
+        "name": "create-key-pair",
+        "description": "create-key-pair command",
+        "parameters": [
+          {
+            "name": "--key-pair-name <value>",
+            "description": "--key-pair-name (string) [required] The name for your new key pair. Constraints: +\bo pattern: \\w[\\w\\-]*\\w"
+          },
+          {
+            "name": "--tags <value>",
+            "description": "--tags (list) The tag keys and optional values to add to the resource during create. Use the TagResource action to tag a resource after it's created. (structure) Shorthand Syntax: key=string,value=string ... JSON Syntax: [ ]"
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          }
+        ]
+      },
+      {
+        "name": "create-load-balancer",
+        "description": "create-load-balancer command",
+        "parameters": [
+          {
+            "name": "--load-balancer-name <value>",
+            "description": "--load-balancer-name (string) [required] The name of your load balancer. Constraints: +\bo pattern: \\w[\\w\\-]*\\w"
+          },
+          {
+            "name": "--instance-port <value>",
+            "description": "--instance-port (integer) [required] The instance port where you're creating your load balancer. Constraints: +\bo min: -1 +\bo max: 65535"
+          },
+          {
+            "name": "--health-check-path <value>",
+            "description": "--health-check-path (string) The path you provided to perform the load balancer health check. If you didn't specify a health check path, Lightsail uses the root path of your website (\"/\" ). You may want to specify a custom health check path other ..."
+          },
+          {
+            "name": "--certificate-name <value>",
+            "description": "--certificate-name (string) The name of the SSL/TLS certificate. If you specify certificateName , then certificateDomainName is required (and vice-versa). Constraints: +\bo pattern: \\w[\\w\\-]*\\w"
+          },
+          {
+            "name": "--certificate-domain-name <value>",
+            "description": "--certificate-domain-name (string) The domain name with which your certificate is associated (example.com ). If you specify certificateDomainName , then certificateName is required (and vice-versa)."
+          },
+          {
+            "name": "--certificate-alternative-names <value>",
+            "description": "--certificate-alternative-names (list) The optional alternative domains and subdomains to use with your SSL/TLS certificate (www.example.com , example.com , m.example.com , blog.example.com ). (string) Syntax: \"string\" \"string\" ..."
+          },
+          {
+            "name": "--tags <value>",
+            "description": "--tags (list) The tag keys and optional values to add to the resource during create. Use the TagResource action to tag a resource after it's created. (structure) Shorthand Syntax: key=string,value=string ... JSON Syntax: [ ]"
+          },
+          {
+            "name": "--ip-address-type <value>",
+            "description": "--ip-address-type (string) The IP address type for the load balancer. The possible values are ipv4 for IPv4 only, ipv6 for IPv6 only, and dualstack for IPv4 and IPv6. The default value is dualstack . Possible values: +\bo dualstack +\bo ipv4 +\bo ipv6"
+          },
+          {
+            "name": "--tls-policy-name <value>",
+            "description": "--tls-policy-name (string) The name of the TLS policy to apply to the load balancer. Use the _\bG_\be_\bt_\bL_\bo_\ba_\bd_\bB_\ba_\bl_\ba_\bn_\bc_\be_\br_\bT_\bl_\bs_\bP_\bo_\bl_\bi_\bc_\bi_\be_\bs action to get a list of TLS policy names that you can specify. For more inf..."
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          }
+        ]
+      },
+      {
+        "name": "create-load-balancer-tls-certificate",
+        "description": "create-load-balancer-tls-certificate command",
+        "parameters": [
+          {
+            "name": "--load-balancer-name <value>",
+            "description": "--load-balancer-name (string) [required] The load balancer name where you want to create the SSL/TLS certificate. Constraints: +\bo pattern: \\w[\\w\\-]*\\w"
+          },
+          {
+            "name": "--certificate-name <value>",
+            "description": "--certificate-name (string) [required] The SSL/TLS certificate name. You can have up to 10 certificates in your account at one time. Each Lightsail load balancer can have up to 2 certificates associated with it at one time. There is also an overal..."
+          },
+          {
+            "name": "--certificate-domain-name <value>",
+            "description": "--certificate-domain-name (string) [required] The domain name (example.com ) for your SSL/TLS certificate."
+          },
+          {
+            "name": "--certificate-alternative-names <value>",
+            "description": "--certificate-alternative-names (list) An array of strings listing alternative domains and subdomains for your SSL/TLS certificate. Lightsail will de-dupe the names for you. You can have a maximum of 9 alternative names (in addition to the 1 prima..."
+          },
+          {
+            "name": "--tags <value>",
+            "description": "--tags (list) The tag keys and optional values to add to the resource during create. Use the TagResource action to tag a resource after it's created. (structure) Shorthand Syntax: key=string,value=string ... JSON Syntax: [ ]"
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          }
+        ]
+      },
+      {
+        "name": "create-relational-database",
+        "description": "create-relational-database command",
+        "parameters": [
+          {
+            "name": "--relational-database-name <value>",
+            "description": "--relational-database-name (string) [required] The name to use for your new Lightsail database resource. Constraints: +\bo Must contain from 2 to 255 alphanumeric characters, or hyphens. +\bo The first and last character must be a letter or number. ..."
+          },
+          {
+            "name": "--availability-zone <value>",
+            "description": "--availability-zone (string) The Availability Zone in which to create your new database. Use the us-east-2a case-sensitive format. You can get a list of Availability Zones by using the get regions operation. Be sure to add the include relational d..."
+          },
+          {
+            "name": "--relational-database-blueprint-id <value>",
+            "description": "--relational-database-blueprint-id (string) [required] The blueprint ID for your new database. A blueprint describes the major engine version of a database. You can get a list of database blueprints IDs by using the get relational database bluepri..."
+          },
+          {
+            "name": "--relational-database-bundle-id <value>",
+            "description": "--relational-database-bundle-id (string) [required] The bundle ID for your new database. A bundle describes the performance specifications for your database. You can get a list of database bundle IDs by using the get relational database bundles op..."
+          },
+          {
+            "name": "--master-database-name <value>",
+            "description": "--master-database-name (string) [required] The meaning of this parameter differs according to the database engine you use. The name of the database to create when the Lightsail database resource is created. If this parameter isn't specified, no da..."
+          },
+          {
+            "name": "--master-username <value>",
+            "description": "--master-username (string) [required] The name for the master user. Constraints: +\bo Required for MySQL. +\bo Must be 1 to 16 letters or numbers. Can contain underscores. +\bo First character must be a letter. +\bo Can't be a reserved word for the ch..."
+          },
+          {
+            "name": "--master-user-password <value>",
+            "description": "--master-user-password (string) The password for the master user. The password can include any printable ASCII character except \"/\", \"\"\", or \"@\". It cannot contain spaces. Constraints: Must contain from 8 to 41 characters. Constraints: Must contai..."
+          },
+          {
+            "name": "--preferred-backup-window <value>",
+            "description": "--preferred-backup-window (string) The daily time range during which automated backups are created for your new database if automated backups are enabled. The default is a 30-minute window selected at random from an 8-hour block of time for each A..."
+          },
+          {
+            "name": "--preferred-maintenance-window <value>",
+            "description": "--preferred-maintenance-window (string) The weekly time range during which system maintenance can occur on your new database. The default is a 30-minute window selected at random from an 8-hour block of time for each AWS Region, occurring on a ran..."
+          },
+          {
+            "name": "--publicly-accessible | --no-publicly-accessible",
+            "description": "--publicly-accessible | --no-publicly-accessible (boolean) Specifies the accessibility options for your new database. A value of true specifies a database that is available to resources outside of your Lightsail account. A value of false specifies..."
+          },
+          {
+            "name": "--tags <value>",
+            "description": "--tags (list) The tag keys and optional values to add to the resource during create. Use the TagResource action to tag a resource after it's created. (structure) Shorthand Syntax: key=string,value=string ... JSON Syntax: [ ]"
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          }
+        ]
+      },
+      {
+        "name": "create-relational-database-from-snapshot",
+        "description": "create-relational-database-from-snapshot command",
+        "parameters": [
+          {
+            "name": "--relational-database-name <value>",
+            "description": "--relational-database-name (string) [required] The name to use for your new Lightsail database resource. Constraints: +\bo Must contain from 2 to 255 alphanumeric characters, or hyphens. +\bo The first and last character must be a letter or number. ..."
+          },
+          {
+            "name": "--availability-zone <value>",
+            "description": "--availability-zone (string) The Availability Zone in which to create your new database. Use the us-east-2a case-sensitive format. You can get a list of Availability Zones by using the get regions operation. Be sure to add the include relational d..."
+          },
+          {
+            "name": "--publicly-accessible | --no-publicly-accessible",
+            "description": "--publicly-accessible | --no-publicly-accessible (boolean) Specifies the accessibility options for your new database. A value of true specifies a database that is available to resources outside of your Lightsail account. A value of false specifies..."
+          },
+          {
+            "name": "--relational-database-snapshot-name <value>",
+            "description": "--relational-database-snapshot-name (string) The name of the database snapshot from which to create your new database. Constraints: +\bo pattern: \\w[\\w\\-]*\\w"
+          },
+          {
+            "name": "--relational-database-bundle-id <value>",
+            "description": "--relational-database-bundle-id (string) The bundle ID for your new database. A bundle describes the performance specifications for your database. You can get a list of database bundle IDs by using the get relational database bundles operation. Wh..."
+          },
+          {
+            "name": "--source-relational-database-name <value>",
+            "description": "--source-relational-database-name (string) The name of the source database. Constraints: +\bo pattern: \\w[\\w\\-]*\\w"
+          },
+          {
+            "name": "--restore-time <value>",
+            "description": "--restore-time (timestamp) The date and time to restore your database from. Constraints: +\bo Must be before the latest restorable time for the database. +\bo Cannot be specified if the use latest restorable time parameter is +\bo Specified in Coordi..."
+          },
+          {
+            "name": "--use-latest-restorable-time | --no-use-latest-restorable-time",
+            "description": "--use-latest-restorable-time | --no-use-latest-restorable-time (boolean) Specifies whether your database is restored from the latest backup time. A value of true restores from the latest backup time. Default: false Constraints: Cannot be specified..."
+          },
+          {
+            "name": "--tags <value>",
+            "description": "--tags (list) The tag keys and optional values to add to the resource during create. Use the TagResource action to tag a resource after it's created. (structure) Shorthand Syntax: key=string,value=string ... JSON Syntax: [ ]"
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          }
+        ]
+      },
+      {
+        "name": "create-relational-database-snapshot",
+        "description": "create-relational-database-snapshot command",
+        "parameters": [
+          {
+            "name": "--relational-database-name <value>",
+            "description": "--relational-database-name (string) [required] The name of the database on which to base your new snapshot. Constraints: +\bo pattern: \\w[\\w\\-]*\\w"
+          },
+          {
+            "name": "--relational-database-snapshot-name <value>",
+            "description": "--relational-database-snapshot-name (string) [required] The name for your new database snapshot. Constraints: +\bo Must contain from 2 to 255 alphanumeric characters, or hyphens. +\bo The first and last character must be a letter or number. Constrai..."
+          },
+          {
+            "name": "--tags <value>",
+            "description": "--tags (list) The tag keys and optional values to add to the resource during create. Use the TagResource action to tag a resource after it's created. (structure) Shorthand Syntax: key=string,value=string ... JSON Syntax: [ ]"
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          }
+        ]
+      },
+      {
+        "name": "delete-alarm",
+        "description": "delete-alarm command",
+        "parameters": [
+          {
+            "name": "--alarm-name <value>",
+            "description": "--alarm-name (string) [required] The name of the alarm to delete. Constraints: +\bo pattern: \\w[\\w\\-]*\\w"
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          }
+        ]
+      },
+      {
+        "name": "delete-auto-snapshot",
+        "description": "delete-auto-snapshot command",
+        "parameters": [
+          {
+            "name": "--resource-name <value>",
+            "description": "--resource-name (string) [required] The name of the source instance or disk from which to delete the automatic snapshot. Constraints: +\bo pattern: \\w[\\w\\-]*\\w"
+          },
+          {
+            "name": "--date <value>",
+            "description": "--date (string) [required] The date of the automatic snapshot to delete in YYYY-MM-DD format. Use the get auto snapshots operation to get the available automatic snapshots for a resource. Constraints: +\bo pattern: ^[0-9]{4}-[0-9]{2}-[0-9]{2}$"
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          }
+        ]
+      },
+      {
+        "name": "delete-bucket",
+        "description": "delete-bucket command",
+        "parameters": [
+          {
+            "name": "--bucket-name <value>",
+            "description": "--bucket-name (string) [required] The name of the bucket to delete. Use the _\bG_\be_\bt_\bB_\bu_\bc_\bk_\be_\bt_\bs action to get a list of bucket names that you can specify. Constraints: +\bo min: 3 +\bo max: 54 +\bo pattern: ^[a-z0-9][a-z0-9-]{1,52}[a-z0-9]$"
+          },
+          {
+            "name": "--force-delete | --no-force-delete",
+            "description": "--force-delete | --no-force-delete (boolean) A Boolean value that indicates whether to force delete the bucket. You must force delete the bucket if it has one of the following conditions: +\bo The bucket is the origin of a distribution. +\bo The buc..."
+          },
+          {
+            "name": "--force-delete | --no-force-delete",
+            "description": "--force-delete | --no-force-delete (boolean) A Boolean value that indicates whether to force delete the bucket. You must force delete the bucket if it has one of the following conditions: +\bo The bucket is the origin of a distribution. +\bo The buc..."
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          }
+        ]
+      },
+      {
+        "name": "delete-bucket-access-key",
+        "description": "delete-bucket-access-key command",
+        "parameters": [
+          {
+            "name": "--bucket-name <value>",
+            "description": "--bucket-name (string) [required] The name of the bucket that the access key belongs to. Constraints: +\bo min: 3 +\bo max: 54 +\bo pattern: ^[a-z0-9][a-z0-9-]{1,52}[a-z0-9]$"
+          },
+          {
+            "name": "--access-key-id <value>",
+            "description": "--access-key-id (string) [required] The ID of the access key to delete. Use the _\bG_\be_\bt_\bB_\bu_\bc_\bk_\be_\bt_\bA_\bc_\bc_\be_\bs_\bs_\bK_\be_\by_\bs action to get a list of access key IDs that you can specify. Constraints: +\bo pattern: .*\\S.*"
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          }
+        ]
+      },
+      {
+        "name": "delete-certificate",
+        "description": "delete-certificate command",
+        "parameters": [
+          {
+            "name": "--certificate-name <value>",
+            "description": "--certificate-name (string) [required] The name of the certificate to delete. Use the GetCertificates action to get a list of certificate names that you can specify."
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          }
+        ]
+      },
+      {
+        "name": "delete-contact-method",
+        "description": "delete-contact-method command",
+        "parameters": [
+          {
+            "name": "--protocol <value>",
+            "description": "--protocol (string) [required] The protocol that will be deleted, such as Email or SMS (text messaging). NOTE: Possible values: +\bo Email +\bo SMS"
+          },
+          {
+            "name": "--protocol <value>",
+            "description": "--protocol (string) [required] The protocol that will be deleted, such as Email or SMS (text messaging). NOTE: Possible values: +\bo Email +\bo SMS"
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          }
+        ]
+      },
+      {
+        "name": "delete-container-image",
+        "description": "delete-container-image command",
+        "parameters": [
+          {
+            "name": "--service-name <value>",
+            "description": "--service-name (string) [required] The name of the container service for which to delete a registered container image. Constraints: +\bo min: 1 +\bo max: 63 +\bo pattern: ^[a-z0-9]{1,2}|[a-z0-9][a-z0-9-]+[a-z0-9]$"
+          },
+          {
+            "name": "--image <value>",
+            "description": "--image (string) [required] The name of the container image to delete from the container service. Use the GetContainerImages action to get the name of the container images that are registered to a container service. NOTE:"
+          },
+          {
+            "name": "--image <value>",
+            "description": "--image (string) [required] The name of the container image to delete from the container service. Use the GetContainerImages action to get the name of the container images that are registered to a container service. NOTE:"
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          }
+        ]
+      },
+      {
+        "name": "delete-container-service",
+        "description": "delete-container-service command",
+        "parameters": [
+          {
+            "name": "--service-name <value>",
+            "description": "--service-name (string) [required] The name of the container service to delete. Constraints: +\bo min: 1 +\bo max: 63 +\bo pattern: ^[a-z0-9]{1,2}|[a-z0-9][a-z0-9-]+[a-z0-9]$"
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          }
+        ]
+      },
+      {
+        "name": "delete-disk",
+        "description": "delete-disk command",
+        "parameters": [
+          {
+            "name": "--disk-name <value>",
+            "description": "--disk-name (string) [required] The unique name of the disk you want to delete (my-disk ). Constraints: +\bo pattern: \\w[\\w\\-]*\\w"
+          },
+          {
+            "name": "--force-delete-add-ons | --no-force-delete-add-ons",
+            "description": "--force-delete-add-ons | --no-force-delete-add-ons (boolean) A Boolean value to indicate whether to delete all add-ons for the disk."
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          }
+        ]
+      },
+      {
+        "name": "delete-disk-snapshot",
+        "description": "delete-disk-snapshot command",
+        "parameters": [
+          {
+            "name": "--disk-snapshot-name <value>",
+            "description": "--disk-snapshot-name (string) [required] The name of the disk snapshot you want to delete (my-disk-snapshot ). Constraints: +\bo pattern: \\w[\\w\\-]*\\w"
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          }
+        ]
+      },
+      {
+        "name": "delete-distribution",
+        "description": "delete-distribution command",
+        "parameters": [
+          {
+            "name": "--distribution-name <value>",
+            "description": "--distribution-name (string) The name of the distribution to delete. Use the GetDistributions action to get a list of distribution names that you can specify. Constraints: +\bo pattern: \\w[\\w\\-]*\\w"
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          }
+        ]
+      },
+      {
+        "name": "delete-domain",
+        "description": "delete-domain command",
+        "parameters": [
+          {
+            "name": "--domain-name <value>",
+            "description": "--domain-name (string) [required] The specific domain name to delete."
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          }
+        ]
+      },
+      {
+        "name": "delete-domain-entry",
+        "description": "delete-domain-entry command",
+        "parameters": [
+          {
+            "name": "--domain-name <value>",
+            "description": "--domain-name (string) [required] The name of the domain entry to delete."
+          },
+          {
+            "name": "--domain-entry <value>",
+            "description": "--domain-entry (structure) [required] An array of key-value pairs containing information about your domain entries. id -> (string) name -> (string) target -> (string) isAlias -> (boolean) type -> (string) options -> (map) Shorthand Syntax: id=stri..."
+          },
+          {
+            "name": "--domain-entry <value>",
+            "description": "--domain-entry (structure) [required] An array of key-value pairs containing information about your domain entries. id -> (string) name -> (string) target -> (string) isAlias -> (boolean) type -> (string) options -> (map) Shorthand Syntax: id=stri..."
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          }
+        ]
+      },
+      {
+        "name": "delete-instance",
+        "description": "delete-instance command",
+        "parameters": [
+          {
+            "name": "--instance-name <value>",
+            "description": "--instance-name (string) [required] The name of the instance to delete. Constraints: +\bo pattern: \\w[\\w\\-]*\\w"
+          },
+          {
+            "name": "--force-delete-add-ons | --no-force-delete-add-ons",
+            "description": "--force-delete-add-ons | --no-force-delete-add-ons (boolean) A Boolean value to indicate whether to delete all add-ons for the instance."
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          }
+        ]
+      },
+      {
+        "name": "delete-instance-snapshot",
+        "description": "delete-instance-snapshot command",
+        "parameters": [
+          {
+            "name": "--instance-snapshot-name <value>",
+            "description": "--instance-snapshot-name (string) [required] The name of the snapshot to delete. Constraints: +\bo pattern: \\w[\\w\\-]*\\w"
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          }
+        ]
+      },
+      {
+        "name": "delete-key-pair",
+        "description": "delete-key-pair command",
+        "parameters": [
+          {
+            "name": "--key-pair-name <value>",
+            "description": "--key-pair-name (string) [required] The name of the key pair to delete. Constraints: +\bo pattern: \\w[\\w\\-]*\\w"
+          },
+          {
+            "name": "--expected-fingerprint <value>",
+            "description": "--expected-fingerprint (string) The RSA fingerprint of the Lightsail default key pair to delete. NOTE:"
+          },
+          {
+            "name": "--expected-fingerprint <value>",
+            "description": "--expected-fingerprint (string) The RSA fingerprint of the Lightsail default key pair to delete. NOTE:"
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          }
+        ]
+      },
+      {
+        "name": "delete-known-host-keys",
+        "description": "delete-known-host-keys command",
+        "parameters": [
+          {
+            "name": "--instance-name <value>",
+            "description": "--instance-name (string) [required] The name of the instance for which you want to reset the host key or certificate. Constraints: +\bo pattern: \\w[\\w\\-]*\\w"
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          }
+        ]
+      },
+      {
+        "name": "delete-load-balancer",
+        "description": "delete-load-balancer command",
+        "parameters": [
+          {
+            "name": "--load-balancer-name <value>",
+            "description": "--load-balancer-name (string) [required] The name of the load balancer you want to delete. Constraints: +\bo pattern: \\w[\\w\\-]*\\w"
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          }
+        ]
+      },
+      {
+        "name": "delete-load-balancer-tls-certificate",
+        "description": "delete-load-balancer-tls-certificate command",
+        "parameters": [
+          {
+            "name": "--load-balancer-name <value>",
+            "description": "--load-balancer-name (string) [required] The load balancer name. Constraints: +\bo pattern: \\w[\\w\\-]*\\w"
+          },
+          {
+            "name": "--certificate-name <value>",
+            "description": "--certificate-name (string) [required] The SSL/TLS certificate name. Constraints: +\bo pattern: \\w[\\w\\-]*\\w"
+          },
+          {
+            "name": "--force | --no-force",
+            "description": "--force | --no-force (boolean) When true , forces the deletion of an SSL/TLS certificate. There can be two certificates associated with a Lightsail load balancer: the primary and the backup. The force parameter is required when the primary SSL/TLS..."
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          }
+        ]
+      },
+      {
+        "name": "delete-relational-database",
+        "description": "delete-relational-database command",
+        "parameters": [
+          {
+            "name": "--relational-database-name <value>",
+            "description": "--relational-database-name (string) [required] The name of the database that you are deleting. Constraints: +\bo pattern: \\w[\\w\\-]*\\w"
+          },
+          {
+            "name": "--skip-final-snapshot | --no-skip-final-snapshot",
+            "description": "--skip-final-snapshot | --no-skip-final-snapshot (boolean) Determines whether a final database snapshot is created before your database is deleted. If true is specified, no database snapshot is created. If false is specified, a database snapshot i..."
+          },
+          {
+            "name": "--final-relational-database-snapshot-name <value>",
+            "description": "--final-relational-database-snapshot-name (string) The name of the database snapshot created if skip final snapshot is false , which is the default value for that parameter. NOTE: Constraints: +\bo Must contain from 2 to 255 alphanumeric characters..."
+          },
+          {
+            "name": "--final-relational-database-snapshot-name <value>",
+            "description": "--final-relational-database-snapshot-name (string) The name of the database snapshot created if skip final snapshot is false , which is the default value for that parameter. NOTE: Constraints: +\bo Must contain from 2 to 255 alphanumeric characters..."
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          }
+        ]
+      },
+      {
+        "name": "delete-relational-database-snapshot",
+        "description": "delete-relational-database-snapshot command",
+        "parameters": [
+          {
+            "name": "--relational-database-snapshot-name <value>",
+            "description": "--relational-database-snapshot-name (string) [required] The name of the database snapshot that you are deleting. Constraints: +\bo pattern: \\w[\\w\\-]*\\w"
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          }
+        ]
+      },
+      {
+        "name": "detach-certificate-from-distribution",
+        "description": "detach-certificate-from-distribution command",
+        "parameters": [
+          {
+            "name": "--distribution-name <value>",
+            "description": "--distribution-name (string) [required] The name of the distribution from which to detach the certificate. Use the GetDistributions action to get a list of distribution names that you can specify. Constraints: +\bo pattern: \\w[\\w\\-]*\\w"
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          }
+        ]
+      },
+      {
+        "name": "detach-disk",
+        "description": "detach-disk command",
+        "parameters": [
+          {
+            "name": "--disk-name <value>",
+            "description": "--disk-name (string) [required] The unique name of the disk you want to detach from your instance (my-disk ). Constraints: +\bo pattern: \\w[\\w\\-]*\\w"
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          }
+        ]
+      },
+      {
+        "name": "detach-instances-from-load-balancer",
+        "description": "detach-instances-from-load-balancer command",
+        "parameters": [
+          {
+            "name": "--load-balancer-name <value>",
+            "description": "--load-balancer-name (string) [required] The name of the Lightsail load balancer. Constraints: +\bo pattern: \\w[\\w\\-]*\\w"
+          },
+          {
+            "name": "--instance-names <value>",
+            "description": "--instance-names (list) [required] An array of strings containing the names of the instances you want to detach from the load balancer. (string) Syntax: \"string\" \"string\" ..."
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          }
+        ]
+      },
+      {
+        "name": "detach-static-ip",
+        "description": "detach-static-ip command",
+        "parameters": [
+          {
+            "name": "--static-ip-name <value>",
+            "description": "--static-ip-name (string) [required] The name of the static IP to detach from the instance. Constraints: +\bo pattern: \\w[\\w\\-]*\\w"
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          }
+        ]
+      },
+      {
+        "name": "disable-add-on",
+        "description": "disable-add-on command",
+        "parameters": [
+          {
+            "name": "--add-on-type <value>",
+            "description": "--add-on-type (string) [required] The add-on type to disable. Possible values: +\bo AutoSnapshot +\bo StopInstanceOnIdle"
+          },
+          {
+            "name": "--resource-name <value>",
+            "description": "--resource-name (string) [required] The name of the source resource for which to disable the add-on. Constraints: +\bo pattern: \\w[\\w\\-]*\\w"
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          }
+        ]
+      },
+      {
+        "name": "download-default-key-pair",
+        "description": "download-default-key-pair command",
+        "parameters": [
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          }
+        ]
+      },
+      {
+        "name": "enable-add-on",
+        "description": "enable-add-on command",
+        "parameters": [
+          {
+            "name": "--resource-name <value>",
+            "description": "--resource-name (string) [required] The name of the source resource for which to enable or modify the add-on. Constraints: +\bo pattern: \\w[\\w\\-]*\\w"
+          },
+          {
+            "name": "--add-on-request <value>",
+            "description": "--add-on-request (structure) [required] An array of strings representing the add-on to enable or modify. addOnType -> (string) [required] autoSnapshotAddOnRequest -> (structure) stopInstanceOnIdleRequest -> (structure) Shorthand Syntax: addOnType=..."
+          },
+          {
+            "name": "--add-on-request <value>",
+            "description": "--add-on-request (structure) [required] An array of strings representing the add-on to enable or modify. addOnType -> (string) [required] autoSnapshotAddOnRequest -> (structure) stopInstanceOnIdleRequest -> (structure) Shorthand Syntax: addOnType=..."
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          }
+        ]
+      },
+      {
+        "name": "export-snapshot",
+        "description": "export-snapshot command",
+        "parameters": [
+          {
+            "name": "--source-snapshot-name <value>",
+            "description": "--source-snapshot-name (string) [required] The name of the instance or disk snapshot to be exported to Amazon EC2. Constraints: +\bo pattern: \\w[\\w\\-]*\\w"
+          },
+          {
+            "name": "--source-snapshot-name <value>",
+            "description": "--source-snapshot-name (string) [required] The name of the instance or disk snapshot to be exported to Amazon EC2. Constraints: +\bo pattern: \\w[\\w\\-]*\\w"
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          }
+        ]
+      },
+      {
+        "name": "get-active-names",
+        "description": "get-active-names command",
+        "parameters": [
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the..."
+          },
+          {
+            "name": "--starting-token <value>",
+            "description": "--starting-token (string) A token to specify where to start paginating. This is the NextToken from a previously truncated response. For usage examples, see _\bP_\ba_\bg_\bi_\bn_\ba_\bt_\bi_\bo_\bn in the _\bA_\bW_\bS _\bC_\bo_\bm_\bm_\ba_\bn_\bd _\bL_\bi_\bn_\be _\bI_\bn_\b..."
+          },
+          {
+            "name": "--max-items <value>",
+            "description": "--max-items (integer) The total number of items to return in the command's output. If the total number of items available is more than the value specified, a NextToken is provided in the command's output. To resume pagination, provide the NextToke..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          }
+        ]
+      },
+      {
+        "name": "get-alarms",
+        "description": "get-alarms command",
+        "parameters": [
+          {
+            "name": "--alarm-name <value>",
+            "description": "--alarm-name (string) The name of the alarm. Specify an alarm name to return information about a specific alarm. Constraints: +\bo pattern: \\w[\\w\\-]*\\w"
+          },
+          {
+            "name": "--page-token <value>",
+            "description": "--page-token (string) The token to advance to the next page of results from your request. To get a page token, perform an initial GetAlarms request. If your results are paginated, the response will return a next page token that you can specify as ..."
+          },
+          {
+            "name": "--monitored-resource-name <value>",
+            "description": "--monitored-resource-name (string) The name of the Lightsail resource being monitored by the alarm. Specify a monitored resource name to return information about all alarms for a specific resource. Constraints: +\bo pattern: \\w[\\w\\-]*\\w"
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          }
+        ]
+      },
+      {
+        "name": "get-auto-snapshots",
+        "description": "get-auto-snapshots command",
+        "parameters": [
+          {
+            "name": "--resource-name <value>",
+            "description": "--resource-name (string) [required] The name of the source instance or disk from which to get automatic snapshot information. Constraints: +\bo pattern: \\w[\\w\\-]*\\w"
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          }
+        ]
+      },
+      {
+        "name": "get-blueprints",
+        "description": "get-blueprints command",
+        "parameters": [
+          {
+            "name": "--include-inactive | --no-include-inactive",
+            "description": "--include-inactive | --no-include-inactive (boolean) A Boolean value that indicates whether to include inactive (unavailable) blueprints in the response of your request."
+          },
+          {
+            "name": "--app-category <value>",
+            "description": "--app-category (string) Returns a list of blueprints that are specific to Lightsail for Research. WARNING: Possible values: +\bo LfR"
+          },
+          {
+            "name": "--app-category <value>",
+            "description": "--app-category (string) Returns a list of blueprints that are specific to Lightsail for Research. WARNING: Possible values: +\bo LfR"
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the..."
+          },
+          {
+            "name": "--starting-token <value>",
+            "description": "--starting-token (string) A token to specify where to start paginating. This is the NextToken from a previously truncated response. For usage examples, see _\bP_\ba_\bg_\bi_\bn_\ba_\bt_\bi_\bo_\bn in the _\bA_\bW_\bS _\bC_\bo_\bm_\bm_\ba_\bn_\bd _\bL_\bi_\bn_\be _\bI_\bn_\b..."
+          },
+          {
+            "name": "--max-items <value>",
+            "description": "--max-items (integer) The total number of items to return in the command's output. If the total number of items available is more than the value specified, a NextToken is provided in the command's output. To resume pagination, provide the NextToke..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          }
+        ]
+      },
+      {
+        "name": "get-bucket-access-keys",
+        "description": "get-bucket-access-keys command",
+        "parameters": [
+          {
+            "name": "--bucket-name <value>",
+            "description": "--bucket-name (string) [required] The name of the bucket for which to return access keys. Constraints: +\bo min: 3 +\bo max: 54 +\bo pattern: ^[a-z0-9][a-z0-9-]{1,52}[a-z0-9]$"
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          }
+        ]
+      },
+      {
+        "name": "get-bucket-bundles",
+        "description": "get-bucket-bundles command",
+        "parameters": [
+          {
+            "name": "--include-inactive | --no-include-inactive",
+            "description": "--include-inactive | --no-include-inactive (boolean) A Boolean value that indicates whether to include inactive (unavailable) bundles in the response of your request."
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          }
+        ]
+      },
+      {
+        "name": "get-bucket-metric-data",
+        "description": "get-bucket-metric-data command",
+        "parameters": [
+          {
+            "name": "--bucket-name <value>",
+            "description": "--bucket-name (string) [required] The name of the bucket for which to get metric data. Constraints: +\bo min: 3 +\bo max: 54 +\bo pattern: ^[a-z0-9][a-z0-9-]{1,52}[a-z0-9]$"
+          },
+          {
+            "name": "--metric-name <value>",
+            "description": "--metric-name (string) [required] The metric for which you want to return information. Valid bucket metric names are listed below, along with the most useful statistics to include in your request, and the published unit value. NOTE: +\bo System Mes..."
+          },
+          {
+            "name": "--metric-name <value>",
+            "description": "--metric-name (string) [required] The metric for which you want to return information. Valid bucket metric names are listed below, along with the most useful statistics to include in your request, and the published unit value. NOTE: +\bo System Mes..."
+          },
+          {
+            "name": "--start-time <value>",
+            "description": "--start-time (timestamp) [required] The timestamp indicating the earliest data to be returned."
+          },
+          {
+            "name": "--end-time <value>",
+            "description": "--end-time (timestamp) [required] The timestamp indicating the latest data to be returned."
+          },
+          {
+            "name": "--period <value>",
+            "description": "--period (integer) [required] The granularity, in seconds, of the returned data points. NOTE: Constraints: +\bo min: 60 +\bo max: 86400"
+          },
+          {
+            "name": "--period <value>",
+            "description": "--period (integer) [required] The granularity, in seconds, of the returned data points. NOTE: Constraints: +\bo min: 60 +\bo max: 86400"
+          },
+          {
+            "name": "--statistics <value>",
+            "description": "--statistics (list) [required] The statistic for the metric. The following statistics are available: +\bo Minimum - The lowest value observed during the specified period. +\bo Maximum - The highest value observed during the specified period. +\bo Sum..."
+          },
+          {
+            "name": "--unit <value>",
+            "description": "--unit (string) [required] The unit for the metric data request. Valid units depend on the metric data being requested. For the valid units with each available metric, see the metricName parameter. Possible values: +\bo Seconds +\bo Microseconds +\bo..."
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          }
+        ]
+      },
+      {
+        "name": "get-buckets",
+        "description": "get-buckets command",
+        "parameters": [
+          {
+            "name": "--bucket-name <value>",
+            "description": "--bucket-name (string) The name of the bucket for which to return information. When omitted, the response includes all of your buckets in the Amazon Web Services Region where the request is made. Constraints: +\bo min: 3 +\bo max: 54 +\bo pattern: ^[..."
+          },
+          {
+            "name": "--page-token <value>",
+            "description": "--page-token (string) The token to advance to the next page of results from your request. To get a page token, perform an initial GetBuckets request. If your results are paginated, the response will return a next page token that you can specify as..."
+          },
+          {
+            "name": "--include-connected-resources | --no-include-connected-resources",
+            "description": "--include-connected-resources | --no-include-connected-resources (boolean) A Boolean value that indicates whether to include Lightsail instances that were given access to the bucket using the _\bS_\be_\bt_\bR_\be_\bs_\bo_\bu_\br_\bc_\be_\bA_\bc_\bc_\be_\bs_\bs_\bF_..."
+          },
+          {
+            "name": "--include-cors | --no-include-cors",
+            "description": "--include-cors | --no-include-cors (boolean) A Boolean value that indicates whether to include Lightsail bucket CORS configuration in the response. For more information, see _\bC_\bo_\bn_\bf_\bi_\bg_\bu_\br_\bi_\bn_\bg _\bc_\br_\bo_\bs_\bs_\b-_\bo_\br_\bi_\bg_\bi_\bn _\b..."
+          },
+          {
+            "name": "--include-cors | --no-include-cors",
+            "description": "--include-cors | --no-include-cors (boolean) A Boolean value that indicates whether to include Lightsail bucket CORS configuration in the response. For more information, see _\bC_\bo_\bn_\bf_\bi_\bg_\bu_\br_\bi_\bn_\bg _\bc_\br_\bo_\bs_\bs_\b-_\bo_\br_\bi_\bg_\bi_\bn _\b..."
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          }
+        ]
+      },
+      {
+        "name": "get-bundles",
+        "description": "get-bundles command",
+        "parameters": [
+          {
+            "name": "--include-inactive | --no-include-inactive",
+            "description": "--include-inactive | --no-include-inactive (boolean) A Boolean value that indicates whether to include inactive (unavailable) bundles in the response of your request."
+          },
+          {
+            "name": "--app-category <value>",
+            "description": "--app-category (string) Returns a list of bundles that are specific to Lightsail for Research. WARNING: Possible values: +\bo LfR"
+          },
+          {
+            "name": "--app-category <value>",
+            "description": "--app-category (string) Returns a list of bundles that are specific to Lightsail for Research. WARNING: Possible values: +\bo LfR"
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the..."
+          },
+          {
+            "name": "--starting-token <value>",
+            "description": "--starting-token (string) A token to specify where to start paginating. This is the NextToken from a previously truncated response. For usage examples, see _\bP_\ba_\bg_\bi_\bn_\ba_\bt_\bi_\bo_\bn in the _\bA_\bW_\bS _\bC_\bo_\bm_\bm_\ba_\bn_\bd _\bL_\bi_\bn_\be _\bI_\bn_\b..."
+          },
+          {
+            "name": "--max-items <value>",
+            "description": "--max-items (integer) The total number of items to return in the command's output. If the total number of items available is more than the value specified, a NextToken is provided in the command's output. To resume pagination, provide the NextToke..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          }
+        ]
+      },
+      {
+        "name": "get-certificates",
+        "description": "get-certificates command",
+        "parameters": [
+          {
+            "name": "--certificate-statuses <value>",
+            "description": "--certificate-statuses (list) The status of the certificates for which to return information. For example, specify ISSUED to return only certificates with an ISSUED status. When omitted, the response includes all of your certificates in the Amazon..."
+          },
+          {
+            "name": "--include-certificate-details | --no-include-certificate-details",
+            "description": "--include-certificate-details | --no-include-certificate-details (boolean) Indicates whether to include detailed information about the certificates in the response. When omitted, the response includes only the certificate names, Amazon Resource Na..."
+          },
+          {
+            "name": "--certificate-name <value>",
+            "description": "--certificate-name (string) The name for the certificate for which to return information. When omitted, the response includes all of your certificates in the Amazon Web Services Region where the request is made."
+          },
+          {
+            "name": "--page-token <value>",
+            "description": "--page-token (string) The token to advance to the next page of results from your request. To get a page token, perform an initial GetCertificates request. If your results are paginated, the response will return a next page token that you can speci..."
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          }
+        ]
+      },
+      {
+        "name": "get-cloud-formation-stack-records",
+        "description": "get-cloud-formation-stack-records command",
+        "parameters": [
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the..."
+          },
+          {
+            "name": "--starting-token <value>",
+            "description": "--starting-token (string) A token to specify where to start paginating. This is the NextToken from a previously truncated response. For usage examples, see _\bP_\ba_\bg_\bi_\bn_\ba_\bt_\bi_\bo_\bn in the _\bA_\bW_\bS _\bC_\bo_\bm_\bm_\ba_\bn_\bd _\bL_\bi_\bn_\be _\bI_\bn_\b..."
+          },
+          {
+            "name": "--max-items <value>",
+            "description": "--max-items (integer) The total number of items to return in the command's output. If the total number of items available is more than the value specified, a NextToken is provided in the command's output. To resume pagination, provide the NextToke..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          }
+        ]
+      },
+      {
+        "name": "get-contact-methods",
+        "description": "get-contact-methods command",
+        "parameters": [
+          {
+            "name": "--protocols <value>",
+            "description": "--protocols (list) The protocols used to send notifications, such as Email , or SMS (text messaging). Specify a protocol in your request to return information about a specific contact method protocol. (string) Syntax: \"string\" \"string\" ..."
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          }
+        ]
+      },
+      {
+        "name": "get-container-api-metadata",
+        "description": "get-container-api-metadata command",
+        "parameters": [
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          }
+        ]
+      },
+      {
+        "name": "get-container-images",
+        "description": "get-container-images command",
+        "parameters": [
+          {
+            "name": "--service-name <value>",
+            "description": "--service-name (string) [required] The name of the container service for which to return registered container images. Constraints: +\bo min: 1 +\bo max: 63 +\bo pattern: ^[a-z0-9]{1,2}|[a-z0-9][a-z0-9-]+[a-z0-9]$"
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          }
+        ]
+      },
+      {
+        "name": "get-container-log",
+        "description": "get-container-log command",
+        "parameters": [
+          {
+            "name": "--service-name <value>",
+            "description": "--service-name (string) [required] The name of the container service for which to get a container log. Constraints: +\bo min: 1 +\bo max: 63 +\bo pattern: ^[a-z0-9]{1,2}|[a-z0-9][a-z0-9-]+[a-z0-9]$"
+          },
+          {
+            "name": "--container-name <value>",
+            "description": "--container-name (string) [required] The name of the container that is either running or previously ran on the container service for which to return a log."
+          },
+          {
+            "name": "--start-time <value>",
+            "description": "--start-time (timestamp) The start of the time interval for which to get log data. Constraints: +\bo Specified in Coordinated Universal Time (UTC). +\bo Specified in the Unix time format. For example, if you wish to use You can convert a human-frien..."
+          },
+          {
+            "name": "--end-time <value>",
+            "description": "--end-time (timestamp) The end of the time interval for which to get log data. Constraints: +\bo Specified in Coordinated Universal Time (UTC). +\bo Specified in the Unix time format. For example, if you wish to use You can convert a human-friendly ..."
+          },
+          {
+            "name": "--filter-pattern <value>",
+            "description": "--filter-pattern (string) The pattern to use to filter the returned log events to a specific term. The following are a few examples of filter patterns that you can specify: +\bo To return all log events, specify a filter pattern of \"\" . +\bo To excl..."
+          },
+          {
+            "name": "--page-token <value>",
+            "description": "--page-token (string) The token to advance to the next page of results from your request. To get a page token, perform an initial GetContainerLog request. If your results are paginated, the response will return a next page token that you can speci..."
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          }
+        ]
+      },
+      {
+        "name": "get-container-service-deployments",
+        "description": "get-container-service-deployments command",
+        "parameters": [
+          {
+            "name": "--service-name <value>",
+            "description": "--service-name (string) [required] The name of the container service for which to return deployments. Constraints: +\bo min: 1 +\bo max: 63 +\bo pattern: ^[a-z0-9]{1,2}|[a-z0-9][a-z0-9-]+[a-z0-9]$"
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          }
+        ]
+      },
+      {
+        "name": "get-container-service-metric-data",
+        "description": "get-container-service-metric-data command",
+        "parameters": [
+          {
+            "name": "--service-name <value>",
+            "description": "--service-name (string) [required] The name of the container service for which to get metric data. Constraints: +\bo min: 1 +\bo max: 63 +\bo pattern: ^[a-z0-9]{1,2}|[a-z0-9][a-z0-9-]+[a-z0-9]$"
+          },
+          {
+            "name": "--metric-name <value>",
+            "description": "--metric-name (string) [required] The metric for which you want to return information. Valid container service metric names are listed below, along with the most useful statistics to include in your request, and the published unit value. +\bo CPUUt..."
+          },
+          {
+            "name": "--start-time <value>",
+            "description": "--start-time (timestamp) [required] The start time of the time period."
+          },
+          {
+            "name": "--end-time <value>",
+            "description": "--end-time (timestamp) [required] The end time of the time period."
+          },
+          {
+            "name": "--period <value>",
+            "description": "--period (integer) [required] The granularity, in seconds, of the returned data points. All container service metric data is available in 5-minute (300 seconds) granularity. Constraints: +\bo min: 60 +\bo max: 86400"
+          },
+          {
+            "name": "--statistics <value>",
+            "description": "--statistics (list) [required] The statistic for the metric. The following statistics are available: +\bo Minimum - The lowest value observed during the specified period. +\bo Maximum - The highest value observed during the specified period. +\bo Sum..."
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          }
+        ]
+      },
+      {
+        "name": "get-container-service-powers",
+        "description": "get-container-service-powers command",
+        "parameters": [
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          }
+        ]
+      },
+      {
+        "name": "get-container-services",
+        "description": "get-container-services command",
+        "parameters": [
+          {
+            "name": "--service-name <value>",
+            "description": "--service-name (string) The name of the container service for which to return information. When omitted, the response includes all of your container services in the Amazon Web Services Region where the request is made. Constraints: +\bo min: 1 +\bo ..."
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          }
+        ]
+      },
+      {
+        "name": "get-cost-estimate",
+        "description": "get-cost-estimate command",
+        "parameters": [
+          {
+            "name": "--resource-name <value>",
+            "description": "--resource-name (string) [required] The resource name. Constraints: +\bo pattern: \\w[\\w\\-]*\\w"
+          },
+          {
+            "name": "--start-time <value>",
+            "description": "--start-time (timestamp) [required] The cost estimate start time. Constraints: +\bo Specified in Coordinated Universal Time (UTC). +\bo Specified in the Unix time format. For example, if you want to use You can convert a human-friendly time to Unix ..."
+          },
+          {
+            "name": "--end-time <value>",
+            "description": "--end-time (timestamp) [required] The cost estimate end time. Constraints: +\bo Specified in Coordinated Universal Time (UTC). +\bo Specified in the Unix time format. For example, if you want to use You can convert a human-friendly time to Unix time..."
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          }
+        ]
+      },
+      {
+        "name": "get-disk",
+        "description": "get-disk command",
+        "parameters": [
+          {
+            "name": "--disk-name <value>",
+            "description": "--disk-name (string) [required] The name of the disk (my-disk ). Constraints: +\bo pattern: \\w[\\w\\-]*\\w"
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          }
+        ]
+      },
+      {
+        "name": "get-disk-snapshot",
+        "description": "get-disk-snapshot command",
+        "parameters": [
+          {
+            "name": "--disk-snapshot-name <value>",
+            "description": "--disk-snapshot-name (string) [required] The name of the disk snapshot (my-disk-snapshot ). Constraints: +\bo pattern: \\w[\\w\\-]*\\w"
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          }
+        ]
+      },
+      {
+        "name": "get-disk-snapshots",
+        "description": "get-disk-snapshots command",
+        "parameters": [
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the..."
+          },
+          {
+            "name": "--starting-token <value>",
+            "description": "--starting-token (string) A token to specify where to start paginating. This is the NextToken from a previously truncated response. For usage examples, see _\bP_\ba_\bg_\bi_\bn_\ba_\bt_\bi_\bo_\bn in the _\bA_\bW_\bS _\bC_\bo_\bm_\bm_\ba_\bn_\bd _\bL_\bi_\bn_\be _\bI_\bn_\b..."
+          },
+          {
+            "name": "--max-items <value>",
+            "description": "--max-items (integer) The total number of items to return in the command's output. If the total number of items available is more than the value specified, a NextToken is provided in the command's output. To resume pagination, provide the NextToke..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          }
+        ]
+      },
+      {
+        "name": "get-disks",
+        "description": "get-disks command",
+        "parameters": [
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the..."
+          },
+          {
+            "name": "--starting-token <value>",
+            "description": "--starting-token (string) A token to specify where to start paginating. This is the NextToken from a previously truncated response. For usage examples, see _\bP_\ba_\bg_\bi_\bn_\ba_\bt_\bi_\bo_\bn in the _\bA_\bW_\bS _\bC_\bo_\bm_\bm_\ba_\bn_\bd _\bL_\bi_\bn_\be _\bI_\bn_\b..."
+          },
+          {
+            "name": "--max-items <value>",
+            "description": "--max-items (integer) The total number of items to return in the command's output. If the total number of items available is more than the value specified, a NextToken is provided in the command's output. To resume pagination, provide the NextToke..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          }
+        ]
+      },
+      {
+        "name": "get-distribution-bundles",
+        "description": "get-distribution-bundles command",
+        "parameters": [
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          }
+        ]
+      },
+      {
+        "name": "get-distribution-latest-cache-reset",
+        "description": "get-distribution-latest-cache-reset command",
+        "parameters": [
+          {
+            "name": "--distribution-name <value>",
+            "description": "--distribution-name (string) The name of the distribution for which to return the timestamp of the last cache reset. Use the GetDistributions action to get a list of distribution names that you can specify. When omitted, the response includes the ..."
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          }
+        ]
+      },
+      {
+        "name": "get-distribution-metric-data",
+        "description": "get-distribution-metric-data command",
+        "parameters": [
+          {
+            "name": "--distribution-name <value>",
+            "description": "--distribution-name (string) [required] The name of the distribution for which to get metric data. Use the GetDistributions action to get a list of distribution names that you can specify. Constraints: +\bo pattern: \\w[\\w\\-]*\\w"
+          },
+          {
+            "name": "--metric-name <value>",
+            "description": "--metric-name (string) [required] The metric for which you want to return information. Valid distribution metric names are listed below, along with the most useful statistics to include in your request, and the published unit value. +\bo System Mes..."
+          },
+          {
+            "name": "--start-time <value>",
+            "description": "--start-time (timestamp) [required] The start of the time interval for which to get metric data. Constraints: +\bo Specified in Coordinated Universal Time (UTC). +\bo Specified in the Unix time format. For example, if you wish to use You can convert..."
+          },
+          {
+            "name": "--end-time <value>",
+            "description": "--end-time (timestamp) [required] The end of the time interval for which to get metric data. Constraints: +\bo Specified in Coordinated Universal Time (UTC). +\bo Specified in the Unix time format. For example, if you wish to use You can convert a h..."
+          },
+          {
+            "name": "--period <value>",
+            "description": "--period (integer) [required] The granularity, in seconds, for the metric data points that will be returned. Constraints: +\bo min: 60 +\bo max: 86400"
+          },
+          {
+            "name": "--unit <value>",
+            "description": "--unit (string) [required] The unit for the metric data request. Valid units depend on the metric data being requested. For the valid units with each available metric, see the metricName parameter. Possible values: +\bo Seconds +\bo Microseconds +\bo..."
+          },
+          {
+            "name": "--statistics <value>",
+            "description": "--statistics (list) [required] The statistic for the metric. The following statistics are available: +\bo Minimum - The lowest value observed during the specified period. +\bo Maximum - The highest value observed during the specified period. +\bo Sum..."
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          }
+        ]
+      },
+      {
+        "name": "get-distributions",
+        "description": "get-distributions command",
+        "parameters": [
+          {
+            "name": "--distribution-name <value>",
+            "description": "--distribution-name (string) The name of the distribution for which to return information. When omitted, the response includes all of your distributions in the Amazon Web Services Region where the request is made. Constraints: +\bo pattern: \\w[\\w\\-..."
+          },
+          {
+            "name": "--page-token <value>",
+            "description": "--page-token (string) The token to advance to the next page of results from your request. To get a page token, perform an initial GetDistributions request. If your results are paginated, the response will return a next page token that you can spec..."
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          }
+        ]
+      },
+      {
+        "name": "get-domain",
+        "description": "get-domain command",
+        "parameters": [
+          {
+            "name": "--domain-name <value>",
+            "description": "--domain-name (string) [required] The domain name for which your want to return information about."
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          }
+        ]
+      },
+      {
+        "name": "get-domains",
+        "description": "get-domains command",
+        "parameters": [
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the..."
+          },
+          {
+            "name": "--starting-token <value>",
+            "description": "--starting-token (string) A token to specify where to start paginating. This is the NextToken from a previously truncated response. For usage examples, see _\bP_\ba_\bg_\bi_\bn_\ba_\bt_\bi_\bo_\bn in the _\bA_\bW_\bS _\bC_\bo_\bm_\bm_\ba_\bn_\bd _\bL_\bi_\bn_\be _\bI_\bn_\b..."
+          },
+          {
+            "name": "--max-items <value>",
+            "description": "--max-items (integer) The total number of items to return in the command's output. If the total number of items available is more than the value specified, a NextToken is provided in the command's output. To resume pagination, provide the NextToke..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          }
+        ]
+      },
+      {
+        "name": "get-export-snapshot-records",
+        "description": "get-export-snapshot-records command",
+        "parameters": [
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the..."
+          },
+          {
+            "name": "--starting-token <value>",
+            "description": "--starting-token (string) A token to specify where to start paginating. This is the NextToken from a previously truncated response. For usage examples, see _\bP_\ba_\bg_\bi_\bn_\ba_\bt_\bi_\bo_\bn in the _\bA_\bW_\bS _\bC_\bo_\bm_\bm_\ba_\bn_\bd _\bL_\bi_\bn_\be _\bI_\bn_\b..."
+          },
+          {
+            "name": "--max-items <value>",
+            "description": "--max-items (integer) The total number of items to return in the command's output. If the total number of items available is more than the value specified, a NextToken is provided in the command's output. To resume pagination, provide the NextToke..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          }
+        ]
+      },
+      {
+        "name": "get-instance",
+        "description": "get-instance command",
+        "parameters": [
+          {
+            "name": "--instance-name <value>",
+            "description": "--instance-name (string) [required] The name of the instance. Constraints: +\bo pattern: \\w[\\w\\-]*\\w"
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          }
+        ]
+      },
+      {
+        "name": "get-instance-access-details",
+        "description": "get-instance-access-details command",
+        "parameters": [
+          {
+            "name": "--instance-name <value>",
+            "description": "--instance-name (string) [required] The name of the instance to access. Constraints: +\bo pattern: \\w[\\w\\-]*\\w"
+          },
+          {
+            "name": "--protocol <value>",
+            "description": "--protocol (string) The protocol to use to connect to your instance. Defaults to ssh . Possible values: +\bo ssh +\bo rdp"
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          }
+        ]
+      },
+      {
+        "name": "get-instance-metric-data",
+        "description": "get-instance-metric-data command",
+        "parameters": [
+          {
+            "name": "--instance-name <value>",
+            "description": "--instance-name (string) [required] The name of the instance for which you want to get metrics data. Constraints: +\bo pattern: \\w[\\w\\-]*\\w"
+          },
+          {
+            "name": "--metric-name <value>",
+            "description": "--metric-name (string) [required] The metric for which you want to return information. Valid instance metric names are listed below, along with the most useful statistics to include in your request, and the published unit value. +\bo System Message..."
+          },
+          {
+            "name": "--period <value>",
+            "description": "--period (integer) [required] The granularity, in seconds, of the returned data points. The StatusCheckFailed , StatusCheckFailed_Instance , and StatusCheckFailed_System instance metric data is available in 1-minute (60 seconds) granularity. All o..."
+          },
+          {
+            "name": "--start-time <value>",
+            "description": "--start-time (timestamp) [required] The start time of the time period."
+          },
+          {
+            "name": "--end-time <value>",
+            "description": "--end-time (timestamp) [required] The end time of the time period."
+          },
+          {
+            "name": "--unit <value>",
+            "description": "--unit (string) [required] The unit for the metric data request. Valid units depend on the metric data being requested. For the valid units to specify with each available metric, see the metricName parameter. Possible values: +\bo Seconds +\bo Micro..."
+          },
+          {
+            "name": "--statistics <value>",
+            "description": "--statistics (list) [required] The statistic for the metric. The following statistics are available: +\bo Minimum - The lowest value observed during the specified period. +\bo Maximum - The highest value observed during the specified period. +\bo Sum..."
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          }
+        ]
+      },
+      {
+        "name": "get-instance-port-states",
+        "description": "get-instance-port-states command",
+        "parameters": [
+          {
+            "name": "--instance-name <value>",
+            "description": "--instance-name (string) [required] The name of the instance for which to return firewall port states. Constraints: +\bo pattern: \\w[\\w\\-]*\\w"
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          }
+        ]
+      },
+      {
+        "name": "get-instance-snapshot",
+        "description": "get-instance-snapshot command",
+        "parameters": [
+          {
+            "name": "--instance-snapshot-name <value>",
+            "description": "--instance-snapshot-name (string) [required] The name of the snapshot for which you are requesting information. Constraints: +\bo pattern: \\w[\\w\\-]*\\w"
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          }
+        ]
+      },
+      {
+        "name": "get-instance-snapshots",
+        "description": "get-instance-snapshots command",
+        "parameters": [
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the..."
+          },
+          {
+            "name": "--starting-token <value>",
+            "description": "--starting-token (string) A token to specify where to start paginating. This is the NextToken from a previously truncated response. For usage examples, see _\bP_\ba_\bg_\bi_\bn_\ba_\bt_\bi_\bo_\bn in the _\bA_\bW_\bS _\bC_\bo_\bm_\bm_\ba_\bn_\bd _\bL_\bi_\bn_\be _\bI_\bn_\b..."
+          },
+          {
+            "name": "--max-items <value>",
+            "description": "--max-items (integer) The total number of items to return in the command's output. If the total number of items available is more than the value specified, a NextToken is provided in the command's output. To resume pagination, provide the NextToke..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          }
+        ]
+      },
+      {
+        "name": "get-instance-state",
+        "description": "get-instance-state command",
+        "parameters": [
+          {
+            "name": "--instance-name <value>",
+            "description": "--instance-name (string) [required] The name of the instance to get state information about. Constraints: +\bo pattern: \\w[\\w\\-]*\\w"
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          }
+        ]
+      },
+      {
         "name": "get-instances",
         "description": "Gets instance information",
         "parameters": [
@@ -46378,6 +49314,1816 @@ export const awsServices: Service[] = [
           {
             "name": "--max-items <value>",
             "description": "--max-items (integer) The total number of items to return in the command's output. If the total number of items available is more than the value specified, a NextToken is provided in the command's output. To resume pagination, provide the NextToke..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          }
+        ]
+      },
+      {
+        "name": "get-key-pair",
+        "description": "get-key-pair command",
+        "parameters": [
+          {
+            "name": "--key-pair-name <value>",
+            "description": "--key-pair-name (string) [required] The name of the key pair for which you are requesting information. Constraints: +\bo pattern: \\w[\\w\\-]*\\w"
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          }
+        ]
+      },
+      {
+        "name": "get-key-pairs",
+        "description": "get-key-pairs command",
+        "parameters": [
+          {
+            "name": "--include-default-key-pair | --no-include-default-key-pair",
+            "description": "--include-default-key-pair | --no-include-default-key-pair (boolean) A Boolean value that indicates whether to include the default key pair in the response of your request."
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the..."
+          },
+          {
+            "name": "--starting-token <value>",
+            "description": "--starting-token (string) A token to specify where to start paginating. This is the NextToken from a previously truncated response. For usage examples, see _\bP_\ba_\bg_\bi_\bn_\ba_\bt_\bi_\bo_\bn in the _\bA_\bW_\bS _\bC_\bo_\bm_\bm_\ba_\bn_\bd _\bL_\bi_\bn_\be _\bI_\bn_\b..."
+          },
+          {
+            "name": "--max-items <value>",
+            "description": "--max-items (integer) The total number of items to return in the command's output. If the total number of items available is more than the value specified, a NextToken is provided in the command's output. To resume pagination, provide the NextToke..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          }
+        ]
+      },
+      {
+        "name": "get-load-balancer",
+        "description": "get-load-balancer command",
+        "parameters": [
+          {
+            "name": "--load-balancer-name <value>",
+            "description": "--load-balancer-name (string) [required] The name of the load balancer. Constraints: +\bo pattern: \\w[\\w\\-]*\\w"
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          }
+        ]
+      },
+      {
+        "name": "get-load-balancer-metric-data",
+        "description": "get-load-balancer-metric-data command",
+        "parameters": [
+          {
+            "name": "--load-balancer-name <value>",
+            "description": "--load-balancer-name (string) [required] The name of the load balancer. Constraints: +\bo pattern: \\w[\\w\\-]*\\w"
+          },
+          {
+            "name": "--metric-name <value>",
+            "description": "--metric-name (string) [required] The metric for which you want to return information. Valid load balancer metric names are listed below, along with the most useful statistics to include in your request, and the published unit value. +\bo System Me..."
+          },
+          {
+            "name": "--period <value>",
+            "description": "--period (integer) [required] The granularity, in seconds, of the returned data points. Constraints: +\bo min: 60 +\bo max: 86400"
+          },
+          {
+            "name": "--start-time <value>",
+            "description": "--start-time (timestamp) [required] The start time of the period."
+          },
+          {
+            "name": "--end-time <value>",
+            "description": "--end-time (timestamp) [required] The end time of the period."
+          },
+          {
+            "name": "--unit <value>",
+            "description": "--unit (string) [required] The unit for the metric data request. Valid units depend on the metric data being requested. For the valid units with each available metric, see the metricName parameter. Possible values: +\bo Seconds +\bo Microseconds +\bo..."
+          },
+          {
+            "name": "--statistics <value>",
+            "description": "--statistics (list) [required] The statistic for the metric. The following statistics are available: +\bo Minimum - The lowest value observed during the specified period. +\bo Maximum - The highest value observed during the specified period. +\bo Sum..."
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          }
+        ]
+      },
+      {
+        "name": "get-load-balancer-tls-certificates",
+        "description": "get-load-balancer-tls-certificates command",
+        "parameters": [
+          {
+            "name": "--load-balancer-name <value>",
+            "description": "--load-balancer-name (string) [required] The name of the load balancer you associated with your SSL/TLS certificate. Constraints: +\bo pattern: \\w[\\w\\-]*\\w"
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          }
+        ]
+      },
+      {
+        "name": "get-load-balancer-tls-policies",
+        "description": "get-load-balancer-tls-policies command",
+        "parameters": [
+          {
+            "name": "--page-token <value>",
+            "description": "--page-token (string) The token to advance to the next page of results from your request. To get a page token, perform an initial GetLoadBalancerTlsPolicies request. If your results are paginated, the response will return a next page token that yo..."
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          }
+        ]
+      },
+      {
+        "name": "get-load-balancers",
+        "description": "get-load-balancers command",
+        "parameters": [
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the..."
+          },
+          {
+            "name": "--starting-token <value>",
+            "description": "--starting-token (string) A token to specify where to start paginating. This is the NextToken from a previously truncated response. For usage examples, see _\bP_\ba_\bg_\bi_\bn_\ba_\bt_\bi_\bo_\bn in the _\bA_\bW_\bS _\bC_\bo_\bm_\bm_\ba_\bn_\bd _\bL_\bi_\bn_\be _\bI_\bn_\b..."
+          },
+          {
+            "name": "--max-items <value>",
+            "description": "--max-items (integer) The total number of items to return in the command's output. If the total number of items available is more than the value specified, a NextToken is provided in the command's output. To resume pagination, provide the NextToke..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          }
+        ]
+      },
+      {
+        "name": "get-operation",
+        "description": "get-operation command",
+        "parameters": [
+          {
+            "name": "--operation-id <value>",
+            "description": "--operation-id (string) [required] A GUID used to identify the operation. Constraints: +\bo pattern: .*\\S.*"
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          }
+        ]
+      },
+      {
+        "name": "get-operations",
+        "description": "get-operations command",
+        "parameters": [
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the..."
+          },
+          {
+            "name": "--starting-token <value>",
+            "description": "--starting-token (string) A token to specify where to start paginating. This is the NextToken from a previously truncated response. For usage examples, see _\bP_\ba_\bg_\bi_\bn_\ba_\bt_\bi_\bo_\bn in the _\bA_\bW_\bS _\bC_\bo_\bm_\bm_\ba_\bn_\bd _\bL_\bi_\bn_\be _\bI_\bn_\b..."
+          },
+          {
+            "name": "--max-items <value>",
+            "description": "--max-items (integer) The total number of items to return in the command's output. If the total number of items available is more than the value specified, a NextToken is provided in the command's output. To resume pagination, provide the NextToke..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          }
+        ]
+      },
+      {
+        "name": "get-operations-for-resource",
+        "description": "get-operations-for-resource command",
+        "parameters": [
+          {
+            "name": "--resource-name <value>",
+            "description": "--resource-name (string) [required] The name of the resource for which you are requesting information. Constraints: +\bo pattern: \\w[\\w\\-]*\\w"
+          },
+          {
+            "name": "--page-token <value>",
+            "description": "--page-token (string) The token to advance to the next page of results from your request. To get a page token, perform an initial GetOperationsForResource request. If your results are paginated, the response will return a next page token that you ..."
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          }
+        ]
+      },
+      {
+        "name": "get-regions",
+        "description": "get-regions command",
+        "parameters": [
+          {
+            "name": "--include-availability-zones | --no-include-availability-zones",
+            "description": "--include-availability-zones | --no-include-availability-zones (boolean) A Boolean value indicating whether to also include Availability Zones in your get regions request. Availability Zones are indicated with a letter: us-east-2a . --include-rela..."
+          },
+          {
+            "name": "--no-include-relational-database-availability-zones | --no-no-include-relational-database-availability-zones",
+            "description": "--no-include-relational-database-availability-zones (boolean) A Boolean value indicating whether to also include Availability Zones for databases in your get regions request. Availability Zones are indicated with a letter (us-east-2a )."
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          }
+        ]
+      },
+      {
+        "name": "get-relational-database",
+        "description": "get-relational-database command",
+        "parameters": [
+          {
+            "name": "--relational-database-name <value>",
+            "description": "--relational-database-name (string) [required] The name of the database that you are looking up. Constraints: +\bo pattern: \\w[\\w\\-]*\\w"
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          }
+        ]
+      },
+      {
+        "name": "get-relational-database-blueprints",
+        "description": "get-relational-database-blueprints command",
+        "parameters": [
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the..."
+          },
+          {
+            "name": "--starting-token <value>",
+            "description": "--starting-token (string) A token to specify where to start paginating. This is the NextToken from a previously truncated response. For usage examples, see _\bP_\ba_\bg_\bi_\bn_\ba_\bt_\bi_\bo_\bn in the _\bA_\bW_\bS _\bC_\bo_\bm_\bm_\ba_\bn_\bd _\bL_\bi_\bn_\be _\bI_\bn_\b..."
+          },
+          {
+            "name": "--max-items <value>",
+            "description": "--max-items (integer) The total number of items to return in the command's output. If the total number of items available is more than the value specified, a NextToken is provided in the command's output. To resume pagination, provide the NextToke..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          }
+        ]
+      },
+      {
+        "name": "get-relational-database-bundles",
+        "description": "get-relational-database-bundles command",
+        "parameters": [
+          {
+            "name": "--include-inactive | --no-include-inactive",
+            "description": "--include-inactive | --no-include-inactive (boolean) A Boolean value that indicates whether to include inactive (unavailable) bundles in the response of your request."
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the..."
+          },
+          {
+            "name": "--starting-token <value>",
+            "description": "--starting-token (string) A token to specify where to start paginating. This is the NextToken from a previously truncated response. For usage examples, see _\bP_\ba_\bg_\bi_\bn_\ba_\bt_\bi_\bo_\bn in the _\bA_\bW_\bS _\bC_\bo_\bm_\bm_\ba_\bn_\bd _\bL_\bi_\bn_\be _\bI_\bn_\b..."
+          },
+          {
+            "name": "--max-items <value>",
+            "description": "--max-items (integer) The total number of items to return in the command's output. If the total number of items available is more than the value specified, a NextToken is provided in the command's output. To resume pagination, provide the NextToke..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          }
+        ]
+      },
+      {
+        "name": "get-relational-database-events",
+        "description": "get-relational-database-events command",
+        "parameters": [
+          {
+            "name": "--relational-database-name <value>",
+            "description": "--relational-database-name (string) [required] The name of the database from which to get events. Constraints: +\bo pattern: \\w[\\w\\-]*\\w"
+          },
+          {
+            "name": "--duration-in-minutes <value>",
+            "description": "--duration-in-minutes (integer) The number of minutes in the past from which to retrieve events. For example, to get all events from the past 2 hours, enter 120. Default: 60 The minimum is 1 and the maximum is 14 days (20160 minutes)."
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the..."
+          },
+          {
+            "name": "--starting-token <value>",
+            "description": "--starting-token (string) A token to specify where to start paginating. This is the NextToken from a previously truncated response. For usage examples, see _\bP_\ba_\bg_\bi_\bn_\ba_\bt_\bi_\bo_\bn in the _\bA_\bW_\bS _\bC_\bo_\bm_\bm_\ba_\bn_\bd _\bL_\bi_\bn_\be _\bI_\bn_\b..."
+          },
+          {
+            "name": "--max-items <value>",
+            "description": "--max-items (integer) The total number of items to return in the command's output. If the total number of items available is more than the value specified, a NextToken is provided in the command's output. To resume pagination, provide the NextToke..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          }
+        ]
+      },
+      {
+        "name": "get-relational-database-log-events",
+        "description": "get-relational-database-log-events command",
+        "parameters": [
+          {
+            "name": "--relational-database-name <value>",
+            "description": "--relational-database-name (string) [required] The name of your database for which to get log events. Constraints: +\bo pattern: \\w[\\w\\-]*\\w"
+          },
+          {
+            "name": "--log-stream-name <value>",
+            "description": "--log-stream-name (string) [required] The name of the log stream. Use the get relational database log streams operation to get a list of available log streams."
+          },
+          {
+            "name": "--start-time <value>",
+            "description": "--start-time (timestamp) The start of the time interval from which to get log events. Constraints: +\bo Specified in Coordinated Universal Time (UTC). +\bo Specified in the Unix time format. For example, if you wish to use"
+          },
+          {
+            "name": "--end-time <value>",
+            "description": "--end-time (timestamp) The end of the time interval from which to get log events. Constraints: +\bo Specified in Coordinated Universal Time (UTC). +\bo Specified in the Unix time format. For example, if you wish to use"
+          },
+          {
+            "name": "--start-from-head | --no-start-from-head",
+            "description": "--start-from-head | --no-start-from-head (boolean) Parameter to specify if the log should start from head or tail. If true is specified, the log event starts from the head of the log. If false is specified, the log event starts from the tail of th..."
+          },
+          {
+            "name": "--start-from-head | --no-start-from-head",
+            "description": "--start-from-head | --no-start-from-head (boolean) Parameter to specify if the log should start from head or tail. If true is specified, the log event starts from the head of the log. If false is specified, the log event starts from the tail of th..."
+          },
+          {
+            "name": "--page-token <value>",
+            "description": "--page-token (string) The token to advance to the next or previous page of results from your request. To get a page token, perform an initial GetRelationalDatabaseLogEvents request. If your results are paginated, the response will return a next fo..."
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          }
+        ]
+      },
+      {
+        "name": "get-relational-database-log-streams",
+        "description": "get-relational-database-log-streams command",
+        "parameters": [
+          {
+            "name": "--relational-database-name <value>",
+            "description": "--relational-database-name (string) [required] The name of your database for which to get log streams. Constraints: +\bo pattern: \\w[\\w\\-]*\\w"
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          }
+        ]
+      },
+      {
+        "name": "get-relational-database-master-user-password",
+        "description": "get-relational-database-master-user-password command",
+        "parameters": [
+          {
+            "name": "--relational-database-name <value>",
+            "description": "--relational-database-name (string) [required] The name of your database for which to get the master user password. Constraints: +\bo pattern: \\w[\\w\\-]*\\w"
+          },
+          {
+            "name": "--password-version <value>",
+            "description": "--password-version (string) The password version to return. Specifying CURRENT or PREVIOUS returns the current or previous passwords respectively. Specifying PENDING returns the newest version of the password that will rotate to CURRENT . After th..."
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          }
+        ]
+      },
+      {
+        "name": "get-relational-database-metric-data",
+        "description": "get-relational-database-metric-data command",
+        "parameters": [
+          {
+            "name": "--relational-database-name <value>",
+            "description": "--relational-database-name (string) [required] The name of your database from which to get metric data. Constraints: +\bo pattern: \\w[\\w\\-]*\\w"
+          },
+          {
+            "name": "--metric-name <value>",
+            "description": "--metric-name (string) [required] The metric for which you want to return information. Valid relational database metric names are listed below, along with the most useful statistics to include in your request, and the published unit value. All rel..."
+          },
+          {
+            "name": "--period <value>",
+            "description": "--period (integer) [required] The granularity, in seconds, of the returned data points. All relational database metric data is available in 1-minute (60 seconds) granularity. Constraints: +\bo min: 60 +\bo max: 86400"
+          },
+          {
+            "name": "--start-time <value>",
+            "description": "--start-time (timestamp) [required] The start of the time interval from which to get metric data. Constraints: +\bo Specified in Coordinated Universal Time (UTC). +\bo Specified in the Unix time format. For example, if you wish to use"
+          },
+          {
+            "name": "--end-time <value>",
+            "description": "--end-time (timestamp) [required] The end of the time interval from which to get metric data. Constraints: +\bo Specified in Coordinated Universal Time (UTC). +\bo Specified in the Unix time format. For example, if you wish to use"
+          },
+          {
+            "name": "--unit <value>",
+            "description": "--unit (string) [required] The unit for the metric data request. Valid units depend on the metric data being requested. For the valid units with each available metric, see the metricName parameter. Possible values: +\bo Seconds +\bo Microseconds +\bo..."
+          },
+          {
+            "name": "--statistics <value>",
+            "description": "--statistics (list) [required] The statistic for the metric. The following statistics are available: +\bo Minimum - The lowest value observed during the specified period. +\bo Maximum - The highest value observed during the specified period. +\bo Sum..."
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          }
+        ]
+      },
+      {
+        "name": "get-relational-database-parameters",
+        "description": "get-relational-database-parameters command",
+        "parameters": [
+          {
+            "name": "--relational-database-name <value>",
+            "description": "--relational-database-name (string) [required] The name of your database for which to get parameters. Constraints: +\bo pattern: \\w[\\w\\-]*\\w"
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the..."
+          },
+          {
+            "name": "--starting-token <value>",
+            "description": "--starting-token (string) A token to specify where to start paginating. This is the NextToken from a previously truncated response. For usage examples, see _\bP_\ba_\bg_\bi_\bn_\ba_\bt_\bi_\bo_\bn in the _\bA_\bW_\bS _\bC_\bo_\bm_\bm_\ba_\bn_\bd _\bL_\bi_\bn_\be _\bI_\bn_\b..."
+          },
+          {
+            "name": "--max-items <value>",
+            "description": "--max-items (integer) The total number of items to return in the command's output. If the total number of items available is more than the value specified, a NextToken is provided in the command's output. To resume pagination, provide the NextToke..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          }
+        ]
+      },
+      {
+        "name": "get-relational-database-snapshot",
+        "description": "get-relational-database-snapshot command",
+        "parameters": [
+          {
+            "name": "--relational-database-snapshot-name <value>",
+            "description": "--relational-database-snapshot-name (string) [required] The name of the database snapshot for which to get information. Constraints: +\bo pattern: \\w[\\w\\-]*\\w"
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          }
+        ]
+      },
+      {
+        "name": "get-relational-database-snapshots",
+        "description": "get-relational-database-snapshots command",
+        "parameters": [
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the..."
+          },
+          {
+            "name": "--starting-token <value>",
+            "description": "--starting-token (string) A token to specify where to start paginating. This is the NextToken from a previously truncated response. For usage examples, see _\bP_\ba_\bg_\bi_\bn_\ba_\bt_\bi_\bo_\bn in the _\bA_\bW_\bS _\bC_\bo_\bm_\bm_\ba_\bn_\bd _\bL_\bi_\bn_\be _\bI_\bn_\b..."
+          },
+          {
+            "name": "--max-items <value>",
+            "description": "--max-items (integer) The total number of items to return in the command's output. If the total number of items available is more than the value specified, a NextToken is provided in the command's output. To resume pagination, provide the NextToke..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          }
+        ]
+      },
+      {
+        "name": "get-relational-databases",
+        "description": "get-relational-databases command",
+        "parameters": [
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the..."
+          },
+          {
+            "name": "--starting-token <value>",
+            "description": "--starting-token (string) A token to specify where to start paginating. This is the NextToken from a previously truncated response. For usage examples, see _\bP_\ba_\bg_\bi_\bn_\ba_\bt_\bi_\bo_\bn in the _\bA_\bW_\bS _\bC_\bo_\bm_\bm_\ba_\bn_\bd _\bL_\bi_\bn_\be _\bI_\bn_\b..."
+          },
+          {
+            "name": "--max-items <value>",
+            "description": "--max-items (integer) The total number of items to return in the command's output. If the total number of items available is more than the value specified, a NextToken is provided in the command's output. To resume pagination, provide the NextToke..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          }
+        ]
+      },
+      {
+        "name": "get-setup-history",
+        "description": "get-setup-history command",
+        "parameters": [
+          {
+            "name": "--resource-name <value>",
+            "description": "--resource-name (string) [required] The name of the resource for which you are requesting information. Constraints: +\bo pattern: \\w[\\w\\-]*\\w"
+          },
+          {
+            "name": "--page-token <value>",
+            "description": "--page-token (string) The token to advance to the next page of results from your request. To get a page token, perform an initial GetSetupHistory request. If your results are paginated, the response will return a next page token that you can speci..."
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          }
+        ]
+      },
+      {
+        "name": "get-static-ip",
+        "description": "get-static-ip command",
+        "parameters": [
+          {
+            "name": "--static-ip-name <value>",
+            "description": "--static-ip-name (string) [required] The name of the static IP in Lightsail. Constraints: +\bo pattern: \\w[\\w\\-]*\\w"
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          }
+        ]
+      },
+      {
+        "name": "get-static-ips",
+        "description": "get-static-ips command",
+        "parameters": [
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the..."
+          },
+          {
+            "name": "--starting-token <value>",
+            "description": "--starting-token (string) A token to specify where to start paginating. This is the NextToken from a previously truncated response. For usage examples, see _\bP_\ba_\bg_\bi_\bn_\ba_\bt_\bi_\bo_\bn in the _\bA_\bW_\bS _\bC_\bo_\bm_\bm_\ba_\bn_\bd _\bL_\bi_\bn_\be _\bI_\bn_\b..."
+          },
+          {
+            "name": "--max-items <value>",
+            "description": "--max-items (integer) The total number of items to return in the command's output. If the total number of items available is more than the value specified, a NextToken is provided in the command's output. To resume pagination, provide the NextToke..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          }
+        ]
+      },
+      {
+        "name": "import-key-pair",
+        "description": "import-key-pair command",
+        "parameters": [
+          {
+            "name": "--key-pair-name <value>",
+            "description": "--key-pair-name (string) [required] The name of the key pair for which you want to import the public key. Constraints: +\bo pattern: \\w[\\w\\-]*\\w"
+          },
+          {
+            "name": "--public-key-base64 <value>",
+            "description": "--public-key-base64 (string) [required] A base64-encoded public key of the ssh-rsa type."
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          }
+        ]
+      },
+      {
+        "name": "is-vpc-peered",
+        "description": "is-vpc-peered command",
+        "parameters": [
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          }
+        ]
+      },
+      {
+        "name": "open-instance-public-ports",
+        "description": "open-instance-public-ports command",
+        "parameters": [
+          {
+            "name": "--port-info <value>",
+            "description": "--port-info (structure) [required] An object to describe the ports to open for the specified instance. fromPort -> (integer) toPort -> (integer) protocol -> (string) cidrs -> (list) ipv6Cidrs -> (list) cidrListAliases -> (list) Shorthand Syntax: f..."
+          },
+          {
+            "name": "--port-info <value>",
+            "description": "--port-info (structure) [required] An object to describe the ports to open for the specified instance. fromPort -> (integer) toPort -> (integer) protocol -> (string) cidrs -> (list) ipv6Cidrs -> (list) cidrListAliases -> (list) Shorthand Syntax: f..."
+          },
+          {
+            "name": "--port-info <value>",
+            "description": "--port-info (structure) [required] An object to describe the ports to open for the specified instance. fromPort -> (integer) toPort -> (integer) protocol -> (string) cidrs -> (list) ipv6Cidrs -> (list) cidrListAliases -> (list) Shorthand Syntax: f..."
+          },
+          {
+            "name": "--instance-name <value>",
+            "description": "--instance-name (string) [required] The name of the instance for which to open ports. Constraints: +\bo pattern: \\w[\\w\\-]*\\w"
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          }
+        ]
+      },
+      {
+        "name": "peer-vpc",
+        "description": "peer-vpc command",
+        "parameters": [
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          }
+        ]
+      },
+      {
+        "name": "put-alarm",
+        "description": "put-alarm command",
+        "parameters": [
+          {
+            "name": "--alarm-name <value>",
+            "description": "--alarm-name (string) [required] The name for the alarm. Specify the name of an existing alarm to update, and overwrite the previous configuration of the alarm. Constraints: +\bo pattern: \\w[\\w\\-]*\\w"
+          },
+          {
+            "name": "--metric-name <value>",
+            "description": "--metric-name (string) [required] The name of the metric to associate with the alarm. You can configure up to two alarms per metric. The following metrics are available for each resource type: +\bo Instances : BurstCapacityPercentage , BurstCapacit..."
+          },
+          {
+            "name": "--monitored-resource-name <value>",
+            "description": "--monitored-resource-name (string) [required] The name of the Lightsail resource that will be monitored. Instances, load balancers, and relational databases are the only Lightsail resources that can currently be monitored by alarms. Constraints: +..."
+          },
+          {
+            "name": "--comparison-operator <value>",
+            "description": "--comparison-operator (string) [required] The arithmetic operation to use when comparing the specified statistic to the threshold. The specified statistic value is used as the first operand. Possible values: +\bo GreaterThanOrEqualToThreshold +\bo G..."
+          },
+          {
+            "name": "--threshold <value>",
+            "description": "--threshold (double) [required] The value against which the specified statistic is compared."
+          },
+          {
+            "name": "--evaluation-periods <value>",
+            "description": "--evaluation-periods (integer) [required] The number of most recent periods over which data is compared to the specified threshold. If you are setting an \"M out of N\" alarm, this value (evaluationPeriods ) is the N. If you are setting an alarm tha..."
+          },
+          {
+            "name": "--datapoints-to-alarm <value>",
+            "description": "--datapoints-to-alarm (integer) The number of data points that must be not within the specified threshold to trigger the alarm. If you are setting an \"M out of N\" alarm, this value (datapointsToAlarm ) is the M."
+          },
+          {
+            "name": "--treat-missing-data <value>",
+            "description": "--treat-missing-data (string) Sets how this alarm will handle missing data points. An alarm can treat missing data in the following ways: +\bo breaching - Assume the missing data is not within the threshold. +\bo notBreaching - Assume the missing da..."
+          },
+          {
+            "name": "--contact-protocols <value>",
+            "description": "--contact-protocols (list) The contact protocols to use for the alarm, such as Email , SMS (text messaging), or both. A notification is sent via the specified contact protocol if notifications are enabled for the alarm, and when the alarm is trigg..."
+          },
+          {
+            "name": "--notification-triggers <value>",
+            "description": "--notification-triggers (list) The alarm states that trigger a notification. An alarm has the following possible states: +\bo ALARM - The metric is outside of the defined threshold. +\bo INSUFFICIENT_DATA - The alarm has just started, the metric is ..."
+          },
+          {
+            "name": "--notification-enabled | --no-notification-enabled",
+            "description": "--notification-enabled | --no-notification-enabled (boolean) Indicates whether the alarm is enabled. Notifications are enabled by default if you don't specify this parameter."
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          }
+        ]
+      },
+      {
+        "name": "put-instance-public-ports",
+        "description": "put-instance-public-ports command",
+        "parameters": [
+          {
+            "name": "--port-infos <value>",
+            "description": "--port-infos (list) [required] An array of objects to describe the ports to open for the specified instance. (structure) Shorthand Syntax: fromPort=integer,toPort=integer,protocol=string,cidrs=string,string,ipv6Cidrs=string,string,cidrListAliases=..."
+          },
+          {
+            "name": "--port-infos <value>",
+            "description": "--port-infos (list) [required] An array of objects to describe the ports to open for the specified instance. (structure) Shorthand Syntax: fromPort=integer,toPort=integer,protocol=string,cidrs=string,string,ipv6Cidrs=string,string,cidrListAliases=..."
+          },
+          {
+            "name": "--port-infos <value>",
+            "description": "--port-infos (list) [required] An array of objects to describe the ports to open for the specified instance. (structure) Shorthand Syntax: fromPort=integer,toPort=integer,protocol=string,cidrs=string,string,ipv6Cidrs=string,string,cidrListAliases=..."
+          },
+          {
+            "name": "--instance-name <value>",
+            "description": "--instance-name (string) [required] The name of the instance for which to open ports. Constraints: +\bo pattern: \\w[\\w\\-]*\\w"
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          }
+        ]
+      },
+      {
+        "name": "reboot-instance",
+        "description": "reboot-instance command",
+        "parameters": [
+          {
+            "name": "--instance-name <value>",
+            "description": "--instance-name (string) [required] The name of the instance to reboot. Constraints: +\bo pattern: \\w[\\w\\-]*\\w"
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          }
+        ]
+      },
+      {
+        "name": "reboot-relational-database",
+        "description": "reboot-relational-database command",
+        "parameters": [
+          {
+            "name": "--relational-database-name <value>",
+            "description": "--relational-database-name (string) [required] The name of your database to reboot. Constraints: +\bo pattern: \\w[\\w\\-]*\\w"
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          }
+        ]
+      },
+      {
+        "name": "register-container-image",
+        "description": "register-container-image command",
+        "parameters": [
+          {
+            "name": "--service-name <value>",
+            "description": "--service-name (string) [required] The name of the container service for which to register a container image. Constraints: +\bo min: 1 +\bo max: 63 +\bo pattern: ^[a-z0-9]{1,2}|[a-z0-9][a-z0-9-]+[a-z0-9]$"
+          },
+          {
+            "name": "--label <value>",
+            "description": "--label (string) [required] The label for the container image when it's registered to the container service. Use a descriptive label that you can use to track the different versions of your registered container images. Use the GetContainerImages a..."
+          },
+          {
+            "name": "--digest <value>",
+            "description": "--digest (string) [required] The digest of the container image to be registered."
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          }
+        ]
+      },
+      {
+        "name": "release-static-ip",
+        "description": "release-static-ip command",
+        "parameters": [
+          {
+            "name": "--static-ip-name <value>",
+            "description": "--static-ip-name (string) [required] The name of the static IP to delete. Constraints: +\bo pattern: \\w[\\w\\-]*\\w"
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          }
+        ]
+      },
+      {
+        "name": "reset-distribution-cache",
+        "description": "reset-distribution-cache command",
+        "parameters": [
+          {
+            "name": "--distribution-name <value>",
+            "description": "--distribution-name (string) The name of the distribution for which to reset cache. Use the GetDistributions action to get a list of distribution names that you can specify. Constraints: +\bo pattern: \\w[\\w\\-]*\\w"
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          }
+        ]
+      },
+      {
+        "name": "send-contact-method-verification",
+        "description": "send-contact-method-verification command",
+        "parameters": [
+          {
+            "name": "--protocol <value>",
+            "description": "--protocol (string) [required] The protocol to verify, such as Email or SMS (text messaging). Possible values: +\bo Email"
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          }
+        ]
+      },
+      {
+        "name": "set-ip-address-type",
+        "description": "set-ip-address-type command",
+        "parameters": [
+          {
+            "name": "--resource-type <value>",
+            "description": "--resource-type (string) [required] The resource type. The resource values are Distribution , Instance , and LoadBalancer . NOTE: Possible values: +\bo ContainerService +\bo Instance +\bo StaticIp +\bo KeyPair +\bo InstanceSnapshot +\bo Domain +\bo Peere..."
+          },
+          {
+            "name": "--resource-type <value>",
+            "description": "--resource-type (string) [required] The resource type. The resource values are Distribution , Instance , and LoadBalancer . NOTE: Possible values: +\bo ContainerService +\bo Instance +\bo StaticIp +\bo KeyPair +\bo InstanceSnapshot +\bo Domain +\bo Peere..."
+          },
+          {
+            "name": "--resource-name <value>",
+            "description": "--resource-name (string) [required] The name of the resource for which to set the IP address type. Constraints: +\bo pattern: \\w[\\w\\-]*\\w"
+          },
+          {
+            "name": "--ip-address-type <value>",
+            "description": "--ip-address-type (string) [required] The IP address type to set for the specified resource. The possible values are ipv4 for IPv4 only, ipv6 for IPv6 only, and dualstack for IPv4 and IPv6. Possible values: +\bo dualstack +\bo ipv4 +\bo ipv6"
+          },
+          {
+            "name": "--accept-bundle-update | --no-accept-bundle-update",
+            "description": "--accept-bundle-update | --no-accept-bundle-update (boolean) Required parameter to accept the instance bundle update when changing to, and from, IPv6-only. NOTE:"
+          },
+          {
+            "name": "--accept-bundle-update | --no-accept-bundle-update",
+            "description": "--accept-bundle-update | --no-accept-bundle-update (boolean) Required parameter to accept the instance bundle update when changing to, and from, IPv6-only. NOTE:"
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          }
+        ]
+      },
+      {
+        "name": "set-resource-access-for-bucket",
+        "description": "set-resource-access-for-bucket command",
+        "parameters": [
+          {
+            "name": "--resource-name <value>",
+            "description": "--resource-name (string) [required] The name of the Lightsail instance for which to set bucket access. The instance must be in a running or stopped state. Constraints: +\bo pattern: \\w[\\w\\-]*\\w"
+          },
+          {
+            "name": "--bucket-name <value>",
+            "description": "--bucket-name (string) [required] The name of the bucket for which to set access to another Lightsail resource. Constraints: +\bo min: 3 +\bo max: 54 +\bo pattern: ^[a-z0-9][a-z0-9-]{1,52}[a-z0-9]$"
+          },
+          {
+            "name": "--access <value>",
+            "description": "--access (string) [required] The access setting. The following access settings are available: +\bo allow - Allows access to the bucket and its objects. +\bo deny - Denies access to the bucket and its objects. Use this Possible values: +\bo allow +\bo ..."
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          }
+        ]
+      },
+      {
+        "name": "setup-instance-https",
+        "description": "setup-instance-https command",
+        "parameters": [
+          {
+            "name": "--instance-name <value>",
+            "description": "--instance-name (string) [required] The name of the Lightsail instance. Constraints: +\bo pattern: \\w[\\w\\-]*\\w"
+          },
+          {
+            "name": "--email-address <value>",
+            "description": "--email-address (string) [required] The contact method for SSL/TLS certificate renewal alerts. You can enter one email address. Constraints: +\bo min: 6 +\bo max: 254 +\bo pattern:"
+          },
+          {
+            "name": "--domain-names <value>",
+            "description": "--domain-names (list) [required] The name of the domain and subdomains that were specified for the SSL/TLS certificate. Constraints: +\bo min: 1 +\bo max: 10 (string) Syntax: \"string\" \"string\" ..."
+          },
+          {
+            "name": "--certificate-provider <value>",
+            "description": "--certificate-provider (string) [required] The certificate authority that issues the SSL/TLS certificate. Possible values: +\bo LetsEncrypt"
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          }
+        ]
+      },
+      {
+        "name": "start-gui-session",
+        "description": "start-gui-session command",
+        "parameters": [
+          {
+            "name": "--resource-name <value>",
+            "description": "--resource-name (string) [required] The resource name. Constraints: +\bo pattern: \\w[\\w\\-]*\\w"
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          }
+        ]
+      },
+      {
+        "name": "start-instance",
+        "description": "start-instance command",
+        "parameters": [
+          {
+            "name": "--instance-name <value>",
+            "description": "--instance-name (string) [required] The name of the instance (a virtual private server) to start. Constraints: +\bo pattern: \\w[\\w\\-]*\\w"
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          }
+        ]
+      },
+      {
+        "name": "start-relational-database",
+        "description": "start-relational-database command",
+        "parameters": [
+          {
+            "name": "--relational-database-name <value>",
+            "description": "--relational-database-name (string) [required] The name of your database to start. Constraints: +\bo pattern: \\w[\\w\\-]*\\w"
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          }
+        ]
+      },
+      {
+        "name": "stop-gui-session",
+        "description": "stop-gui-session command",
+        "parameters": [
+          {
+            "name": "--resource-name <value>",
+            "description": "--resource-name (string) [required] The resource name. Constraints: +\bo pattern: \\w[\\w\\-]*\\w"
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          }
+        ]
+      },
+      {
+        "name": "stop-instance",
+        "description": "stop-instance command",
+        "parameters": [
+          {
+            "name": "--instance-name <value>",
+            "description": "--instance-name (string) [required] The name of the instance (a virtual private server) to stop. Constraints: +\bo pattern: \\w[\\w\\-]*\\w"
+          },
+          {
+            "name": "--force | --no-force",
+            "description": "--force | --no-force (boolean) When set to True , forces a Lightsail instance that is stuck in a stopping state to stop. WARNING:"
+          },
+          {
+            "name": "--force | --no-force",
+            "description": "--force | --no-force (boolean) When set to True , forces a Lightsail instance that is stuck in a stopping state to stop. WARNING:"
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          }
+        ]
+      },
+      {
+        "name": "stop-relational-database",
+        "description": "stop-relational-database command",
+        "parameters": [
+          {
+            "name": "--relational-database-name <value>",
+            "description": "--relational-database-name (string) [required] The name of your database to stop. Constraints: +\bo pattern: \\w[\\w\\-]*\\w"
+          },
+          {
+            "name": "--relational-database-snapshot-name <value>",
+            "description": "--relational-database-snapshot-name (string) The name of your new database snapshot to be created before stopping your database. Constraints: +\bo pattern: \\w[\\w\\-]*\\w"
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          }
+        ]
+      },
+      {
+        "name": "tag-resource",
+        "description": "tag-resource command",
+        "parameters": [
+          {
+            "name": "--resource-name <value>",
+            "description": "--resource-name (string) [required] The name of the resource to which you are adding tags. Constraints: +\bo pattern: \\w[\\w\\-]*\\w"
+          },
+          {
+            "name": "--resource-arn <value>",
+            "description": "--resource-arn (string) The Amazon Resource Name (ARN) of the resource to which you want to add a tag. Constraints: +\bo pattern:"
+          },
+          {
+            "name": "--tags <value>",
+            "description": "--tags (list) [required] The tag key and optional value. (structure) Shorthand Syntax: key=string,value=string ... JSON Syntax: [ ]"
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          }
+        ]
+      },
+      {
+        "name": "test-alarm",
+        "description": "test-alarm command",
+        "parameters": [
+          {
+            "name": "--alarm-name <value>",
+            "description": "--alarm-name (string) [required] The name of the alarm to test. Constraints: +\bo pattern: \\w[\\w\\-]*\\w"
+          },
+          {
+            "name": "--state <value>",
+            "description": "--state (string) [required] The alarm state to test. An alarm has the following possible states that can be tested: +\bo ALARM - The metric is outside of the defined threshold. +\bo INSUFFICIENT_DATA - The alarm has just started, the metric is not +..."
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          }
+        ]
+      },
+      {
+        "name": "unpeer-vpc",
+        "description": "unpeer-vpc command",
+        "parameters": [
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          }
+        ]
+      },
+      {
+        "name": "untag-resource",
+        "description": "untag-resource command",
+        "parameters": [
+          {
+            "name": "--resource-name <value>",
+            "description": "--resource-name (string) [required] The name of the resource from which you are removing a tag. Constraints: +\bo pattern: \\w[\\w\\-]*\\w"
+          },
+          {
+            "name": "--resource-arn <value>",
+            "description": "--resource-arn (string) The Amazon Resource Name (ARN) of the resource from which you want to remove a tag. Constraints: +\bo pattern:"
+          },
+          {
+            "name": "--tag-keys <value>",
+            "description": "--tag-keys (list) [required] The tag keys to delete from the specified resource. (string) Syntax: \"string\" \"string\" ..."
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          }
+        ]
+      },
+      {
+        "name": "update-bucket",
+        "description": "update-bucket command",
+        "parameters": [
+          {
+            "name": "--bucket-name <value>",
+            "description": "--bucket-name (string) [required] The name of the bucket to update. Constraints: +\bo min: 3 +\bo max: 54 +\bo pattern: ^[a-z0-9][a-z0-9-]{1,52}[a-z0-9]$"
+          },
+          {
+            "name": "--access-rules <value>",
+            "description": "--access-rules (structure) An object that sets the public accessibility of objects in the specified bucket. getObject -> (string) allowPublicOverrides -> (boolean) Shorthand Syntax: getObject=string,allowPublicOverrides=boolean JSON Syntax: { }"
+          },
+          {
+            "name": "--versioning <value>",
+            "description": "--versioning (string) Specifies whether to enable or suspend versioning of objects in the bucket. The following options can be specified: +\bo Enabled - Enables versioning of objects in the specified bucket. +\bo Suspended - Suspends versioning of o..."
+          },
+          {
+            "name": "--readonly-access-accounts <value>",
+            "description": "--readonly-access-accounts (list) An array of strings to specify the Amazon Web Services account IDs that can access the bucket. You can give a maximum of 10 Amazon Web Services accounts access to a bucket. Constraints: +\bo max: 10 (string) Syntax..."
+          },
+          {
+            "name": "--access-log-config <value>",
+            "description": "--access-log-config (structure) An object that describes the access log configuration for the bucket. enabled -> (boolean) [required] destination -> (string) prefix -> (string) Shorthand Syntax: enabled=boolean,destination=string,prefix=string JSO..."
+          },
+          {
+            "name": "--access-log-config <value>",
+            "description": "--access-log-config (structure) An object that describes the access log configuration for the bucket. enabled -> (boolean) [required] destination -> (string) prefix -> (string) Shorthand Syntax: enabled=boolean,destination=string,prefix=string JSO..."
+          },
+          {
+            "name": "--access-log-config <value>",
+            "description": "--access-log-config (structure) An object that describes the access log configuration for the bucket. enabled -> (boolean) [required] destination -> (string) prefix -> (string) Shorthand Syntax: enabled=boolean,destination=string,prefix=string JSO..."
+          },
+          {
+            "name": "--cors <value>",
+            "description": "--cors (structure) Sets the cross-origin resource sharing (CORS) configuration for your bucket. If a CORS configuration exists, it is replaced with the specified configuration. For AWS CLI operations, this parameter can also be passed as a file. F..."
+          },
+          {
+            "name": "--cors <value>",
+            "description": "--cors (structure) Sets the cross-origin resource sharing (CORS) configuration for your bucket. If a CORS configuration exists, it is replaced with the specified configuration. For AWS CLI operations, this parameter can also be passed as a file. F..."
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          }
+        ]
+      },
+      {
+        "name": "update-bucket-bundle",
+        "description": "update-bucket-bundle command",
+        "parameters": [
+          {
+            "name": "--bucket-name <value>",
+            "description": "--bucket-name (string) [required] The name of the bucket for which to update the bundle. Constraints: +\bo min: 3 +\bo max: 54 +\bo pattern: ^[a-z0-9][a-z0-9-]{1,52}[a-z0-9]$"
+          },
+          {
+            "name": "--bundle-id <value>",
+            "description": "--bundle-id (string) [required] The ID of the new bundle to apply to the bucket. Use the _\bG_\be_\bt_\bB_\bu_\bc_\bk_\be_\bt_\bB_\bu_\bn_\bd_\bl_\be_\bs action to get a list of bundle IDs that you can specify. Constraints: +\bo pattern: .*\\S.*"
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          }
+        ]
+      },
+      {
+        "name": "update-container-service",
+        "description": "update-container-service command",
+        "parameters": [
+          {
+            "name": "--service-name <value>",
+            "description": "--service-name (string) [required] The name of the container service to update. Constraints: +\bo min: 1 +\bo max: 63 +\bo pattern: ^[a-z0-9]{1,2}|[a-z0-9][a-z0-9-]+[a-z0-9]$"
+          },
+          {
+            "name": "--power <value>",
+            "description": "--power (string) The power for the container service. The power specifies the amount of memory, vCPUs, and base monthly cost of each node of the container service. The power and scale of a container service makes up its configured capacity. To det..."
+          },
+          {
+            "name": "--scale <value>",
+            "description": "--scale (integer) The scale for the container service. The scale specifies the allocated compute nodes of the container service. The power and scale of a container service makes up its configured capacity. To determine the monthly price of your co..."
+          },
+          {
+            "name": "--is-disabled | --no-is-disabled",
+            "description": "--is-disabled | --no-is-disabled (boolean) A Boolean value to indicate whether the container service is disabled."
+          },
+          {
+            "name": "--public-domain-names <value>",
+            "description": "--public-domain-names (map) The public domain names to use with the container service, such as example.com and www.example.com . You can specify up to four public domain names for a container service. The domain names that you specify are used whe..."
+          },
+          {
+            "name": "--public-domain-names <value>",
+            "description": "--public-domain-names (map) The public domain names to use with the container service, such as example.com and www.example.com . You can specify up to four public domain names for a container service. The domain names that you specify are used whe..."
+          },
+          {
+            "name": "--private-registry-access <value>",
+            "description": "--private-registry-access (structure) An object to describe the configuration for the container service to access private container image repositories, such as Amazon Elastic Container Registry (Amazon ECR) private repositories. For more informati..."
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          }
+        ]
+      },
+      {
+        "name": "update-distribution",
+        "description": "update-distribution command",
+        "parameters": [
+          {
+            "name": "--distribution-name <value>",
+            "description": "--distribution-name (string) [required] The name of the distribution to update. Use the GetDistributions action to get a list of distribution names that you can specify. Constraints: +\bo pattern: \\w[\\w\\-]*\\w"
+          },
+          {
+            "name": "--origin <value>",
+            "description": "--origin (structure) An object that describes the origin resource for the distribution, such as a Lightsail instance, bucket, or load balancer. The distribution pulls, caches, and serves content from the origin. name -> (string) regionName -> (str..."
+          },
+          {
+            "name": "--default-cache-behavior <value>",
+            "description": "--default-cache-behavior (structure) An object that describes the default cache behavior for the distribution. behavior -> (string) Shorthand Syntax: behavior=string JSON Syntax: { }"
+          },
+          {
+            "name": "--cache-behavior-settings <value>",
+            "description": "--cache-behavior-settings (structure) An object that describes the cache behavior settings for the distribution. NOTE: defaultTTL -> (long) minimumTTL -> (long) maximumTTL -> (long) allowedHTTPMethods -> (string) cachedHTTPMethods -> (string) forw..."
+          },
+          {
+            "name": "--cache-behavior-settings <value>",
+            "description": "--cache-behavior-settings (structure) An object that describes the cache behavior settings for the distribution. NOTE: defaultTTL -> (long) minimumTTL -> (long) maximumTTL -> (long) allowedHTTPMethods -> (string) cachedHTTPMethods -> (string) forw..."
+          },
+          {
+            "name": "--cache-behavior-settings <value>",
+            "description": "--cache-behavior-settings (structure) An object that describes the cache behavior settings for the distribution. NOTE: defaultTTL -> (long) minimumTTL -> (long) maximumTTL -> (long) allowedHTTPMethods -> (string) cachedHTTPMethods -> (string) forw..."
+          },
+          {
+            "name": "--cache-behaviors <value>",
+            "description": "--cache-behaviors (list) An array of objects that describe the per-path cache behavior for the distribution. (structure) Shorthand Syntax: path=string,behavior=string ... JSON Syntax: [ ]"
+          },
+          {
+            "name": "--is-enabled | --no-is-enabled",
+            "description": "--is-enabled | --no-is-enabled (boolean) Indicates whether to enable the distribution."
+          },
+          {
+            "name": "--viewer-minimum-tls-protocol-version <value>",
+            "description": "--viewer-minimum-tls-protocol-version (string) Use this parameter to update the minimum TLS protocol version for the SSL/TLS certificate that's attached to the distribution. Possible values: +\bo TLSv1.1_2016 +\bo TLSv1.2_2018 +\bo TLSv1.2_2019 +\bo T..."
+          },
+          {
+            "name": "--certificate-name <value>",
+            "description": "--certificate-name (string) The name of the SSL/TLS certificate that you want to attach to the distribution. Only certificates with a status of ISSUED can be attached to a distribution. Use the _\bG_\be_\bt_\bC_\be_\br_\bt_\bi_\bf_\bi_\bc_\ba_\bt_\be_\bs action ..."
+          },
+          {
+            "name": "--use-default-certificate | --no-use-default-certificate",
+            "description": "--use-default-certificate | --no-use-default-certificate (boolean) Indicates whether the default SSL/TLS certificate is attached to the distribution. The default value is true . When true , the distribution uses the default domain name such as d11..."
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          }
+        ]
+      },
+      {
+        "name": "update-distribution-bundle",
+        "description": "update-distribution-bundle command",
+        "parameters": [
+          {
+            "name": "--distribution-name <value>",
+            "description": "--distribution-name (string) The name of the distribution for which to update the bundle. Use the GetDistributions action to get a list of distribution names that you can specify. Constraints: +\bo pattern: \\w[\\w\\-]*\\w"
+          },
+          {
+            "name": "--bundle-id <value>",
+            "description": "--bundle-id (string) The bundle ID of the new bundle to apply to your distribution. Use the GetDistributionBundles action to get a list of distribution bundle IDs that you can specify."
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          }
+        ]
+      },
+      {
+        "name": "update-domain-entry",
+        "description": "update-domain-entry command",
+        "parameters": [
+          {
+            "name": "--domain-name <value>",
+            "description": "--domain-name (string) [required] The name of the domain recordset to update."
+          },
+          {
+            "name": "--domain-entry <value>",
+            "description": "--domain-entry (structure) [required] An array of key-value pairs containing information about the domain entry. id -> (string) name -> (string) target -> (string) isAlias -> (boolean) type -> (string) options -> (map) Shorthand Syntax: id=string,..."
+          },
+          {
+            "name": "--domain-entry <value>",
+            "description": "--domain-entry (structure) [required] An array of key-value pairs containing information about the domain entry. id -> (string) name -> (string) target -> (string) isAlias -> (boolean) type -> (string) options -> (map) Shorthand Syntax: id=string,..."
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          }
+        ]
+      },
+      {
+        "name": "update-instance-metadata-options",
+        "description": "update-instance-metadata-options command",
+        "parameters": [
+          {
+            "name": "--instance-name <value>",
+            "description": "--instance-name (string) [required] The name of the instance for which to update metadata parameters. Constraints: +\bo pattern: \\w[\\w\\-]*\\w"
+          },
+          {
+            "name": "--http-tokens <value>",
+            "description": "--http-tokens (string) The state of token usage for your instance metadata requests. If the parameter is not specified in the request, the default state is optional . If the state is optional , you can choose whether to retrieve instance metadata ..."
+          },
+          {
+            "name": "--http-endpoint <value>",
+            "description": "--http-endpoint (string) Enables or disables the HTTP metadata endpoint on your instances. If this parameter is not specified, the existing state is maintained. If you specify a value of disabled , you cannot access your instance metadata. Possibl..."
+          },
+          {
+            "name": "--http-put-response-hop-limit <value>",
+            "description": "--http-put-response-hop-limit (integer) The desired HTTP PUT response hop limit for instance metadata requests. A larger number means that the instance metadata requests can travel farther. If no parameter is specified, the existing state is maint..."
+          },
+          {
+            "name": "--http-protocol-ipv6 <value>",
+            "description": "--http-protocol-ipv6 (string) Enables or disables the IPv6 endpoint for the instance metadata service. This setting applies only when the HTTP metadata endpoint is enabled. NOTE: Possible values: +\bo disabled +\bo enabled"
+          },
+          {
+            "name": "--http-protocol-ipv6 <value>",
+            "description": "--http-protocol-ipv6 (string) Enables or disables the IPv6 endpoint for the instance metadata service. This setting applies only when the HTTP metadata endpoint is enabled. NOTE: Possible values: +\bo disabled +\bo enabled"
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          }
+        ]
+      },
+      {
+        "name": "update-load-balancer-attribute",
+        "description": "update-load-balancer-attribute command",
+        "parameters": [
+          {
+            "name": "--load-balancer-name <value>",
+            "description": "--load-balancer-name (string) [required] The name of the load balancer that you want to modify (my-load-balancer . Constraints: +\bo pattern: \\w[\\w\\-]*\\w"
+          },
+          {
+            "name": "--attribute-name <value>",
+            "description": "--attribute-name (string) [required] The name of the attribute you want to update. Possible values: +\bo HealthCheckPath +\bo SessionStickinessEnabled +\bo SessionStickiness_LB_CookieDurationSeconds +\bo HttpsRedirectionEnabled +\bo TlsPolicyName"
+          },
+          {
+            "name": "--attribute-value <value>",
+            "description": "--attribute-value (string) [required] The value that you want to specify for the attribute name. The following values are supported depending on what you specify for the attributeName request parameter: +\bo If you specify HealthCheckPath for the a..."
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          }
+        ]
+      },
+      {
+        "name": "update-relational-database",
+        "description": "update-relational-database command",
+        "parameters": [
+          {
+            "name": "--relational-database-name <value>",
+            "description": "--relational-database-name (string) [required] The name of your Lightsail database resource to update. Constraints: +\bo pattern: \\w[\\w\\-]*\\w"
+          },
+          {
+            "name": "--master-user-password <value>",
+            "description": "--master-user-password (string) The password for the master user. The password can include any printable ASCII character except \"/\", \"\"\", or \"@\". My**SQL** Constraints: Must contain from 8 to 41 characters. Constraints: Must contain from 8 to 128 ..."
+          },
+          {
+            "name": "--rotate-master-user-password | --no-rotate-master-user-password",
+            "description": "--rotate-master-user-password | --no-rotate-master-user-password (boolean) When true , the master user password is changed to a new strong password generated by Lightsail. Use the get relational database master user password operation to get the n..."
+          },
+          {
+            "name": "--preferred-backup-window <value>",
+            "description": "--preferred-backup-window (string) The daily time range during which automated backups are created for your database if automated backups are enabled. Constraints: +\bo Must be in the hh24:mi-hh24:mi format. Example: 16:00-16:30 +\bo Specified in Co..."
+          },
+          {
+            "name": "--preferred-maintenance-window <value>",
+            "description": "--preferred-maintenance-window (string) The weekly time range during which system maintenance can occur on your database. The default is a 30-minute window selected at random from an 8-hour block of time for each Amazon Web Services Region, occurr..."
+          },
+          {
+            "name": "--enable-backup-retention | --no-enable-backup-retention",
+            "description": "--enable-backup-retention | --no-enable-backup-retention (boolean) When true , enables automated backup retention for your database. Updates are applied during the next maintenance window because this can result in an outage."
+          },
+          {
+            "name": "--disable-backup-retention | --no-disable-backup-retention",
+            "description": "--disable-backup-retention | --no-disable-backup-retention (boolean) When true , disables automated backup retention for your database. Disabling backup retention deletes all automated database backups. Before disabling this, you may want to creat..."
+          },
+          {
+            "name": "--publicly-accessible | --no-publicly-accessible",
+            "description": "--publicly-accessible | --no-publicly-accessible (boolean) Specifies the accessibility options for your database. A value of true specifies a database that is available to resources outside of your Lightsail account. A value of false specifies a d..."
+          },
+          {
+            "name": "--apply-immediately | --no-apply-immediately",
+            "description": "--apply-immediately | --no-apply-immediately (boolean) When true , applies changes immediately. When false , applies changes during the preferred maintenance window. Some changes may cause an outage. Default: false"
+          },
+          {
+            "name": "--ca-certificate-identifier <value>",
+            "description": "--ca-certificate-identifier (string) Indicates the certificate that needs to be associated with the database."
+          },
+          {
+            "name": "--relational-database-blueprint-id <value>",
+            "description": "--relational-database-blueprint-id (string) This parameter is used to update the major version of the database. Enter the blueprintId for the major version that you want to update to. Use the _\bG_\be_\bt_\bR_\be_\bl_\ba_\bt_\bi_\bo_\bn_\ba_\bl_\bD_\ba_\bt_\ba_\bb_..."
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          }
+        ]
+      },
+      {
+        "name": "update-relational-database-parameters",
+        "description": "update-relational-database-parameters command",
+        "parameters": [
+          {
+            "name": "--relational-database-name <value>",
+            "description": "--relational-database-name (string) [required] The name of your database for which to update parameters. Constraints: +\bo pattern: \\w[\\w\\-]*\\w"
+          },
+          {
+            "name": "--parameters <value>",
+            "description": "--parameters (list) [required] The database parameters to update. (structure) Shorthand Syntax: allowedValues=string,applyMethod=string,applyType=string,dataType=string,description=string,isModifiable=boolean,parameterName=string,parameterValue=st..."
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
           },
           {
             "name": "--generate-cli-skeleton <value>",
