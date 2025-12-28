@@ -61838,28 +61838,94 @@ export const awsServices: Service[] = [
     "description": "AWS Identity and Access Management",
     "commands": [
       {
-        "name": "list-users",
-        "description": "Lists the IAM users",
+        "name": "accept-delegation-request",
+        "description": "accept-delegation-request command",
         "parameters": [
           {
-            "name": "--path-prefix <value>",
-            "description": "--path-prefix (string) The path prefix for filtering the results. For example: /division_abc/subdivision_xyz/ , which would get all user names whose path starts with /division_abc/subdivision_xyz/ . This parameter is optional. If it is not include..."
+            "name": "--delegation-request-id <value>",
+            "description": "--delegation-request-id (string) [required] The unique identifier of the delegation request to accept. Constraints: +\bo min: 16 +\bo max: 128 +\bo pattern: [\\w-]+"
           },
           {
-            "name": "--max-items <value>",
-            "description": "--max-items (integer) The total number of items to return in the command's output. If the total number of items available is more than the value specified, a NextToken is provided in the command's output. To resume pagination, provide the NextToke..."
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          }
+        ]
+      },
+      {
+        "name": "add-client-id-to-open-id-connect-provider",
+        "description": "add-client-id-to-open-id-connect-provider command",
+        "parameters": [
+          {
+            "name": "--open-id-connect-provider-arn <value>",
+            "description": "--open-id-connect-provider-arn (string) [required] The Amazon Resource Name (ARN) of the IAM OpenID Connect (OIDC) provider resource to add the client ID to. You can get a list of OIDC provider ARNs by using the _\bL_\bi_\bs_\bt_\bO_\bp_\be_\bn_\bI_\bD_\bC_\b"
+          },
+          {
+            "name": "--client-id <value>",
+            "description": "--client-id (string) [required] The client ID (also known as audience) to add to the IAM OpenID Connect provider resource. Constraints: +\bo min: 1 +\bo max: 255"
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          }
+        ]
+      },
+      {
+        "name": "add-role-to-instance-profile",
+        "description": "add-role-to-instance-profile command",
+        "parameters": [
+          {
+            "name": "--instance-profile-name <value>",
+            "description": "--instance-profile-name (string) [required] The name of the instance profile to update. This parameter allows (through its _\br_\be_\bg_\be_\bx _\bp_\ba_\bt_\bt_\be_\br_\bn ) a string of characters consisting of upper and lowercase alphanumeric characters wit"
+          },
+          {
+            "name": "--role-name <value>",
+            "description": "--role-name (string) [required] The name of the role to add. This parameter allows (through its _\br_\be_\bg_\be_\bx _\bp_\ba_\bt_\bt_\be_\br_\bn ) a string of characters consisting of upper and lowercase alphanumeric characters with no spaces. You can also i"
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          }
+        ]
+      },
+      {
+        "name": "add-user-to-group",
+        "description": "Adds a user to a group",
+        "parameters": [
+          {
+            "name": "--group-name <value>",
+            "description": "--group-name (string) [required] The name of the group to update. This parameter allows (through its _\br_\be_\bg_\be_\bx _\bp_\ba_\bt_\bt_\be_\br_\bn ) a string of characters consisting of upper and lowercase alphanumeric characters with no spaces. You can a..."
+          },
+          {
+            "name": "--user-name <value>",
+            "description": "--user-name (string) [required] The name of the user to add. This parameter allows (through its _\br_\be_\bg_\be_\bx _\bp_\ba_\bt_\bt_\be_\br_\bn ) a string of characters consisting of upper and lowercase alphanumeric characters with no spaces. You can also i..."
           },
           {
             "name": "--cli-input-json | --cli-input-yaml",
             "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the..."
-          },
-          {
-            "name": "--starting-token <value>",
-            "description": "--starting-token (string) A token to specify where to start paginating. This is the NextToken from a previously truncated response. For usage examples, see _\bP_\ba_\bg_\bi_\bn_\ba_\bt_\bi_\bo_\bn in the _\bA_\bW_\bS _\bC_\bo_\bm_\bm_\ba_\bn_\bd _\bL_\bi_\bn_\be _\bI_\bn_\b..."
-          },
-          {
-            "name": "--page-size <value>",
-            "description": "--page-size (integer) The size of each page to get in the AWS service call. This does not affect the number of items returned in the command's output. Setting a smaller page size results in more calls to the AWS service, retrieving fewer items in ..."
           },
           {
             "name": "--generate-cli-skeleton <value>",
@@ -61868,42 +61934,368 @@ export const awsServices: Service[] = [
         ]
       },
       {
-        "name": "create-user",
-        "description": "Creates a new IAM user",
+        "name": "associate-delegation-request",
+        "description": "associate-delegation-request command",
+        "parameters": [
+          {
+            "name": "--delegation-request-id <value>",
+            "description": "--delegation-request-id (string) [required] The unique identifier of the delegation request to associate. Constraints: +\bo min: 16 +\bo max: 128 +\bo pattern: [\\w-]+"
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          }
+        ]
+      },
+      {
+        "name": "attach-group-policy",
+        "description": "attach-group-policy command",
+        "parameters": [
+          {
+            "name": "--group-name <value>",
+            "description": "--group-name (string) [required] The name (friendly name, not ARN) of the group to attach the policy to. This parameter allows (through its _\br_\be_\bg_\be_\bx _\bp_\ba_\bt_\bt_\be_\br_\bn ) a string of characters consisting of upper and lowercase alphanumer"
+          },
+          {
+            "name": "--policy-arn <value>",
+            "description": "--policy-arn (string) [required] The Amazon Resource Name (ARN) of the IAM policy you want to attach. For more information about ARNs, see _\bA_\bm_\ba_\bz_\bo_\bn _\bR_\be_\bs_\bo_\bu_\br_\bc_\be _\bN_\ba_\bm_\be_\bs _\b(_\bA_\bR_\bN_\bs_\b) in the _\bA_\bm_\ba_\bz_\bo_\bn _\bW"
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          }
+        ]
+      },
+      {
+        "name": "attach-role-policy",
+        "description": "Attaches a managed policy to a role",
+        "parameters": [
+          {
+            "name": "--role-name <value>",
+            "description": "--role-name (string) [required] The name (friendly name, not ARN) of the role to attach the policy to. This parameter allows (through its _\br_\be_\bg_\be_\bx _\bp_\ba_\bt_\bt_\be_\br_\bn ) a string of characters consisting of upper and lowercase alphanumeric..."
+          },
+          {
+            "name": "--policy-arn <value>",
+            "description": "--policy-arn (string) [required] The Amazon Resource Name (ARN) of the IAM policy you want to attach. For more information about ARNs, see _\bA_\bm_\ba_\bz_\bo_\bn _\bR_\be_\bs_\bo_\bu_\br_\bc_\be _\bN_\ba_\bm_\be_\bs _\b(_\bA_\bR_\bN_\bs_\b) in the _\bA_\bm_\ba_\bz_\bo_\bn _\bW..."
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          }
+        ]
+      },
+      {
+        "name": "attach-user-policy",
+        "description": "attach-user-policy command",
+        "parameters": [
+          {
+            "name": "--user-name <value>",
+            "description": "--user-name (string) [required] The name (friendly name, not ARN) of the IAM user to attach the policy to. This parameter allows (through its _\br_\be_\bg_\be_\bx _\bp_\ba_\bt_\bt_\be_\br_\bn ) a string of characters consisting of upper and lowercase alphanum"
+          },
+          {
+            "name": "--policy-arn <value>",
+            "description": "--policy-arn (string) [required] The Amazon Resource Name (ARN) of the IAM policy you want to attach. For more information about ARNs, see _\bA_\bm_\ba_\bz_\bo_\bn _\bR_\be_\bs_\bo_\bu_\br_\bc_\be _\bN_\ba_\bm_\be_\bs _\b(_\bA_\bR_\bN_\bs_\b) in the _\bA_\bm_\ba_\bz_\bo_\bn _\bW"
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          }
+        ]
+      },
+      {
+        "name": "change-password",
+        "description": "change-password command",
+        "parameters": [
+          {
+            "name": "--old-password <value>",
+            "description": "--old-password (string) [required] The IAM user's current password. Constraints: +\bo min: 1 +\bo max: 128 +\bo pattern: [\\u0009\\u000A\\u000D\\u0020-\\u00FF]+"
+          },
+          {
+            "name": "--new-password <value>",
+            "description": "--new-password (string) [required] The new password. The new password must conform to the Amazon Web Services account's password policy, if one exists. The _\br_\be_\bg_\be_\bx _\bp_\ba_\bt_\bt_\be_\br_\bn that is used to validate this parameter is a string o"
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          }
+        ]
+      },
+      {
+        "name": "create-access-key",
+        "description": "Creates a new access key for a user",
+        "parameters": [
+          {
+            "name": "--user-name <value>",
+            "description": "--user-name (string) The name of the IAM user that the new key will belong to. This parameter allows (through its _\br_\be_\bg_\be_\bx _\bp_\ba_\bt_\bt_\be_\br_\bn ) a string of characters consisting of upper and lowercase alphanumeric characters with no spac..."
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          }
+        ]
+      },
+      {
+        "name": "create-account-alias",
+        "description": "create-account-alias command",
+        "parameters": [
+          {
+            "name": "--account-alias <value>",
+            "description": "--account-alias (string) [required] The account alias to create. This parameter allows (through its _\br_\be_\bg_\be_\bx _\bp_\ba_\bt_\bt_\be_\br_\bn ) a string of characters consisting of lowercase letters, digits, and dashes. You cannot start or finish with"
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          }
+        ]
+      },
+      {
+        "name": "create-delegation-request",
+        "description": "create-delegation-request command",
+        "parameters": [
+          {
+            "name": "--owner-account-id <value>",
+            "description": "--owner-account-id (string) The Amazon Web Services account ID this delegation request is targeted to. If the account ID is not known, this parameter can be omitted, resulting in a request that can be associated by any account. If the account ID p"
+          },
+          {
+            "name": "--description <value>",
+            "description": "--description (string) [required] A description of the delegation request. Constraints: +\bo max: 1000 +\bo pattern: [\\u0009\\u000A\\u000D\\u0020-\\u007E\\u00A1-\\u00FF]*"
+          },
+          {
+            "name": "--permissions <value>",
+            "description": "--permissions (structure) [required] The permissions to be delegated in this delegation request. PolicyTemplateArn -> (string) Parameters -> (list) JSON Syntax: { }"
+          },
+          {
+            "name": "--request-message <value>",
+            "description": "--request-message (string) A message explaining the reason for the delegation request. Requesters can utilize this field to add a custom note to the delegation request. This field is different from the description such that this is to be utilized "
+          },
+          {
+            "name": "--requestor-workflow-id <value>",
+            "description": "--requestor-workflow-id (string) [required] The workflow ID associated with the requestor. This is the unique identifier on the partner side that can be used to track the progress of the request. IAM maintains a uniqueness check on this workflow i"
+          },
+          {
+            "name": "--redirect-url <value>",
+            "description": "--redirect-url (string) The URL to redirect to after the delegation request is processed. This URL is used by the IAM console to show a link to the customer to re-load the partner workflow. Constraints: +\bo min: 1 +\bo max: 255 +\bo pattern:"
+          },
+          {
+            "name": "--notification-channel <value>",
+            "description": "--notification-channel (string) [required] The notification channel for updates about the delegation request. At this time,only SNS topic ARNs are accepted for notification. This topic ARN must have a resource policy granting SNS:Publish permissio"
+          },
+          {
+            "name": "--session-duration <value>",
+            "description": "--session-duration (integer) [required] The duration for which the delegated session should remain active, in seconds. The active time window for the session starts when the customer calls the _\bS_\be_\bn_\bd_\bD_\be_\bl_\be_\bg_\ba_\bt_\bi_\bo_\bn_\bT_\bo_\bk_\be"
+          },
+          {
+            "name": "--only-send-by-owner | --no-only-send-by-owner",
+            "description": "--only-send-by-owner | --no-only-send-by-owner (boolean) Specifies whether the delegation token should only be sent by the owner. This flag prevents any party other than the owner from calling SendDelegationToken API for this delegation request. T"
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          }
+        ]
+      },
+      {
+        "name": "create-group",
+        "description": "Creates a new IAM group",
         "parameters": [
           {
             "name": "--path <value>",
-            "description": "--path (string) The path for the user name. For more information about paths, see _\bI_\bA_\bM _\bi_\bd_\be_\bn_\bt_\bi_\bf_\bi_\be_\br_\bs in the _\bI_\bA_\bM _\bU_\bs_\be_\br _\bG_\bu_\bi_\bd_\be . This parameter is optional. If it is not included, it defaults to a slash..."
+            "description": "--path (string) The path to the group. For more information about paths, see _\bI_\bA_\bM _\bi_\bd_\be_\bn_\bt_\bi_\bf_\bi_\be_\br_\bs in the _\bI_\bA_\bM _\bU_\bs_\be_\br _\bG_\bu_\bi_\bd_\be . This parameter is optional. If it is not included, it defaults to a slash (/)...."
           },
           {
-            "name": "--user-name <value>",
-            "description": "--user-name (string) [required] The name of the user to create. IAM user, group, role, and policy names must be unique within the account. Names are not distinguished by case. For example, you cannot create resources named both \"MyResource\" and \"m..."
+            "name": "--group-name <value>",
+            "description": "--group-name (string) [required] The name of the group to create. Do not include the path in this value. IAM user, group, role, and policy names must be unique within the account. Names are not distinguished by case. For example, you cannot create..."
           },
           {
-            "name": "--permissions-boundary <value>",
-            "description": "--permissions-boundary (string) The ARN of the managed policy that is used to set the permissions boundary for the user. A permissions boundary policy defines the maximum permissions that identity-based policies can grant to an entity, but does no..."
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          }
+        ]
+      },
+      {
+        "name": "create-instance-profile",
+        "description": "create-instance-profile command",
+        "parameters": [
+          {
+            "name": "--instance-profile-name <value>",
+            "description": "--instance-profile-name (string) [required] The name of the instance profile to create. This parameter allows (through its _\br_\be_\bg_\be_\bx _\bp_\ba_\bt_\bt_\be_\br_\bn ) a string of characters consisting of upper and lowercase alphanumeric characters wit"
+          },
+          {
+            "name": "--path <value>",
+            "description": "--path (string) The path to the instance profile. For more information about paths, see _\bI_\bA_\bM _\bI_\bd_\be_\bn_\bt_\bi_\bf_\bi_\be_\br_\bs in the _\bI_\bA_\bM _\bU_\bs_\be_\br _\bG_\bu_\bi_\bd_\be . This parameter is optional. If it is not included, it defaults to a"
           },
           {
             "name": "--tags <value>",
-            "description": "--tags (list) A list of tags that you want to attach to the new user. Each tag consists of a key name and an associated value. For more information about tagging, see _\bT_\ba_\bg_\bg_\bi_\bn_\bg _\bI_\bA_\bM _\br_\be_\bs_\bo_\bu_\br_\bc_\be_\bs in the _\bI_\bA_\bM _\bU..."
+            "description": "--tags (list) A list of tags that you want to attach to the newly created IAM instance profile. Each tag consists of a key name and an associated value. For more information about tagging, see _\bT_\ba_\bg_\bg_\bi_\bn_\bg _\bI_\bA_\bM _\br_\be_\bs_\bo_\bu_\br_\bc_"
+          },
+          {
+            "name": "--tags <value>",
+            "description": "--tags (list) A list of tags that you want to attach to the newly created IAM instance profile. Each tag consists of a key name and an associated value. For more information about tagging, see _\bT_\ba_\bg_\bg_\bi_\bn_\bg _\bI_\bA_\bM _\br_\be_\bs_\bo_\bu_\br_\bc_"
           },
           {
             "name": "--cli-input-json | --cli-input-yaml",
-            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the..."
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the"
           },
           {
             "name": "--generate-cli-skeleton <value>",
-            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
           }
         ]
       },
       {
-        "name": "delete-user",
-        "description": "Deletes an IAM user",
+        "name": "create-login-profile",
+        "description": "create-login-profile command",
         "parameters": [
           {
             "name": "--user-name <value>",
-            "description": "--user-name (string) [required] The name of the user to delete. This parameter allows (through its _\br_\be_\bg_\be_\bx _\bp_\ba_\bt_\bt_\be_\br_\bn ) a string of characters consisting of upper and lowercase alphanumeric characters with no spaces. You can als..."
+            "description": "--user-name (string) The name of the IAM user to create a password for. The user must already exist. This parameter is optional. If no user name is included, it defaults to the principal making the request. When you make this request with root use"
+          },
+          {
+            "name": "--password <value>",
+            "description": "--password (string) The new password for the user. This parameter must be omitted when you make the request with an _\bA_\bs_\bs_\bu_\bm_\be_\bR_\bo_\bo_\bt session. It is required in all other cases. The _\br_\be_\bg_\be_\bx _\bp_\ba_\bt_\bt_\be_\br_\bn that is used t"
+          },
+          {
+            "name": "--password-reset-required | --no-password-reset-required",
+            "description": "--password-reset-required | --no-password-reset-required (boolean) Specifies whether the user is required to set a new password on next sign-in."
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          }
+        ]
+      },
+      {
+        "name": "create-open-id-connect-provider",
+        "description": "create-open-id-connect-provider command",
+        "parameters": [
+          {
+            "name": "--url <value>",
+            "description": "--url (string) [required] The URL of the identity provider. The URL must begin with https:// and should correspond to the iss claim in the provider's OpenID Connect ID tokens. Per the OIDC standard, path components are allowed but query parameters"
+          },
+          {
+            "name": "--client-id-list <value>",
+            "description": "--client-id-list (list) Provides a list of client IDs, also known as audiences. When a mobile or web app registers with an OpenID Connect provider, they establish a value that identifies the application. This is the value that's sent as the client"
+          },
+          {
+            "name": "--thumbprint-list <value>",
+            "description": "--thumbprint-list (list) A list of server certificate thumbprints for the OpenID Connect (OIDC) identity provider's server certificates. Typically this list includes only one entry. However, IAM lets you have up to five thumbprints for an OIDC pro"
+          },
+          {
+            "name": "--tags <value>",
+            "description": "--tags (list) A list of tags that you want to attach to the new IAM OpenID Connect (OIDC) provider. Each tag consists of a key name and an associated value. For more information about tagging, see _\bT_\ba_\bg_\bg_\bi_\bn_\bg _\bI_\bA_\bM _\br_\be_\bs_\bo_\bu_\br"
+          },
+          {
+            "name": "--tags <value>",
+            "description": "--tags (list) A list of tags that you want to attach to the new IAM OpenID Connect (OIDC) provider. Each tag consists of a key name and an associated value. For more information about tagging, see _\bT_\ba_\bg_\bg_\bi_\bn_\bg _\bI_\bA_\bM _\br_\be_\bs_\bo_\bu_\br"
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          }
+        ]
+      },
+      {
+        "name": "create-policy",
+        "description": "Creates a new managed policy",
+        "parameters": [
+          {
+            "name": "--policy-name <value>",
+            "description": "--policy-name (string) [required] The friendly name of the policy. IAM user, group, role, and policy names must be unique within the account. Names are not distinguished by case. For example, you cannot create resources named both \"MyResource\" and..."
+          },
+          {
+            "name": "--path <value>",
+            "description": "--path (string) The path for the policy. For more information about paths, see _\bI_\bA_\bM _\bi_\bd_\be_\bn_\bt_\bi_\bf_\bi_\be_\br_\bs in the _\bI_\bA_\bM _\bU_\bs_\be_\br _\bG_\bu_\bi_\bd_\be . This parameter is optional. If it is not included, it defaults to a slash (/..."
+          },
+          {
+            "name": "--policy-document <value>",
+            "description": "--policy-document (string) [required] The JSON policy document that you want to use as the content for the new policy. You must provide policies in JSON format in IAM. However, for CloudFormation templates formatted in YAML, you can provide the po..."
+          },
+          {
+            "name": "--description <value>",
+            "description": "--description (string) A friendly description of the policy. Typically used to store information about the permissions defined in the policy. For example, \"Grants access to production DynamoDB tables.\" The policy description is immutable. After a ..."
+          },
+          {
+            "name": "--tags <value>",
+            "description": "--tags (list) A list of tags that you want to attach to the new IAM customer managed policy. Each tag consists of a key name and an associated value. For more information about tagging, see _\bT_\ba_\bg_\bg_\bi_\bn_\bg _\bI_\bA_\bM _\br_\be_\bs_\bo_\bu_\br_\bc_\be_..."
           },
           {
             "name": "--cli-input-json | --cli-input-yaml",
@@ -61916,50 +62308,32 @@ export const awsServices: Service[] = [
         ]
       },
       {
-        "name": "get-user",
-        "description": "Retrieves information about a user",
+        "name": "create-policy-version",
+        "description": "create-policy-version command",
         "parameters": [
           {
-            "name": "--user-name <value>",
-            "description": "--user-name (string) The name of the user to get information about. This parameter is optional. If it is not included, it defaults to the user making the request. This parameter allows (through its _\br_\be_\bg_\be_\bx _\bp_\ba_\bt_\bt_\be_\br_\bn ) a string ..."
+            "name": "--policy-arn <value>",
+            "description": "--policy-arn (string) [required] The Amazon Resource Name (ARN) of the IAM policy to which you want to add a new version. For more information about ARNs, see _\bA_\bm_\ba_\bz_\bo_\bn _\bR_\be_\bs_\bo_\bu_\br_\bc_\be _\bN_\ba_\bm_\be_\bs _\b(_\bA_\bR_\bN_\bs_\b) in the _\b"
+          },
+          {
+            "name": "--policy-document <value>",
+            "description": "--policy-document (string) [required] The JSON policy document that you want to use as the content for this new version of the policy. You must provide policies in JSON format in IAM. However, for CloudFormation templates formatted in YAML, you ca"
+          },
+          {
+            "name": "--set-as-default | --no-set-as-default",
+            "description": "--set-as-default | --no-set-as-default (boolean) Specifies whether to set this version as the policy's default version. When this parameter is true , the new policy version becomes the operative version. That is, it becomes the version that is in "
           },
           {
             "name": "--cli-input-json | --cli-input-yaml",
-            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the..."
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the"
           },
           {
             "name": "--generate-cli-skeleton <value>",
-            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
-          }
-        ]
-      },
-      {
-        "name": "list-roles",
-        "description": "Lists the IAM roles",
-        "parameters": [
-          {
-            "name": "--path-prefix <value>",
-            "description": "--path-prefix (string) The path prefix for filtering the results. For example, the prefix /application_abc/component_xyz/ gets all roles whose path starts with /application_abc/component_xyz/ . This parameter is optional. If it is not included, it..."
-          },
-          {
-            "name": "--max-items <value>",
-            "description": "--max-items (integer) The total number of items to return in the command's output. If the total number of items available is more than the value specified, a NextToken is provided in the command's output. To resume pagination, provide the NextToke..."
-          },
-          {
-            "name": "--cli-input-json | --cli-input-yaml",
-            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the..."
-          },
-          {
-            "name": "--starting-token <value>",
-            "description": "--starting-token (string) A token to specify where to start paginating. This is the NextToken from a previously truncated response. For usage examples, see _\bP_\ba_\bg_\bi_\bn_\ba_\bt_\bi_\bo_\bn in the _\bA_\bW_\bS _\bC_\bo_\bm_\bm_\ba_\bn_\bd _\bL_\bi_\bn_\be _\bI_\bn_\b..."
-          },
-          {
-            "name": "--page-size <value>",
-            "description": "--page-size (integer) The size of each page to get in the AWS service call. This does not affect the number of items returned in the command's output. Setting a smaller page size results in more calls to the AWS service, retrieving fewer items in ..."
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
           },
           {
             "name": "--generate-cli-skeleton <value>",
-            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
           }
         ]
       },
@@ -62006,6 +62380,414 @@ export const awsServices: Service[] = [
         ]
       },
       {
+        "name": "create-saml-provider",
+        "description": "create-saml-provider command",
+        "parameters": [
+          {
+            "name": "--saml-metadata-document <value>",
+            "description": "--saml-metadata-document (string) [required] An XML document generated by an identity provider (IdP) that supports SAML 2.0. The document includes the issuer's name, expiration information, and keys that can be used to validate the SAML authentica"
+          },
+          {
+            "name": "--name <value>",
+            "description": "--name (string) [required] The name of the provider to create. This parameter allows (through its _\br_\be_\bg_\be_\bx _\bp_\ba_\bt_\bt_\be_\br_\bn ) a string of characters consisting of upper and lowercase alphanumeric characters with no spaces. You can also"
+          },
+          {
+            "name": "--tags <value>",
+            "description": "--tags (list) A list of tags that you want to attach to the new IAM SAML provider. Each tag consists of a key name and an associated value. For more information about tagging, see _\bT_\ba_\bg_\bg_\bi_\bn_\bg _\bI_\bA_\bM _\br_\be_\bs_\bo_\bu_\br_\bc_\be_\bs in the"
+          },
+          {
+            "name": "--tags <value>",
+            "description": "--tags (list) A list of tags that you want to attach to the new IAM SAML provider. Each tag consists of a key name and an associated value. For more information about tagging, see _\bT_\ba_\bg_\bg_\bi_\bn_\bg _\bI_\bA_\bM _\br_\be_\bs_\bo_\bu_\br_\bc_\be_\bs in the"
+          },
+          {
+            "name": "--assertion-encryption-mode <value>",
+            "description": "--assertion-encryption-mode (string) Specifies the encryption setting for the SAML provider. Possible values: +\bo Required +\bo Allowed"
+          },
+          {
+            "name": "--add-private-key <value>",
+            "description": "--add-private-key (string) The private key generated from your external identity provider. The private key must be a .pem file that uses AES-GCM or AES-CBC encryption algorithm to decrypt SAML assertions. Constraints: +\bo min: 1 +\bo max: 16384 +\bo"
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          }
+        ]
+      },
+      {
+        "name": "create-service-linked-role",
+        "description": "create-service-linked-role command",
+        "parameters": [
+          {
+            "name": "--aws-service-name <value>",
+            "description": "--aws-service-name (string) [required] The service principal for the Amazon Web Services service to which this role is attached. You use a string similar to a URL but without the _\bh_\bt_\bt_\bp_\b:_\b/_\b/ in front. For example: elasticbeanstalk.amazon"
+          },
+          {
+            "name": "--description <value>",
+            "description": "--description (string) The description of the role. Constraints: +\bo max: 1000 +\bo pattern: [\\u0009\\u000A\\u000D\\u0020-\\u007E\\u00A1-\\u00FF]*"
+          },
+          {
+            "name": "--custom-suffix <value>",
+            "description": "--custom-suffix (string) A string that you provide, which is combined with the service-provided prefix to form the complete role name. If you make multiple requests for the same service, then you must supply a different CustomSuffix for each reque"
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          }
+        ]
+      },
+      {
+        "name": "create-service-specific-credential",
+        "description": "create-service-specific-credential command",
+        "parameters": [
+          {
+            "name": "--user-name <value>",
+            "description": "--user-name (string) [required] The name of the IAM user that is to be associated with the credentials. The new service-specific credentials have the same permissions as the associated user except that they can be used only to access the specified"
+          },
+          {
+            "name": "--service-name <value>",
+            "description": "--service-name (string) [required] The name of the Amazon Web Services service that is to be associated with the credentials. The service you specify here is the only service that can be accessed using these credentials."
+          },
+          {
+            "name": "--credential-age-days <value>",
+            "description": "--credential-age-days (integer) The number of days until the service specific credential expires. This field is only valid for Bedrock API keys and must be a positive integer. When not specified, the credential will not expire. Constraints: +\bo mi"
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          }
+        ]
+      },
+      {
+        "name": "create-user",
+        "description": "Creates a new IAM user",
+        "parameters": [
+          {
+            "name": "--path <value>",
+            "description": "--path (string) The path for the user name. For more information about paths, see _\bI_\bA_\bM _\bi_\bd_\be_\bn_\bt_\bi_\bf_\bi_\be_\br_\bs in the _\bI_\bA_\bM _\bU_\bs_\be_\br _\bG_\bu_\bi_\bd_\be . This parameter is optional. If it is not included, it defaults to a slash..."
+          },
+          {
+            "name": "--user-name <value>",
+            "description": "--user-name (string) [required] The name of the user to create. IAM user, group, role, and policy names must be unique within the account. Names are not distinguished by case. For example, you cannot create resources named both \"MyResource\" and \"m..."
+          },
+          {
+            "name": "--permissions-boundary <value>",
+            "description": "--permissions-boundary (string) The ARN of the managed policy that is used to set the permissions boundary for the user. A permissions boundary policy defines the maximum permissions that identity-based policies can grant to an entity, but does no..."
+          },
+          {
+            "name": "--tags <value>",
+            "description": "--tags (list) A list of tags that you want to attach to the new user. Each tag consists of a key name and an associated value. For more information about tagging, see _\bT_\ba_\bg_\bg_\bi_\bn_\bg _\bI_\bA_\bM _\br_\be_\bs_\bo_\bu_\br_\bc_\be_\bs in the _\bI_\bA_\bM _\bU..."
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          }
+        ]
+      },
+      {
+        "name": "create-virtual-mfa-device",
+        "description": "create-virtual-mfa-device command",
+        "parameters": [
+          {
+            "name": "--path <value>",
+            "description": "--path (string) The path for the virtual MFA device. For more information about paths, see _\bI_\bA_\bM _\bi_\bd_\be_\bn_\bt_\bi_\bf_\bi_\be_\br_\bs in the _\bI_\bA_\bM _\bU_\bs_\be_\br _\bG_\bu_\bi_\bd_\be . This parameter is optional. If it is not included, it defaults t"
+          },
+          {
+            "name": "--virtual-mfa-device-name <value>",
+            "description": "--virtual-mfa-device-name (string) [required] The name of the virtual MFA device, which must be unique. Use with path to uniquely identify a virtual MFA device. This parameter allows (through its _\br_\be_\bg_\be_\bx _\bp_\ba_\bt_\bt_\be_\br_\bn ) a string of"
+          },
+          {
+            "name": "--tags <value>",
+            "description": "--tags (list) A list of tags that you want to attach to the new IAM virtual MFA device. Each tag consists of a key name and an associated value. For more information about tagging, see _\bT_\ba_\bg_\bg_\bi_\bn_\bg _\bI_\bA_\bM _\br_\be_\bs_\bo_\bu_\br_\bc_\be_\bs in"
+          },
+          {
+            "name": "--tags <value>",
+            "description": "--tags (list) A list of tags that you want to attach to the new IAM virtual MFA device. Each tag consists of a key name and an associated value. For more information about tagging, see _\bT_\ba_\bg_\bg_\bi_\bn_\bg _\bI_\bA_\bM _\br_\be_\bs_\bo_\bu_\br_\bc_\be_\bs in"
+          },
+          {
+            "name": "--outfile <value>",
+            "description": "--outfile (string) [required] The output path and file name where the bootstrap information will be stored."
+          },
+          {
+            "name": "--bootstrap-method <value>",
+            "description": "--bootstrap-method (string) [required] Method to use to seed the virtual MFA. Valid values are: QRCodePNG | Base32StringSeed"
+          },
+          {
+            "name": "--bootstrap-method <value>",
+            "description": "--bootstrap-method (string) [required] Method to use to seed the virtual MFA. Valid values are: QRCodePNG | Base32StringSeed"
+          }
+        ]
+      },
+      {
+        "name": "deactivate-mfa-device",
+        "description": "deactivate-mfa-device command",
+        "parameters": [
+          {
+            "name": "--user-name <value>",
+            "description": "--user-name (string) The name of the user whose MFA device you want to deactivate. This parameter is optional. If no user name is included, it defaults to the principal making the request. When you make this request with root user credentials, you"
+          },
+          {
+            "name": "--serial-number <value>",
+            "description": "--serial-number (string) [required] The serial number that uniquely identifies the MFA device. For virtual MFA devices, the serial number is the device ARN. This parameter allows (through its _\br_\be_\bg_\be_\bx _\bp_\ba_\bt_\bt_\be_\br_\bn ) a string of cha"
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          }
+        ]
+      },
+      {
+        "name": "delete-access-key",
+        "description": "Deletes an access key",
+        "parameters": [
+          {
+            "name": "--user-name <value>",
+            "description": "--user-name (string) The name of the user whose access key pair you want to delete. This parameter allows (through its _\br_\be_\bg_\be_\bx _\bp_\ba_\bt_\bt_\be_\br_\bn ) a string of characters consisting of upper and lowercase alphanumeric characters with no..."
+          },
+          {
+            "name": "--access-key-id <value>",
+            "description": "--access-key-id (string) [required] The access key ID for the access key ID and secret access key you want to delete. This parameter allows (through its _\br_\be_\bg_\be_\bx _\bp_\ba_\bt_\bt_\be_\br_\bn ) a string of characters that can consist of any upper o..."
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          }
+        ]
+      },
+      {
+        "name": "delete-account-alias",
+        "description": "delete-account-alias command",
+        "parameters": [
+          {
+            "name": "--account-alias <value>",
+            "description": "--account-alias (string) [required] The name of the account alias to delete. This parameter allows (through its _\br_\be_\bg_\be_\bx _\bp_\ba_\bt_\bt_\be_\br_\bn ) a string of characters consisting of lowercase letters, digits, and dashes. You cannot start or"
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          }
+        ]
+      },
+      {
+        "name": "delete-account-password-policy",
+        "description": "delete-account-password-policy command",
+        "parameters": [
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          }
+        ]
+      },
+      {
+        "name": "delete-group",
+        "description": "Deletes an IAM group",
+        "parameters": [
+          {
+            "name": "--group-name <value>",
+            "description": "--group-name (string) [required] The name of the IAM group to delete. This parameter allows (through its _\br_\be_\bg_\be_\bx _\bp_\ba_\bt_\bt_\be_\br_\bn ) a string of characters consisting of upper and lowercase alphanumeric characters with no spaces. You c..."
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          }
+        ]
+      },
+      {
+        "name": "delete-group-policy",
+        "description": "delete-group-policy command",
+        "parameters": [
+          {
+            "name": "--group-name <value>",
+            "description": "--group-name (string) [required] The name (friendly name, not ARN) identifying the group that the policy is embedded in. This parameter allows (through its _\br_\be_\bg_\be_\bx _\bp_\ba_\bt_\bt_\be_\br_\bn ) a string of characters consisting of upper and lowe"
+          },
+          {
+            "name": "--policy-name <value>",
+            "description": "--policy-name (string) [required] The name identifying the policy document to delete. This parameter allows (through its _\br_\be_\bg_\be_\bx _\bp_\ba_\bt_\bt_\be_\br_\bn ) a string of characters consisting of upper and lowercase alphanumeric characters with "
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          }
+        ]
+      },
+      {
+        "name": "delete-instance-profile",
+        "description": "delete-instance-profile command",
+        "parameters": [
+          {
+            "name": "--instance-profile-name <value>",
+            "description": "--instance-profile-name (string) [required] The name of the instance profile to delete. This parameter allows (through its _\br_\be_\bg_\be_\bx _\bp_\ba_\bt_\bt_\be_\br_\bn ) a string of characters consisting of upper and lowercase alphanumeric characters wit"
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          }
+        ]
+      },
+      {
+        "name": "delete-login-profile",
+        "description": "delete-login-profile command",
+        "parameters": [
+          {
+            "name": "--user-name <value>",
+            "description": "--user-name (string) The name of the user whose password you want to delete. This parameter is optional. If no user name is included, it defaults to the principal making the request. When you make this request with root user credentials, you must "
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          }
+        ]
+      },
+      {
+        "name": "delete-open-id-connect-provider",
+        "description": "delete-open-id-connect-provider command",
+        "parameters": [
+          {
+            "name": "--open-id-connect-provider-arn <value>",
+            "description": "--open-id-connect-provider-arn (string) [required] The Amazon Resource Name (ARN) of the IAM OpenID Connect provider resource object to delete. You can get a list of OpenID Connect provider resource ARNs by using the _\bL_\bi_\bs_\bt_\bO_\bp_\be_\bn_\bI_\bD"
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          }
+        ]
+      },
+      {
+        "name": "delete-policy",
+        "description": "Deletes a managed policy",
+        "parameters": [
+          {
+            "name": "--policy-arn <value>",
+            "description": "--policy-arn (string) [required] The Amazon Resource Name (ARN) of the IAM policy you want to delete. For more information about ARNs, see _\bA_\bm_\ba_\bz_\bo_\bn _\bR_\be_\bs_\bo_\bu_\br_\bc_\be _\bN_\ba_\bm_\be_\bs _\b(_\bA_\bR_\bN_\bs_\b) in the _\bA_\bm_\ba_\bz_\bo_\bn _\bW..."
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          }
+        ]
+      },
+      {
+        "name": "delete-policy-version",
+        "description": "delete-policy-version command",
+        "parameters": [
+          {
+            "name": "--policy-arn <value>",
+            "description": "--policy-arn (string) [required] The Amazon Resource Name (ARN) of the IAM policy from which you want to delete a version. For more information about ARNs, see _\bA_\bm_\ba_\bz_\bo_\bn _\bR_\be_\bs_\bo_\bu_\br_\bc_\be _\bN_\ba_\bm_\be_\bs _\b(_\bA_\bR_\bN_\bs_\b) in the _"
+          },
+          {
+            "name": "--version-id <value>",
+            "description": "--version-id (string) [required] The policy version to delete. This parameter allows (through its _\br_\be_\bg_\be_\bx _\bp_\ba_\bt_\bt_\be_\br_\bn ) a string of characters that consists of the lowercase letter 'v' followed by one or two digits, and optionall"
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          }
+        ]
+      },
+      {
         "name": "delete-role",
         "description": "Deletes an IAM role",
         "parameters": [
@@ -62024,16 +62806,204 @@ export const awsServices: Service[] = [
         ]
       },
       {
-        "name": "attach-role-policy",
-        "description": "Attaches a managed policy to a role",
+        "name": "delete-role-permissions-boundary",
+        "description": "delete-role-permissions-boundary command",
         "parameters": [
           {
             "name": "--role-name <value>",
-            "description": "--role-name (string) [required] The name (friendly name, not ARN) of the role to attach the policy to. This parameter allows (through its _\br_\be_\bg_\be_\bx _\bp_\ba_\bt_\bt_\be_\br_\bn ) a string of characters consisting of upper and lowercase alphanumeric..."
+            "description": "--role-name (string) [required] The name (friendly name, not ARN) of the IAM role from which you want to remove the permissions boundary. Constraints: +\bo min: 1 +\bo max: 64 +\bo pattern: [\\w+=,.@-]+"
           },
           {
-            "name": "--policy-arn <value>",
-            "description": "--policy-arn (string) [required] The Amazon Resource Name (ARN) of the IAM policy you want to attach. For more information about ARNs, see _\bA_\bm_\ba_\bz_\bo_\bn _\bR_\be_\bs_\bo_\bu_\br_\bc_\be _\bN_\ba_\bm_\be_\bs _\b(_\bA_\bR_\bN_\bs_\b) in the _\bA_\bm_\ba_\bz_\bo_\bn _\bW..."
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          }
+        ]
+      },
+      {
+        "name": "delete-role-policy",
+        "description": "delete-role-policy command",
+        "parameters": [
+          {
+            "name": "--role-name <value>",
+            "description": "--role-name (string) [required] The name (friendly name, not ARN) identifying the role that the policy is embedded in. This parameter allows (through its _\br_\be_\bg_\be_\bx _\bp_\ba_\bt_\bt_\be_\br_\bn ) a string of characters consisting of upper and lowerc"
+          },
+          {
+            "name": "--policy-name <value>",
+            "description": "--policy-name (string) [required] The name of the inline policy to delete from the specified IAM role. This parameter allows (through its _\br_\be_\bg_\be_\bx _\bp_\ba_\bt_\bt_\be_\br_\bn ) a string of characters consisting of upper and lowercase alphanumeric"
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          }
+        ]
+      },
+      {
+        "name": "delete-saml-provider",
+        "description": "delete-saml-provider command",
+        "parameters": [
+          {
+            "name": "--saml-provider-arn <value>",
+            "description": "--saml-provider-arn (string) [required] The Amazon Resource Name (ARN) of the SAML provider to delete. Constraints: +\bo min: 20 +\bo max: 2048"
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          }
+        ]
+      },
+      {
+        "name": "delete-server-certificate",
+        "description": "delete-server-certificate command",
+        "parameters": [
+          {
+            "name": "--server-certificate-name <value>",
+            "description": "--server-certificate-name (string) [required] The name of the server certificate you want to delete. This parameter allows (through its _\br_\be_\bg_\be_\bx _\bp_\ba_\bt_\bt_\be_\br_\bn ) a string of characters consisting of upper and lowercase alphanumeric c"
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          }
+        ]
+      },
+      {
+        "name": "delete-service-linked-role",
+        "description": "delete-service-linked-role command",
+        "parameters": [
+          {
+            "name": "--role-name <value>",
+            "description": "--role-name (string) [required] The name of the service-linked role to be deleted. Constraints: +\bo min: 1 +\bo max: 64 +\bo pattern: [\\w+=,.@-]+"
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          }
+        ]
+      },
+      {
+        "name": "delete-service-specific-credential",
+        "description": "delete-service-specific-credential command",
+        "parameters": [
+          {
+            "name": "--user-name <value>",
+            "description": "--user-name (string) The name of the IAM user associated with the service-specific credential. If this value is not specified, then the operation assumes the user whose credentials are used to call the operation. This parameter allows (through its"
+          },
+          {
+            "name": "--service-specific-credential-id <value>",
+            "description": "--service-specific-credential-id (string) [required] The unique identifier of the service-specific credential. You can get this value by calling _\bL_\bi_\bs_\bt_\bS_\be_\br_\bv_\bi_\bc_\be_\bS_\bp_\be_\bc_\bi_\bf_\bi_\bc_\bC_\br_\be_\bd_\be_\bn_\bt_\bi_\ba_\bl_\bs . This para"
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          }
+        ]
+      },
+      {
+        "name": "delete-signing-certificate",
+        "description": "delete-signing-certificate command",
+        "parameters": [
+          {
+            "name": "--user-name <value>",
+            "description": "--user-name (string) The name of the user the signing certificate belongs to. This parameter allows (through its _\br_\be_\bg_\be_\bx _\bp_\ba_\bt_\bt_\be_\br_\bn ) a string of characters consisting of upper and lowercase alphanumeric characters with no space"
+          },
+          {
+            "name": "--certificate-id <value>",
+            "description": "--certificate-id (string) [required] The ID of the signing certificate to delete. The format of this parameter, as described by its _\br_\be_\bg_\be_\bx pattern, is a string of characters that can be upper- or lower-cased letters or digits. Constraints"
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          }
+        ]
+      },
+      {
+        "name": "delete-ssh-public-key",
+        "description": "delete-ssh-public-key command",
+        "parameters": [
+          {
+            "name": "--user-name <value>",
+            "description": "--user-name (string) [required] The name of the IAM user associated with the SSH public key. This parameter allows (through its _\br_\be_\bg_\be_\bx _\bp_\ba_\bt_\bt_\be_\br_\bn ) a string of characters consisting of upper and lowercase alphanumeric character"
+          },
+          {
+            "name": "--ssh-public-key-id <value>",
+            "description": "--ssh-public-key-id (string) [required] The unique identifier for the SSH public key. This parameter allows (through its _\br_\be_\bg_\be_\bx _\bp_\ba_\bt_\bt_\be_\br_\bn ) a string of characters that can consist of any upper or lowercased letter or digit. Co"
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          }
+        ]
+      },
+      {
+        "name": "delete-user",
+        "description": "Deletes an IAM user",
+        "parameters": [
+          {
+            "name": "--user-name <value>",
+            "description": "--user-name (string) [required] The name of the user to delete. This parameter allows (through its _\br_\be_\bg_\be_\bx _\bp_\ba_\bt_\bt_\be_\br_\bn ) a string of characters consisting of upper and lowercase alphanumeric characters with no spaces. You can als..."
           },
           {
             "name": "--cli-input-json | --cli-input-yaml",
@@ -62042,6 +63012,102 @@ export const awsServices: Service[] = [
           {
             "name": "--generate-cli-skeleton <value>",
             "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          }
+        ]
+      },
+      {
+        "name": "delete-user-permissions-boundary",
+        "description": "delete-user-permissions-boundary command",
+        "parameters": [
+          {
+            "name": "--user-name <value>",
+            "description": "--user-name (string) [required] The name (friendly name, not ARN) of the IAM user from which you want to remove the permissions boundary. Constraints: +\bo min: 1 +\bo max: 64 +\bo pattern: [\\w+=,.@-]+"
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          }
+        ]
+      },
+      {
+        "name": "delete-user-policy",
+        "description": "delete-user-policy command",
+        "parameters": [
+          {
+            "name": "--user-name <value>",
+            "description": "--user-name (string) [required] The name (friendly name, not ARN) identifying the user that the policy is embedded in. This parameter allows (through its _\br_\be_\bg_\be_\bx _\bp_\ba_\bt_\bt_\be_\br_\bn ) a string of characters consisting of upper and lowerc"
+          },
+          {
+            "name": "--policy-name <value>",
+            "description": "--policy-name (string) [required] The name identifying the policy document to delete. This parameter allows (through its _\br_\be_\bg_\be_\bx _\bp_\ba_\bt_\bt_\be_\br_\bn ) a string of characters consisting of upper and lowercase alphanumeric characters with "
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          }
+        ]
+      },
+      {
+        "name": "delete-virtual-mfa-device",
+        "description": "delete-virtual-mfa-device command",
+        "parameters": [
+          {
+            "name": "--serial-number <value>",
+            "description": "--serial-number (string) [required] The serial number that uniquely identifies the MFA device. For virtual MFA devices, the serial number is the same as the ARN. This parameter allows (through its _\br_\be_\bg_\be_\bx _\bp_\ba_\bt_\bt_\be_\br_\bn ) a string o"
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          }
+        ]
+      },
+      {
+        "name": "detach-group-policy",
+        "description": "detach-group-policy command",
+        "parameters": [
+          {
+            "name": "--group-name <value>",
+            "description": "--group-name (string) [required] The name (friendly name, not ARN) of the IAM group to detach the policy from. This parameter allows (through its _\br_\be_\bg_\be_\bx _\bp_\ba_\bt_\bt_\be_\br_\bn ) a string of characters consisting of upper and lowercase alph"
+          },
+          {
+            "name": "--policy-arn <value>",
+            "description": "--policy-arn (string) [required] The Amazon Resource Name (ARN) of the IAM policy you want to detach. For more information about ARNs, see _\bA_\bm_\ba_\bz_\bo_\bn _\bR_\be_\bs_\bo_\bu_\br_\bc_\be _\bN_\ba_\bm_\be_\bs _\b(_\bA_\bR_\bN_\bs_\b) in the _\bA_\bm_\ba_\bz_\bo_\bn _\bW"
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
           }
         ]
       },
@@ -62064,6 +63130,1554 @@ export const awsServices: Service[] = [
           {
             "name": "--generate-cli-skeleton <value>",
             "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          }
+        ]
+      },
+      {
+        "name": "detach-user-policy",
+        "description": "detach-user-policy command",
+        "parameters": [
+          {
+            "name": "--user-name <value>",
+            "description": "--user-name (string) [required] The name (friendly name, not ARN) of the IAM user to detach the policy from. This parameter allows (through its _\br_\be_\bg_\be_\bx _\bp_\ba_\bt_\bt_\be_\br_\bn ) a string of characters consisting of upper and lowercase alphan"
+          },
+          {
+            "name": "--policy-arn <value>",
+            "description": "--policy-arn (string) [required] The Amazon Resource Name (ARN) of the IAM policy you want to detach. For more information about ARNs, see _\bA_\bm_\ba_\bz_\bo_\bn _\bR_\be_\bs_\bo_\bu_\br_\bc_\be _\bN_\ba_\bm_\be_\bs _\b(_\bA_\bR_\bN_\bs_\b) in the _\bA_\bm_\ba_\bz_\bo_\bn _\bW"
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          }
+        ]
+      },
+      {
+        "name": "disable-organizations-root-credentials-management",
+        "description": "disable-organizations-root-credentials-management command",
+        "parameters": [
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          }
+        ]
+      },
+      {
+        "name": "disable-organizations-root-sessions",
+        "description": "disable-organizations-root-sessions command",
+        "parameters": [
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          }
+        ]
+      },
+      {
+        "name": "disable-outbound-web-identity-federation",
+        "description": "disable-outbound-web-identity-federation command",
+        "parameters": [
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          }
+        ]
+      },
+      {
+        "name": "enable-mfa-device",
+        "description": "enable-mfa-device command",
+        "parameters": [
+          {
+            "name": "--user-name <value>",
+            "description": "--user-name (string) [required] The name of the IAM user for whom you want to enable the MFA device. This parameter allows (through its _\br_\be_\bg_\be_\bx _\bp_\ba_\bt_\bt_\be_\br_\bn ) a string of characters consisting of upper and lowercase alphanumeric c"
+          },
+          {
+            "name": "--serial-number <value>",
+            "description": "--serial-number (string) [required] The serial number that uniquely identifies the MFA device. For virtual MFA devices, the serial number is the device ARN. This parameter allows (through its _\br_\be_\bg_\be_\bx _\bp_\ba_\bt_\bt_\be_\br_\bn ) a string of cha"
+          },
+          {
+            "name": "--authentication-code1 <value>",
+            "description": "--authentication-code1 (string) [required] An authentication code emitted by the device. The format for this parameter is a string of six digits. WARNING: Constraints: +\bo min: 6 +\bo max: 6 +\bo pattern: [\\d]+"
+          },
+          {
+            "name": "--authentication-code1 <value>",
+            "description": "--authentication-code1 (string) [required] An authentication code emitted by the device. The format for this parameter is a string of six digits. WARNING: Constraints: +\bo min: 6 +\bo max: 6 +\bo pattern: [\\d]+"
+          },
+          {
+            "name": "--authentication-code2 <value>",
+            "description": "--authentication-code2 (string) [required] A subsequent authentication code emitted by the device. The format for this parameter is a string of six digits. WARNING: Constraints: +\bo min: 6 +\bo max: 6 +\bo pattern: [\\d]+"
+          },
+          {
+            "name": "--authentication-code2 <value>",
+            "description": "--authentication-code2 (string) [required] A subsequent authentication code emitted by the device. The format for this parameter is a string of six digits. WARNING: Constraints: +\bo min: 6 +\bo max: 6 +\bo pattern: [\\d]+"
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          }
+        ]
+      },
+      {
+        "name": "enable-organizations-root-credentials-management",
+        "description": "enable-organizations-root-credentials-management command",
+        "parameters": [
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          }
+        ]
+      },
+      {
+        "name": "enable-organizations-root-sessions",
+        "description": "enable-organizations-root-sessions command",
+        "parameters": [
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          }
+        ]
+      },
+      {
+        "name": "enable-outbound-web-identity-federation",
+        "description": "enable-outbound-web-identity-federation command",
+        "parameters": [
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          }
+        ]
+      },
+      {
+        "name": "generate-credential-report",
+        "description": "generate-credential-report command",
+        "parameters": [
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          }
+        ]
+      },
+      {
+        "name": "generate-organizations-access-report",
+        "description": "generate-organizations-access-report command",
+        "parameters": [
+          {
+            "name": "--entity-path <value>",
+            "description": "--entity-path (string) [required] The path of the Organizations entity (root, OU, or account). You can build an entity path using the known structure of your organization. For example, assume that your account ID is 123456789012 and its parent OU "
+          },
+          {
+            "name": "--organizations-policy-id <value>",
+            "description": "--organizations-policy-id (string) The identifier of the Organizations service control policy (SCP). This parameter is optional. This ID is used to generate information about when an account principal that is limited by the SCP attempted to access"
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          }
+        ]
+      },
+      {
+        "name": "generate-service-last-accessed-details",
+        "description": "generate-service-last-accessed-details command",
+        "parameters": [
+          {
+            "name": "--arn <value>",
+            "description": "--arn (string) [required] The ARN of the IAM resource (user, group, role, or managed policy) used to generate information about when the resource was last used in an attempt to access an Amazon Web Services service. Constraints: +\bo min: 20 +\bo ma"
+          },
+          {
+            "name": "--granularity <value>",
+            "description": "--granularity (string) The level of detail that you want to generate. You can specify whether you want to generate information about the last attempt to access services or actions. If you specify service-level granularity, this operation generates"
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          }
+        ]
+      },
+      {
+        "name": "get-access-key-last-used",
+        "description": "get-access-key-last-used command",
+        "parameters": [
+          {
+            "name": "--access-key-id <value>",
+            "description": "--access-key-id (string) [required] The identifier of an access key. This parameter allows (through its _\br_\be_\bg_\be_\bx _\bp_\ba_\bt_\bt_\be_\br_\bn ) a string of characters that can consist of any upper or lowercased letter or digit. Constraints: +\bo mi"
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          }
+        ]
+      },
+      {
+        "name": "get-account-authorization-details",
+        "description": "get-account-authorization-details command",
+        "parameters": [
+          {
+            "name": "--filter <value>",
+            "description": "--filter (list) A list of entity types used to filter the results. Only the entities that match the types you specify are included in the output. Use the value LocalManagedPolicy to include customer managed policies. The format for this parameter "
+          },
+          {
+            "name": "--max-items <value>",
+            "description": "--max-items (integer) The total number of items to return in the command's output. If the total number of items available is more than the value specified, a NextToken is provided in the command's output. To resume pagination, provide the NextToke"
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the"
+          },
+          {
+            "name": "--starting-token <value>",
+            "description": "--starting-token (string) A token to specify where to start paginating. This is the NextToken from a previously truncated response. For usage examples, see _\bP_\ba_\bg_\bi_\bn_\ba_\bt_\bi_\bo_\bn in the _\bA_\bW_\bS _\bC_\bo_\bm_\bm_\ba_\bn_\bd _\bL_\bi_\bn_\be _\bI_\bn_\b"
+          },
+          {
+            "name": "--page-size <value>",
+            "description": "--page-size (integer) The size of each page to get in the AWS service call. This does not affect the number of items returned in the command's output. Setting a smaller page size results in more calls to the AWS service, retrieving fewer items in "
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          }
+        ]
+      },
+      {
+        "name": "get-account-password-policy",
+        "description": "get-account-password-policy command",
+        "parameters": [
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          }
+        ]
+      },
+      {
+        "name": "get-account-summary",
+        "description": "get-account-summary command",
+        "parameters": [
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          }
+        ]
+      },
+      {
+        "name": "get-context-keys-for-custom-policy",
+        "description": "get-context-keys-for-custom-policy command",
+        "parameters": [
+          {
+            "name": "--policy-input-list <value>",
+            "description": "--policy-input-list (list) [required] A list of policies for which you want the list of context keys referenced in those policies. Each document is specified as a string containing the complete, valid JSON text of an IAM policy. The _\br_\be_\bg_\be_\b"
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          }
+        ]
+      },
+      {
+        "name": "get-context-keys-for-principal-policy",
+        "description": "get-context-keys-for-principal-policy command",
+        "parameters": [
+          {
+            "name": "--policy-source-arn <value>",
+            "description": "--policy-source-arn (string) [required] The ARN of a user, group, or role whose policies contain the context keys that you want listed. If you specify a user, the list includes context keys that are found in all policies that are attached to the u"
+          },
+          {
+            "name": "--policy-input-list <value>",
+            "description": "--policy-input-list (list) An optional list of additional policies for which you want the list of context keys that are referenced. The _\br_\be_\bg_\be_\bx _\bp_\ba_\bt_\bt_\be_\br_\bn used to validate this parameter is a string of characters consisting of t"
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          }
+        ]
+      },
+      {
+        "name": "get-credential-report",
+        "description": "get-credential-report command",
+        "parameters": [
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          }
+        ]
+      },
+      {
+        "name": "get-delegation-request",
+        "description": "get-delegation-request command",
+        "parameters": [
+          {
+            "name": "--delegation-request-id <value>",
+            "description": "--delegation-request-id (string) [required] The unique identifier of the delegation request to retrieve. Constraints: +\bo min: 16 +\bo max: 128 +\bo pattern: [\\w-]+"
+          },
+          {
+            "name": "--delegation-permission-check | --no-delegation-permission-check",
+            "description": "--delegation-permission-check | --no-delegation-permission-check (boolean) Specifies whether to perform a permission check for the delegation request. If set to true, the GetDelegationRequest API call will start a permission check process. This pr"
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          }
+        ]
+      },
+      {
+        "name": "get-group",
+        "description": "get-group command",
+        "parameters": [
+          {
+            "name": "--group-name <value>",
+            "description": "--group-name (string) [required] The name of the group. This parameter allows (through its _\br_\be_\bg_\be_\bx _\bp_\ba_\bt_\bt_\be_\br_\bn ) a string of characters consisting of upper and lowercase alphanumeric characters with no spaces. You can also includ"
+          },
+          {
+            "name": "--max-items <value>",
+            "description": "--max-items (integer) The total number of items to return in the command's output. If the total number of items available is more than the value specified, a NextToken is provided in the command's output. To resume pagination, provide the NextToke"
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the"
+          },
+          {
+            "name": "--starting-token <value>",
+            "description": "--starting-token (string) A token to specify where to start paginating. This is the NextToken from a previously truncated response. For usage examples, see _\bP_\ba_\bg_\bi_\bn_\ba_\bt_\bi_\bo_\bn in the _\bA_\bW_\bS _\bC_\bo_\bm_\bm_\ba_\bn_\bd _\bL_\bi_\bn_\be _\bI_\bn_\b"
+          },
+          {
+            "name": "--page-size <value>",
+            "description": "--page-size (integer) The size of each page to get in the AWS service call. This does not affect the number of items returned in the command's output. Setting a smaller page size results in more calls to the AWS service, retrieving fewer items in "
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          }
+        ]
+      },
+      {
+        "name": "get-group-policy",
+        "description": "get-group-policy command",
+        "parameters": [
+          {
+            "name": "--group-name <value>",
+            "description": "--group-name (string) [required] The name of the group the policy is associated with. This parameter allows (through its _\br_\be_\bg_\be_\bx _\bp_\ba_\bt_\bt_\be_\br_\bn ) a string of characters consisting of upper and lowercase alphanumeric characters with "
+          },
+          {
+            "name": "--policy-name <value>",
+            "description": "--policy-name (string) [required] The name of the policy document to get. This parameter allows (through its _\br_\be_\bg_\be_\bx _\bp_\ba_\bt_\bt_\be_\br_\bn ) a string of characters consisting of upper and lowercase alphanumeric characters with no spaces. Y"
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          }
+        ]
+      },
+      {
+        "name": "get-human-readable-summary",
+        "description": "get-human-readable-summary command",
+        "parameters": [
+          {
+            "name": "--entity-arn <value>",
+            "description": "--entity-arn (string) [required] Arn of the entity to be summarized. At this time, the only supported entity type is delegation-request Constraints: +\bo min: 20 +\bo max: 2048"
+          },
+          {
+            "name": "--locale <value>",
+            "description": "--locale (string) A string representing the locale to use for the summary generation. The supported locale strings are based on the _\bS_\bu_\bp_\bp_\bo_\br_\bt_\be_\bd _\bl_\ba_\bn_\bg_\bu_\ba_\bg_\be_\bs _\bo_\bf _\bt_\bh_\be _\bA_\bm_\ba_\bz_\bo_\bn _\bW_\be_\bb _\bS_\be_\br_\bv_"
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          }
+        ]
+      },
+      {
+        "name": "get-instance-profile",
+        "description": "get-instance-profile command",
+        "parameters": [
+          {
+            "name": "--instance-profile-name <value>",
+            "description": "--instance-profile-name (string) [required] The name of the instance profile to get information about. This parameter allows (through its _\br_\be_\bg_\be_\bx _\bp_\ba_\bt_\bt_\be_\br_\bn ) a string of characters consisting of upper and lowercase alphanumeric"
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          }
+        ]
+      },
+      {
+        "name": "get-login-profile",
+        "description": "get-login-profile command",
+        "parameters": [
+          {
+            "name": "--user-name <value>",
+            "description": "--user-name (string) The name of the user whose login profile you want to retrieve. This parameter is optional. If no user name is included, it defaults to the principal making the request. When you make this request with root user credentials, yo"
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          }
+        ]
+      },
+      {
+        "name": "get-mfa-device",
+        "description": "get-mfa-device command",
+        "parameters": [
+          {
+            "name": "--serial-number <value>",
+            "description": "--serial-number (string) [required] Serial number that uniquely identifies the MFA device. For this API, we only accept FIDO security key _\bA_\bR_\bN_\bs . Constraints: +\bo min: 9 +\bo max: 256 +\bo pattern: [\\w+=/:,.@-]+"
+          },
+          {
+            "name": "--user-name <value>",
+            "description": "--user-name (string) The friendly name identifying the user. Constraints: +\bo min: 1 +\bo max: 64 +\bo pattern: [\\w+=,.@-]+"
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          }
+        ]
+      },
+      {
+        "name": "get-open-id-connect-provider",
+        "description": "get-open-id-connect-provider command",
+        "parameters": [
+          {
+            "name": "--open-id-connect-provider-arn <value>",
+            "description": "--open-id-connect-provider-arn (string) [required] The Amazon Resource Name (ARN) of the OIDC provider resource object in IAM to get information for. You can get a list of OIDC provider resource ARNs by using the _\bL_\bi_\bs_\bt_\bO_\bp_\be_\bn_\bI_\bD_\bC_"
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          }
+        ]
+      },
+      {
+        "name": "get-organizations-access-report",
+        "description": "get-organizations-access-report command",
+        "parameters": [
+          {
+            "name": "--job-id <value>",
+            "description": "--job-id (string) [required] The identifier of the request generated by the _\bG_\be_\bn_\be_\br_\ba_\bt_\be_\bO_\br_\bg_\ba_\bn_\bi_\bz_\ba_\bt_\bi_\bo_\bn_\bs_\bA_\bc_\bc_\be_\bs_\bs_\bR_\be_\bp_\bo_\br_\bt operation. Constraints: +\bo min: 36 +\bo max: 36"
+          },
+          {
+            "name": "--max-items <value>",
+            "description": "--max-items (integer) Use this only when paginating results to indicate the maximum number of items you want in the response. If additional items exist beyond the maximum you specify, the IsTruncated response element is true . If you do not includ"
+          },
+          {
+            "name": "--marker <value>",
+            "description": "--marker (string) Use this parameter only when paginating results and only after you receive a response indicating that the results are truncated. Set it to the value of the Marker element in the response that you received to indicate where the ne"
+          },
+          {
+            "name": "--sort-key <value>",
+            "description": "--sort-key (string) The key that is used to sort the results. If you choose the namespace key, the results are returned in alphabetical order. If you choose the time key, the results are sorted numerically by the date and time. Possible values: +\b"
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          }
+        ]
+      },
+      {
+        "name": "get-outbound-web-identity-federation-info",
+        "description": "get-outbound-web-identity-federation-info command",
+        "parameters": [
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          }
+        ]
+      },
+      {
+        "name": "get-policy",
+        "description": "Retrieves information about a policy",
+        "parameters": [
+          {
+            "name": "--policy-arn <value>",
+            "description": "--policy-arn (string) [required] The Amazon Resource Name (ARN) of the managed policy that you want information about. For more information about ARNs, see _\bA_\bm_\ba_\bz_\bo_\bn _\bR_\be_\bs_\bo_\bu_\br_\bc_\be _\bN_\ba_\bm_\be_\bs _\b(_\bA_\bR_\bN_\bs_\b) in the _\bA_\b..."
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          }
+        ]
+      },
+      {
+        "name": "get-policy-version",
+        "description": "get-policy-version command",
+        "parameters": [
+          {
+            "name": "--policy-arn <value>",
+            "description": "--policy-arn (string) [required] The Amazon Resource Name (ARN) of the managed policy that you want information about. For more information about ARNs, see _\bA_\bm_\ba_\bz_\bo_\bn _\bR_\be_\bs_\bo_\bu_\br_\bc_\be _\bN_\ba_\bm_\be_\bs _\b(_\bA_\bR_\bN_\bs_\b) in the _\bA_\b"
+          },
+          {
+            "name": "--version-id <value>",
+            "description": "--version-id (string) [required] Identifies the policy version to retrieve. This parameter allows (through its _\br_\be_\bg_\be_\bx _\bp_\ba_\bt_\bt_\be_\br_\bn ) a string of characters that consists of the lowercase letter 'v' followed by one or two digits, "
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          }
+        ]
+      },
+      {
+        "name": "get-role",
+        "description": "get-role command",
+        "parameters": [
+          {
+            "name": "--role-name <value>",
+            "description": "--role-name (string) [required] The name of the IAM role to get information about. This parameter allows (through its _\br_\be_\bg_\be_\bx _\bp_\ba_\bt_\bt_\be_\br_\bn ) a string of characters consisting of upper and lowercase alphanumeric characters with no "
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          }
+        ]
+      },
+      {
+        "name": "get-role-policy",
+        "description": "get-role-policy command",
+        "parameters": [
+          {
+            "name": "--role-name <value>",
+            "description": "--role-name (string) [required] The name of the role associated with the policy. This parameter allows (through its _\br_\be_\bg_\be_\bx _\bp_\ba_\bt_\bt_\be_\br_\bn ) a string of characters consisting of upper and lowercase alphanumeric characters with no sp"
+          },
+          {
+            "name": "--policy-name <value>",
+            "description": "--policy-name (string) [required] The name of the policy document to get. This parameter allows (through its _\br_\be_\bg_\be_\bx _\bp_\ba_\bt_\bt_\be_\br_\bn ) a string of characters consisting of upper and lowercase alphanumeric characters with no spaces. Y"
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          }
+        ]
+      },
+      {
+        "name": "get-saml-provider",
+        "description": "get-saml-provider command",
+        "parameters": [
+          {
+            "name": "--saml-provider-arn <value>",
+            "description": "--saml-provider-arn (string) [required] The Amazon Resource Name (ARN) of the SAML provider resource object in IAM to get information about. For more information about ARNs, see _\bA_\bm_\ba_\bz_\bo_\bn _\bR_\be_\bs_\bo_\bu_\br_\bc_\be _\bN_\ba_\bm_\be_\bs _\b(_\bA_\bR"
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          }
+        ]
+      },
+      {
+        "name": "get-server-certificate",
+        "description": "get-server-certificate command",
+        "parameters": [
+          {
+            "name": "--server-certificate-name <value>",
+            "description": "--server-certificate-name (string) [required] The name of the server certificate you want to retrieve information about. This parameter allows (through its _\br_\be_\bg_\be_\bx _\bp_\ba_\bt_\bt_\be_\br_\bn ) a string of characters consisting of upper and lowe"
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          }
+        ]
+      },
+      {
+        "name": "get-service-last-accessed-details",
+        "description": "get-service-last-accessed-details command",
+        "parameters": [
+          {
+            "name": "--job-id <value>",
+            "description": "--job-id (string) [required] The ID of the request generated by the _\bG_\be_\bn_\be_\br_\ba_\bt_\be_\bS_\be_\br_\bv_\bi_\bc_\be_\bL_\ba_\bs_\bt_\bA_\bc_\bc_\be_\bs_\bs_\be_\bd_\bD_\be_\bt_\ba_\bi_\bl_\bs operation. The JobId returned by GenerateServiceLastAccessedDetail must be u"
+          },
+          {
+            "name": "--max-items <value>",
+            "description": "--max-items (integer) Use this only when paginating results to indicate the maximum number of items you want in the response. If additional items exist beyond the maximum you specify, the IsTruncated response element is true . If you do not includ"
+          },
+          {
+            "name": "--marker <value>",
+            "description": "--marker (string) Use this parameter only when paginating results and only after you receive a response indicating that the results are truncated. Set it to the value of the Marker element in the response that you received to indicate where the ne"
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          }
+        ]
+      },
+      {
+        "name": "get-service-last-accessed-details-with-entities",
+        "description": "get-service-last-accessed-details-with-entities command",
+        "parameters": [
+          {
+            "name": "--job-id <value>",
+            "description": "--job-id (string) [required] The ID of the request generated by the GenerateServiceLastAccessedDetails operation. Constraints: +\bo min: 36 +\bo max: 36"
+          },
+          {
+            "name": "--service-namespace <value>",
+            "description": "--service-namespace (string) [required] The service namespace for an Amazon Web Services service. Provide the service namespace to learn when the IAM entity last attempted to access the specified service. To learn the service namespace for a servi"
+          },
+          {
+            "name": "--max-items <value>",
+            "description": "--max-items (integer) Use this only when paginating results to indicate the maximum number of items you want in the response. If additional items exist beyond the maximum you specify, the IsTruncated response element is true . If you do not includ"
+          },
+          {
+            "name": "--marker <value>",
+            "description": "--marker (string) Use this parameter only when paginating results and only after you receive a response indicating that the results are truncated. Set it to the value of the Marker element in the response that you received to indicate where the ne"
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          }
+        ]
+      },
+      {
+        "name": "get-service-linked-role-deletion-status",
+        "description": "get-service-linked-role-deletion-status command",
+        "parameters": [
+          {
+            "name": "--deletion-task-id <value>",
+            "description": "--deletion-task-id (string) [required] The deletion task identifier. This identifier is returned by the _\bD_\be_\bl_\be_\bt_\be_\bS_\be_\br_\bv_\bi_\bc_\be_\bL_\bi_\bn_\bk_\be_\bd_\bR_\bo_\bl_\be operation in the format task/aws-service-role/<service-principal-name>/<r"
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          }
+        ]
+      },
+      {
+        "name": "get-ssh-public-key",
+        "description": "get-ssh-public-key command",
+        "parameters": [
+          {
+            "name": "--user-name <value>",
+            "description": "--user-name (string) [required] The name of the IAM user associated with the SSH public key. This parameter allows (through its _\br_\be_\bg_\be_\bx _\bp_\ba_\bt_\bt_\be_\br_\bn ) a string of characters consisting of upper and lowercase alphanumeric character"
+          },
+          {
+            "name": "--ssh-public-key-id <value>",
+            "description": "--ssh-public-key-id (string) [required] The unique identifier for the SSH public key. This parameter allows (through its _\br_\be_\bg_\be_\bx _\bp_\ba_\bt_\bt_\be_\br_\bn ) a string of characters that can consist of any upper or lowercased letter or digit. Co"
+          },
+          {
+            "name": "--encoding <value>",
+            "description": "--encoding (string) [required] Specifies the public key encoding format to use in the response. To retrieve the public key in ssh-rsa format, use SSH . To retrieve the public key in PEM format, use PEM . Possible values: +\bo SSH +\bo PEM"
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          }
+        ]
+      },
+      {
+        "name": "get-user",
+        "description": "Retrieves information about a user",
+        "parameters": [
+          {
+            "name": "--user-name <value>",
+            "description": "--user-name (string) The name of the user to get information about. This parameter is optional. If it is not included, it defaults to the user making the request. This parameter allows (through its _\br_\be_\bg_\be_\bx _\bp_\ba_\bt_\bt_\be_\br_\bn ) a string ..."
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          }
+        ]
+      },
+      {
+        "name": "get-user-policy",
+        "description": "get-user-policy command",
+        "parameters": [
+          {
+            "name": "--user-name <value>",
+            "description": "--user-name (string) [required] The name of the user who the policy is associated with. This parameter allows (through its _\br_\be_\bg_\be_\bx _\bp_\ba_\bt_\bt_\be_\br_\bn ) a string of characters consisting of upper and lowercase alphanumeric characters wit"
+          },
+          {
+            "name": "--policy-name <value>",
+            "description": "--policy-name (string) [required] The name of the policy document to get. This parameter allows (through its _\br_\be_\bg_\be_\bx _\bp_\ba_\bt_\bt_\be_\br_\bn ) a string of characters consisting of upper and lowercase alphanumeric characters with no spaces. Y"
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          }
+        ]
+      },
+      {
+        "name": "list-access-keys",
+        "description": "list-access-keys command",
+        "parameters": [
+          {
+            "name": "--user-name <value>",
+            "description": "--user-name (string) The name of the user. This parameter allows (through its _\br_\be_\bg_\be_\bx _\bp_\ba_\bt_\bt_\be_\br_\bn ) a string of characters consisting of upper and lowercase alphanumeric characters with no spaces. You can also include any of the "
+          },
+          {
+            "name": "--max-items <value>",
+            "description": "--max-items (integer) The total number of items to return in the command's output. If the total number of items available is more than the value specified, a NextToken is provided in the command's output. To resume pagination, provide the NextToke"
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the"
+          },
+          {
+            "name": "--starting-token <value>",
+            "description": "--starting-token (string) A token to specify where to start paginating. This is the NextToken from a previously truncated response. For usage examples, see _\bP_\ba_\bg_\bi_\bn_\ba_\bt_\bi_\bo_\bn in the _\bA_\bW_\bS _\bC_\bo_\bm_\bm_\ba_\bn_\bd _\bL_\bi_\bn_\be _\bI_\bn_\b"
+          },
+          {
+            "name": "--page-size <value>",
+            "description": "--page-size (integer) The size of each page to get in the AWS service call. This does not affect the number of items returned in the command's output. Setting a smaller page size results in more calls to the AWS service, retrieving fewer items in "
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          }
+        ]
+      },
+      {
+        "name": "list-account-aliases",
+        "description": "list-account-aliases command",
+        "parameters": [
+          {
+            "name": "--max-items <value>",
+            "description": "--max-items (integer) The total number of items to return in the command's output. If the total number of items available is more than the value specified, a NextToken is provided in the command's output. To resume pagination, provide the NextToke"
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the"
+          },
+          {
+            "name": "--starting-token <value>",
+            "description": "--starting-token (string) A token to specify where to start paginating. This is the NextToken from a previously truncated response. For usage examples, see _\bP_\ba_\bg_\bi_\bn_\ba_\bt_\bi_\bo_\bn in the _\bA_\bW_\bS _\bC_\bo_\bm_\bm_\ba_\bn_\bd _\bL_\bi_\bn_\be _\bI_\bn_\b"
+          },
+          {
+            "name": "--page-size <value>",
+            "description": "--page-size (integer) The size of each page to get in the AWS service call. This does not affect the number of items returned in the command's output. Setting a smaller page size results in more calls to the AWS service, retrieving fewer items in "
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          }
+        ]
+      },
+      {
+        "name": "list-attached-group-policies",
+        "description": "list-attached-group-policies command",
+        "parameters": [
+          {
+            "name": "--group-name <value>",
+            "description": "--group-name (string) [required] The name (friendly name, not ARN) of the group to list attached policies for. This parameter allows (through its _\br_\be_\bg_\be_\bx _\bp_\ba_\bt_\bt_\be_\br_\bn ) a string of characters consisting of upper and lowercase alph"
+          },
+          {
+            "name": "--path-prefix <value>",
+            "description": "--path-prefix (string) The path prefix for filtering the results. This parameter is optional. If it is not included, it defaults to a slash (/), listing all policies. This parameter allows (through its _\br_\be_\bg_\be_\bx _\bp_\ba_\bt_\bt_\be_\br_\bn ) a str"
+          },
+          {
+            "name": "--max-items <value>",
+            "description": "--max-items (integer) The total number of items to return in the command's output. If the total number of items available is more than the value specified, a NextToken is provided in the command's output. To resume pagination, provide the NextToke"
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the"
+          },
+          {
+            "name": "--starting-token <value>",
+            "description": "--starting-token (string) A token to specify where to start paginating. This is the NextToken from a previously truncated response. For usage examples, see _\bP_\ba_\bg_\bi_\bn_\ba_\bt_\bi_\bo_\bn in the _\bA_\bW_\bS _\bC_\bo_\bm_\bm_\ba_\bn_\bd _\bL_\bi_\bn_\be _\bI_\bn_\b"
+          },
+          {
+            "name": "--page-size <value>",
+            "description": "--page-size (integer) The size of each page to get in the AWS service call. This does not affect the number of items returned in the command's output. Setting a smaller page size results in more calls to the AWS service, retrieving fewer items in "
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          }
+        ]
+      },
+      {
+        "name": "list-attached-role-policies",
+        "description": "list-attached-role-policies command",
+        "parameters": [
+          {
+            "name": "--role-name <value>",
+            "description": "--role-name (string) [required] The name (friendly name, not ARN) of the role to list attached policies for. This parameter allows (through its _\br_\be_\bg_\be_\bx _\bp_\ba_\bt_\bt_\be_\br_\bn ) a string of characters consisting of upper and lowercase alphan"
+          },
+          {
+            "name": "--path-prefix <value>",
+            "description": "--path-prefix (string) The path prefix for filtering the results. This parameter is optional. If it is not included, it defaults to a slash (/), listing all policies. This parameter allows (through its _\br_\be_\bg_\be_\bx _\bp_\ba_\bt_\bt_\be_\br_\bn ) a str"
+          },
+          {
+            "name": "--max-items <value>",
+            "description": "--max-items (integer) The total number of items to return in the command's output. If the total number of items available is more than the value specified, a NextToken is provided in the command's output. To resume pagination, provide the NextToke"
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the"
+          },
+          {
+            "name": "--starting-token <value>",
+            "description": "--starting-token (string) A token to specify where to start paginating. This is the NextToken from a previously truncated response. For usage examples, see _\bP_\ba_\bg_\bi_\bn_\ba_\bt_\bi_\bo_\bn in the _\bA_\bW_\bS _\bC_\bo_\bm_\bm_\ba_\bn_\bd _\bL_\bi_\bn_\be _\bI_\bn_\b"
+          },
+          {
+            "name": "--page-size <value>",
+            "description": "--page-size (integer) The size of each page to get in the AWS service call. This does not affect the number of items returned in the command's output. Setting a smaller page size results in more calls to the AWS service, retrieving fewer items in "
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          }
+        ]
+      },
+      {
+        "name": "list-attached-user-policies",
+        "description": "list-attached-user-policies command",
+        "parameters": [
+          {
+            "name": "--user-name <value>",
+            "description": "--user-name (string) [required] The name (friendly name, not ARN) of the user to list attached policies for. This parameter allows (through its _\br_\be_\bg_\be_\bx _\bp_\ba_\bt_\bt_\be_\br_\bn ) a string of characters consisting of upper and lowercase alphan"
+          },
+          {
+            "name": "--path-prefix <value>",
+            "description": "--path-prefix (string) The path prefix for filtering the results. This parameter is optional. If it is not included, it defaults to a slash (/), listing all policies. This parameter allows (through its _\br_\be_\bg_\be_\bx _\bp_\ba_\bt_\bt_\be_\br_\bn ) a str"
+          },
+          {
+            "name": "--max-items <value>",
+            "description": "--max-items (integer) The total number of items to return in the command's output. If the total number of items available is more than the value specified, a NextToken is provided in the command's output. To resume pagination, provide the NextToke"
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the"
+          },
+          {
+            "name": "--starting-token <value>",
+            "description": "--starting-token (string) A token to specify where to start paginating. This is the NextToken from a previously truncated response. For usage examples, see _\bP_\ba_\bg_\bi_\bn_\ba_\bt_\bi_\bo_\bn in the _\bA_\bW_\bS _\bC_\bo_\bm_\bm_\ba_\bn_\bd _\bL_\bi_\bn_\be _\bI_\bn_\b"
+          },
+          {
+            "name": "--page-size <value>",
+            "description": "--page-size (integer) The size of each page to get in the AWS service call. This does not affect the number of items returned in the command's output. Setting a smaller page size results in more calls to the AWS service, retrieving fewer items in "
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          }
+        ]
+      },
+      {
+        "name": "list-delegation-requests",
+        "description": "list-delegation-requests command",
+        "parameters": [
+          {
+            "name": "--owner-id <value>",
+            "description": "--owner-id (string) The owner ID to filter delegation requests by. Constraints: +\bo min: 20 +\bo max: 2048 +\bo pattern: ^[a-zA-Z0-9:/+=,.@_-]+$"
+          },
+          {
+            "name": "--marker <value>",
+            "description": "--marker (string) Use this parameter only when paginating results and only after you receive a response indicating that the results are truncated. Set it to the value of the Marker element in the response that you received to indicate where the ne"
+          },
+          {
+            "name": "--max-items <value>",
+            "description": "--max-items (integer) Use this only when paginating results to indicate the maximum number of items you want in the response. If additional items exist beyond the maximum you specify, the IsTruncated response element is true . If you do not includ"
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          }
+        ]
+      },
+      {
+        "name": "list-entities-for-policy",
+        "description": "list-entities-for-policy command",
+        "parameters": [
+          {
+            "name": "--policy-arn <value>",
+            "description": "--policy-arn (string) [required] The Amazon Resource Name (ARN) of the IAM policy for which you want the versions. For more information about ARNs, see _\bA_\bm_\ba_\bz_\bo_\bn _\bR_\be_\bs_\bo_\bu_\br_\bc_\be _\bN_\ba_\bm_\be_\bs _\b(_\bA_\bR_\bN_\bs_\b) in the _\bA_\bm_\ba"
+          },
+          {
+            "name": "--entity-filter <value>",
+            "description": "--entity-filter (string) The entity type to use for filtering the results. For example, when EntityFilter is Role , only the roles that are attached to the specified policy are returned. This parameter is optional. If it is not included, all attac"
+          },
+          {
+            "name": "--path-prefix <value>",
+            "description": "--path-prefix (string) The path prefix for filtering the results. This parameter is optional. If it is not included, it defaults to a slash (/), listing all entities. This parameter allows (through its _\br_\be_\bg_\be_\bx _\bp_\ba_\bt_\bt_\be_\br_\bn ) a str"
+          },
+          {
+            "name": "--policy-usage-filter <value>",
+            "description": "--policy-usage-filter (string) The policy usage method to use for filtering the results. To list only permissions policies, set PolicyUsageFilter to PermissionsPolicy . To list only the policies used to set permissions boundaries, set the value to"
+          },
+          {
+            "name": "--max-items <value>",
+            "description": "--max-items (integer) The total number of items to return in the command's output. If the total number of items available is more than the value specified, a NextToken is provided in the command's output. To resume pagination, provide the NextToke"
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the"
+          },
+          {
+            "name": "--starting-token <value>",
+            "description": "--starting-token (string) A token to specify where to start paginating. This is the NextToken from a previously truncated response. For usage examples, see _\bP_\ba_\bg_\bi_\bn_\ba_\bt_\bi_\bo_\bn in the _\bA_\bW_\bS _\bC_\bo_\bm_\bm_\ba_\bn_\bd _\bL_\bi_\bn_\be _\bI_\bn_\b"
+          },
+          {
+            "name": "--page-size <value>",
+            "description": "--page-size (integer) The size of each page to get in the AWS service call. This does not affect the number of items returned in the command's output. Setting a smaller page size results in more calls to the AWS service, retrieving fewer items in "
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          }
+        ]
+      },
+      {
+        "name": "list-group-policies",
+        "description": "list-group-policies command",
+        "parameters": [
+          {
+            "name": "--group-name <value>",
+            "description": "--group-name (string) [required] The name of the group to list policies for. This parameter allows (through its _\br_\be_\bg_\be_\bx _\bp_\ba_\bt_\bt_\be_\br_\bn ) a string of characters consisting of upper and lowercase alphanumeric characters with no spaces"
+          },
+          {
+            "name": "--max-items <value>",
+            "description": "--max-items (integer) The total number of items to return in the command's output. If the total number of items available is more than the value specified, a NextToken is provided in the command's output. To resume pagination, provide the NextToke"
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the"
+          },
+          {
+            "name": "--starting-token <value>",
+            "description": "--starting-token (string) A token to specify where to start paginating. This is the NextToken from a previously truncated response. For usage examples, see _\bP_\ba_\bg_\bi_\bn_\ba_\bt_\bi_\bo_\bn in the _\bA_\bW_\bS _\bC_\bo_\bm_\bm_\ba_\bn_\bd _\bL_\bi_\bn_\be _\bI_\bn_\b"
+          },
+          {
+            "name": "--page-size <value>",
+            "description": "--page-size (integer) The size of each page to get in the AWS service call. This does not affect the number of items returned in the command's output. Setting a smaller page size results in more calls to the AWS service, retrieving fewer items in "
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          }
+        ]
+      },
+      {
+        "name": "list-groups",
+        "description": "Lists the IAM groups",
+        "parameters": [
+          {
+            "name": "--path-prefix <value>",
+            "description": "--path-prefix (string) The path prefix for filtering the results. For example, the prefix /division_abc/subdivision_xyz/ gets all groups whose path starts with /division_abc/subdivision_xyz/ . This parameter is optional. If it is not included, it ..."
+          },
+          {
+            "name": "--max-items <value>",
+            "description": "--max-items (integer) The total number of items to return in the command's output. If the total number of items available is more than the value specified, a NextToken is provided in the command's output. To resume pagination, provide the NextToke..."
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the..."
+          },
+          {
+            "name": "--starting-token <value>",
+            "description": "--starting-token (string) A token to specify where to start paginating. This is the NextToken from a previously truncated response. For usage examples, see _\bP_\ba_\bg_\bi_\bn_\ba_\bt_\bi_\bo_\bn in the _\bA_\bW_\bS _\bC_\bo_\bm_\bm_\ba_\bn_\bd _\bL_\bi_\bn_\be _\bI_\bn_\b..."
+          },
+          {
+            "name": "--page-size <value>",
+            "description": "--page-size (integer) The size of each page to get in the AWS service call. This does not affect the number of items returned in the command's output. Setting a smaller page size results in more calls to the AWS service, retrieving fewer items in ..."
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          }
+        ]
+      },
+      {
+        "name": "list-groups-for-user",
+        "description": "list-groups-for-user command",
+        "parameters": [
+          {
+            "name": "--user-name <value>",
+            "description": "--user-name (string) [required] The name of the user to list groups for. This parameter allows (through its _\br_\be_\bg_\be_\bx _\bp_\ba_\bt_\bt_\be_\br_\bn ) a string of characters consisting of upper and lowercase alphanumeric characters with no spaces. Yo"
+          },
+          {
+            "name": "--max-items <value>",
+            "description": "--max-items (integer) The total number of items to return in the command's output. If the total number of items available is more than the value specified, a NextToken is provided in the command's output. To resume pagination, provide the NextToke"
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the"
+          },
+          {
+            "name": "--starting-token <value>",
+            "description": "--starting-token (string) A token to specify where to start paginating. This is the NextToken from a previously truncated response. For usage examples, see _\bP_\ba_\bg_\bi_\bn_\ba_\bt_\bi_\bo_\bn in the _\bA_\bW_\bS _\bC_\bo_\bm_\bm_\ba_\bn_\bd _\bL_\bi_\bn_\be _\bI_\bn_\b"
+          },
+          {
+            "name": "--page-size <value>",
+            "description": "--page-size (integer) The size of each page to get in the AWS service call. This does not affect the number of items returned in the command's output. Setting a smaller page size results in more calls to the AWS service, retrieving fewer items in "
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          }
+        ]
+      },
+      {
+        "name": "list-instance-profile-tags",
+        "description": "list-instance-profile-tags command",
+        "parameters": [
+          {
+            "name": "--instance-profile-name <value>",
+            "description": "--instance-profile-name (string) [required] The name of the IAM instance profile whose tags you want to see. This parameter allows (through its _\br_\be_\bg_\be_\bx _\bp_\ba_\bt_\bt_\be_\br_\bn ) a string of characters consisting of upper and lowercase alphan"
+          },
+          {
+            "name": "--max-items <value>",
+            "description": "--max-items (integer) The total number of items to return in the command's output. If the total number of items available is more than the value specified, a NextToken is provided in the command's output. To resume pagination, provide the NextToke"
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the"
+          },
+          {
+            "name": "--starting-token <value>",
+            "description": "--starting-token (string) A token to specify where to start paginating. This is the NextToken from a previously truncated response. For usage examples, see _\bP_\ba_\bg_\bi_\bn_\ba_\bt_\bi_\bo_\bn in the _\bA_\bW_\bS _\bC_\bo_\bm_\bm_\ba_\bn_\bd _\bL_\bi_\bn_\be _\bI_\bn_\b"
+          },
+          {
+            "name": "--page-size <value>",
+            "description": "--page-size (integer) The size of each page to get in the AWS service call. This does not affect the number of items returned in the command's output. Setting a smaller page size results in more calls to the AWS service, retrieving fewer items in "
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          }
+        ]
+      },
+      {
+        "name": "list-instance-profiles",
+        "description": "list-instance-profiles command",
+        "parameters": [
+          {
+            "name": "--path-prefix <value>",
+            "description": "--path-prefix (string) The path prefix for filtering the results. For example, the prefix /application_abc/component_xyz/ gets all instance profiles whose path starts with /application_abc/component_xyz/ . This parameter is optional. If it is not "
+          },
+          {
+            "name": "--max-items <value>",
+            "description": "--max-items (integer) The total number of items to return in the command's output. If the total number of items available is more than the value specified, a NextToken is provided in the command's output. To resume pagination, provide the NextToke"
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the"
+          },
+          {
+            "name": "--starting-token <value>",
+            "description": "--starting-token (string) A token to specify where to start paginating. This is the NextToken from a previously truncated response. For usage examples, see _\bP_\ba_\bg_\bi_\bn_\ba_\bt_\bi_\bo_\bn in the _\bA_\bW_\bS _\bC_\bo_\bm_\bm_\ba_\bn_\bd _\bL_\bi_\bn_\be _\bI_\bn_\b"
+          },
+          {
+            "name": "--page-size <value>",
+            "description": "--page-size (integer) The size of each page to get in the AWS service call. This does not affect the number of items returned in the command's output. Setting a smaller page size results in more calls to the AWS service, retrieving fewer items in "
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          }
+        ]
+      },
+      {
+        "name": "list-instance-profiles-for-role",
+        "description": "list-instance-profiles-for-role command",
+        "parameters": [
+          {
+            "name": "--role-name <value>",
+            "description": "--role-name (string) [required] The name of the role to list instance profiles for. This parameter allows (through its _\br_\be_\bg_\be_\bx _\bp_\ba_\bt_\bt_\be_\br_\bn ) a string of characters consisting of upper and lowercase alphanumeric characters with no"
+          },
+          {
+            "name": "--max-items <value>",
+            "description": "--max-items (integer) The total number of items to return in the command's output. If the total number of items available is more than the value specified, a NextToken is provided in the command's output. To resume pagination, provide the NextToke"
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the"
+          },
+          {
+            "name": "--starting-token <value>",
+            "description": "--starting-token (string) A token to specify where to start paginating. This is the NextToken from a previously truncated response. For usage examples, see _\bP_\ba_\bg_\bi_\bn_\ba_\bt_\bi_\bo_\bn in the _\bA_\bW_\bS _\bC_\bo_\bm_\bm_\ba_\bn_\bd _\bL_\bi_\bn_\be _\bI_\bn_\b"
+          },
+          {
+            "name": "--page-size <value>",
+            "description": "--page-size (integer) The size of each page to get in the AWS service call. This does not affect the number of items returned in the command's output. Setting a smaller page size results in more calls to the AWS service, retrieving fewer items in "
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          }
+        ]
+      },
+      {
+        "name": "list-mfa-device-tags",
+        "description": "list-mfa-device-tags command",
+        "parameters": [
+          {
+            "name": "--serial-number <value>",
+            "description": "--serial-number (string) [required] The unique identifier for the IAM virtual MFA device whose tags you want to see. For virtual MFA devices, the serial number is the same as the ARN. This parameter allows (through its _\br_\be_\bg_\be_\bx _\bp_\ba_\bt_\bt"
+          },
+          {
+            "name": "--max-items <value>",
+            "description": "--max-items (integer) The total number of items to return in the command's output. If the total number of items available is more than the value specified, a NextToken is provided in the command's output. To resume pagination, provide the NextToke"
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the"
+          },
+          {
+            "name": "--starting-token <value>",
+            "description": "--starting-token (string) A token to specify where to start paginating. This is the NextToken from a previously truncated response. For usage examples, see _\bP_\ba_\bg_\bi_\bn_\ba_\bt_\bi_\bo_\bn in the _\bA_\bW_\bS _\bC_\bo_\bm_\bm_\ba_\bn_\bd _\bL_\bi_\bn_\be _\bI_\bn_\b"
+          },
+          {
+            "name": "--page-size <value>",
+            "description": "--page-size (integer) The size of each page to get in the AWS service call. This does not affect the number of items returned in the command's output. Setting a smaller page size results in more calls to the AWS service, retrieving fewer items in "
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          }
+        ]
+      },
+      {
+        "name": "list-mfa-devices",
+        "description": "list-mfa-devices command",
+        "parameters": [
+          {
+            "name": "--user-name <value>",
+            "description": "--user-name (string) The name of the user whose MFA devices you want to list. This parameter allows (through its _\br_\be_\bg_\be_\bx _\bp_\ba_\bt_\bt_\be_\br_\bn ) a string of characters consisting of upper and lowercase alphanumeric characters with no space"
+          },
+          {
+            "name": "--max-items <value>",
+            "description": "--max-items (integer) The total number of items to return in the command's output. If the total number of items available is more than the value specified, a NextToken is provided in the command's output. To resume pagination, provide the NextToke"
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the"
+          },
+          {
+            "name": "--starting-token <value>",
+            "description": "--starting-token (string) A token to specify where to start paginating. This is the NextToken from a previously truncated response. For usage examples, see _\bP_\ba_\bg_\bi_\bn_\ba_\bt_\bi_\bo_\bn in the _\bA_\bW_\bS _\bC_\bo_\bm_\bm_\ba_\bn_\bd _\bL_\bi_\bn_\be _\bI_\bn_\b"
+          },
+          {
+            "name": "--page-size <value>",
+            "description": "--page-size (integer) The size of each page to get in the AWS service call. This does not affect the number of items returned in the command's output. Setting a smaller page size results in more calls to the AWS service, retrieving fewer items in "
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          }
+        ]
+      },
+      {
+        "name": "list-open-id-connect-provider-tags",
+        "description": "list-open-id-connect-provider-tags command",
+        "parameters": [
+          {
+            "name": "--open-id-connect-provider-arn <value>",
+            "description": "--open-id-connect-provider-arn (string) [required] The ARN of the OpenID Connect (OIDC) identity provider whose tags you want to see. This parameter allows (through its _\br_\be_\bg_\be_\bx _\bp_\ba_\bt_\bt_\be_\br_\bn ) a string of characters consisting of u"
+          },
+          {
+            "name": "--max-items <value>",
+            "description": "--max-items (integer) The total number of items to return in the command's output. If the total number of items available is more than the value specified, a NextToken is provided in the command's output. To resume pagination, provide the NextToke"
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the"
+          },
+          {
+            "name": "--starting-token <value>",
+            "description": "--starting-token (string) A token to specify where to start paginating. This is the NextToken from a previously truncated response. For usage examples, see _\bP_\ba_\bg_\bi_\bn_\ba_\bt_\bi_\bo_\bn in the _\bA_\bW_\bS _\bC_\bo_\bm_\bm_\ba_\bn_\bd _\bL_\bi_\bn_\be _\bI_\bn_\b"
+          },
+          {
+            "name": "--page-size <value>",
+            "description": "--page-size (integer) The size of each page to get in the AWS service call. This does not affect the number of items returned in the command's output. Setting a smaller page size results in more calls to the AWS service, retrieving fewer items in "
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          }
+        ]
+      },
+      {
+        "name": "list-open-id-connect-providers",
+        "description": "list-open-id-connect-providers command",
+        "parameters": [
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          }
+        ]
+      },
+      {
+        "name": "list-organizations-features",
+        "description": "list-organizations-features command",
+        "parameters": [
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
           }
         ]
       },
@@ -62110,82 +64724,178 @@ export const awsServices: Service[] = [
         ]
       },
       {
-        "name": "create-policy",
-        "description": "Creates a new managed policy",
+        "name": "list-policies-granting-service-access",
+        "description": "list-policies-granting-service-access command",
         "parameters": [
           {
-            "name": "--policy-name <value>",
-            "description": "--policy-name (string) [required] The friendly name of the policy. IAM user, group, role, and policy names must be unique within the account. Names are not distinguished by case. For example, you cannot create resources named both \"MyResource\" and..."
+            "name": "--marker <value>",
+            "description": "--marker (string) Use this parameter only when paginating results and only after you receive a response indicating that the results are truncated. Set it to the value of the Marker element in the response that you received to indicate where the ne"
           },
           {
-            "name": "--path <value>",
-            "description": "--path (string) The path for the policy. For more information about paths, see _\bI_\bA_\bM _\bi_\bd_\be_\bn_\bt_\bi_\bf_\bi_\be_\br_\bs in the _\bI_\bA_\bM _\bU_\bs_\be_\br _\bG_\bu_\bi_\bd_\be . This parameter is optional. If it is not included, it defaults to a slash (/..."
+            "name": "--arn <value>",
+            "description": "--arn (string) [required] The ARN of the IAM identity (user, group, or role) whose policies you want to list. Constraints: +\bo min: 20 +\bo max: 2048"
           },
           {
-            "name": "--policy-document <value>",
-            "description": "--policy-document (string) [required] The JSON policy document that you want to use as the content for the new policy. You must provide policies in JSON format in IAM. However, for CloudFormation templates formatted in YAML, you can provide the po..."
-          },
-          {
-            "name": "--description <value>",
-            "description": "--description (string) A friendly description of the policy. Typically used to store information about the permissions defined in the policy. For example, \"Grants access to production DynamoDB tables.\" The policy description is immutable. After a ..."
-          },
-          {
-            "name": "--tags <value>",
-            "description": "--tags (list) A list of tags that you want to attach to the new IAM customer managed policy. Each tag consists of a key name and an associated value. For more information about tagging, see _\bT_\ba_\bg_\bg_\bi_\bn_\bg _\bI_\bA_\bM _\br_\be_\bs_\bo_\bu_\br_\bc_\be_..."
+            "name": "--service-namespaces <value>",
+            "description": "--service-namespaces (list) [required] The service namespace for the Amazon Web Services services whose policies you want to list. To learn the service namespace for a service, see _\bA_\bc_\bt_\bi_\bo_\bn_\bs_\b, _\br_\be_\bs_\bo_\bu_\br_\bc_\be_\bs_\b, _\ba_\bn_\bd "
           },
           {
             "name": "--cli-input-json | --cli-input-yaml",
-            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the..."
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the"
           },
           {
             "name": "--generate-cli-skeleton <value>",
-            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
           }
         ]
       },
       {
-        "name": "delete-policy",
-        "description": "Deletes a managed policy",
+        "name": "list-policy-tags",
+        "description": "list-policy-tags command",
         "parameters": [
           {
             "name": "--policy-arn <value>",
-            "description": "--policy-arn (string) [required] The Amazon Resource Name (ARN) of the IAM policy you want to delete. For more information about ARNs, see _\bA_\bm_\ba_\bz_\bo_\bn _\bR_\be_\bs_\bo_\bu_\br_\bc_\be _\bN_\ba_\bm_\be_\bs _\b(_\bA_\bR_\bN_\bs_\b) in the _\bA_\bm_\ba_\bz_\bo_\bn _\bW..."
+            "description": "--policy-arn (string) [required] The ARN of the IAM customer managed policy whose tags you want to see. This parameter allows (through its _\br_\be_\bg_\be_\bx _\bp_\ba_\bt_\bt_\be_\br_\bn ) a string of characters consisting of upper and lowercase alphanumeri"
+          },
+          {
+            "name": "--max-items <value>",
+            "description": "--max-items (integer) The total number of items to return in the command's output. If the total number of items available is more than the value specified, a NextToken is provided in the command's output. To resume pagination, provide the NextToke"
           },
           {
             "name": "--cli-input-json | --cli-input-yaml",
-            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the..."
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the"
+          },
+          {
+            "name": "--starting-token <value>",
+            "description": "--starting-token (string) A token to specify where to start paginating. This is the NextToken from a previously truncated response. For usage examples, see _\bP_\ba_\bg_\bi_\bn_\ba_\bt_\bi_\bo_\bn in the _\bA_\bW_\bS _\bC_\bo_\bm_\bm_\ba_\bn_\bd _\bL_\bi_\bn_\be _\bI_\bn_\b"
+          },
+          {
+            "name": "--page-size <value>",
+            "description": "--page-size (integer) The size of each page to get in the AWS service call. This does not affect the number of items returned in the command's output. Setting a smaller page size results in more calls to the AWS service, retrieving fewer items in "
           },
           {
             "name": "--generate-cli-skeleton <value>",
-            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
           }
         ]
       },
       {
-        "name": "get-policy",
-        "description": "Retrieves information about a policy",
+        "name": "list-policy-versions",
+        "description": "list-policy-versions command",
         "parameters": [
           {
             "name": "--policy-arn <value>",
-            "description": "--policy-arn (string) [required] The Amazon Resource Name (ARN) of the managed policy that you want information about. For more information about ARNs, see _\bA_\bm_\ba_\bz_\bo_\bn _\bR_\be_\bs_\bo_\bu_\br_\bc_\be _\bN_\ba_\bm_\be_\bs _\b(_\bA_\bR_\bN_\bs_\b) in the _\bA_\b..."
+            "description": "--policy-arn (string) [required] The Amazon Resource Name (ARN) of the IAM policy for which you want the versions. For more information about ARNs, see _\bA_\bm_\ba_\bz_\bo_\bn _\bR_\be_\bs_\bo_\bu_\br_\bc_\be _\bN_\ba_\bm_\be_\bs _\b(_\bA_\bR_\bN_\bs_\b) in the _\bA_\bm_\ba"
+          },
+          {
+            "name": "--max-items <value>",
+            "description": "--max-items (integer) The total number of items to return in the command's output. If the total number of items available is more than the value specified, a NextToken is provided in the command's output. To resume pagination, provide the NextToke"
           },
           {
             "name": "--cli-input-json | --cli-input-yaml",
-            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the..."
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the"
+          },
+          {
+            "name": "--starting-token <value>",
+            "description": "--starting-token (string) A token to specify where to start paginating. This is the NextToken from a previously truncated response. For usage examples, see _\bP_\ba_\bg_\bi_\bn_\ba_\bt_\bi_\bo_\bn in the _\bA_\bW_\bS _\bC_\bo_\bm_\bm_\ba_\bn_\bd _\bL_\bi_\bn_\be _\bI_\bn_\b"
+          },
+          {
+            "name": "--page-size <value>",
+            "description": "--page-size (integer) The size of each page to get in the AWS service call. This does not affect the number of items returned in the command's output. Setting a smaller page size results in more calls to the AWS service, retrieving fewer items in "
           },
           {
             "name": "--generate-cli-skeleton <value>",
-            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
           }
         ]
       },
       {
-        "name": "list-groups",
-        "description": "Lists the IAM groups",
+        "name": "list-role-policies",
+        "description": "list-role-policies command",
+        "parameters": [
+          {
+            "name": "--role-name <value>",
+            "description": "--role-name (string) [required] The name of the role to list policies for. This parameter allows (through its _\br_\be_\bg_\be_\bx _\bp_\ba_\bt_\bt_\be_\br_\bn ) a string of characters consisting of upper and lowercase alphanumeric characters with no spaces. "
+          },
+          {
+            "name": "--max-items <value>",
+            "description": "--max-items (integer) The total number of items to return in the command's output. If the total number of items available is more than the value specified, a NextToken is provided in the command's output. To resume pagination, provide the NextToke"
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the"
+          },
+          {
+            "name": "--starting-token <value>",
+            "description": "--starting-token (string) A token to specify where to start paginating. This is the NextToken from a previously truncated response. For usage examples, see _\bP_\ba_\bg_\bi_\bn_\ba_\bt_\bi_\bo_\bn in the _\bA_\bW_\bS _\bC_\bo_\bm_\bm_\ba_\bn_\bd _\bL_\bi_\bn_\be _\bI_\bn_\b"
+          },
+          {
+            "name": "--page-size <value>",
+            "description": "--page-size (integer) The size of each page to get in the AWS service call. This does not affect the number of items returned in the command's output. Setting a smaller page size results in more calls to the AWS service, retrieving fewer items in "
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          }
+        ]
+      },
+      {
+        "name": "list-role-tags",
+        "description": "list-role-tags command",
+        "parameters": [
+          {
+            "name": "--role-name <value>",
+            "description": "--role-name (string) [required] The name of the IAM role for which you want to see the list of tags. This parameter accepts (through its _\br_\be_\bg_\be_\bx _\bp_\ba_\bt_\bt_\be_\br_\bn ) a string of characters that consist of upper and lowercase alphanumeri"
+          },
+          {
+            "name": "--max-items <value>",
+            "description": "--max-items (integer) The total number of items to return in the command's output. If the total number of items available is more than the value specified, a NextToken is provided in the command's output. To resume pagination, provide the NextToke"
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the"
+          },
+          {
+            "name": "--starting-token <value>",
+            "description": "--starting-token (string) A token to specify where to start paginating. This is the NextToken from a previously truncated response. For usage examples, see _\bP_\ba_\bg_\bi_\bn_\ba_\bt_\bi_\bo_\bn in the _\bA_\bW_\bS _\bC_\bo_\bm_\bm_\ba_\bn_\bd _\bL_\bi_\bn_\be _\bI_\bn_\b"
+          },
+          {
+            "name": "--page-size <value>",
+            "description": "--page-size (integer) The size of each page to get in the AWS service call. This does not affect the number of items returned in the command's output. Setting a smaller page size results in more calls to the AWS service, retrieving fewer items in "
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          }
+        ]
+      },
+      {
+        "name": "list-roles",
+        "description": "Lists the IAM roles",
         "parameters": [
           {
             "name": "--path-prefix <value>",
-            "description": "--path-prefix (string) The path prefix for filtering the results. For example, the prefix /division_abc/subdivision_xyz/ gets all groups whose path starts with /division_abc/subdivision_xyz/ . This parameter is optional. If it is not included, it ..."
+            "description": "--path-prefix (string) The path prefix for filtering the results. For example, the prefix /application_abc/component_xyz/ gets all roles whose path starts with /application_abc/component_xyz/ . This parameter is optional. If it is not included, it..."
           },
           {
             "name": "--max-items <value>",
@@ -62210,64 +64920,580 @@ export const awsServices: Service[] = [
         ]
       },
       {
-        "name": "create-group",
-        "description": "Creates a new IAM group",
+        "name": "list-saml-provider-tags",
+        "description": "list-saml-provider-tags command",
         "parameters": [
           {
-            "name": "--path <value>",
-            "description": "--path (string) The path to the group. For more information about paths, see _\bI_\bA_\bM _\bi_\bd_\be_\bn_\bt_\bi_\bf_\bi_\be_\br_\bs in the _\bI_\bA_\bM _\bU_\bs_\be_\br _\bG_\bu_\bi_\bd_\be . This parameter is optional. If it is not included, it defaults to a slash (/)...."
+            "name": "--saml-provider-arn <value>",
+            "description": "--saml-provider-arn (string) [required] The ARN of the Security Assertion Markup Language (SAML) identity provider whose tags you want to see. This parameter allows (through its _\br_\be_\bg_\be_\bx _\bp_\ba_\bt_\bt_\be_\br_\bn ) a string of characters consis"
           },
           {
-            "name": "--group-name <value>",
-            "description": "--group-name (string) [required] The name of the group to create. Do not include the path in this value. IAM user, group, role, and policy names must be unique within the account. Names are not distinguished by case. For example, you cannot create..."
+            "name": "--max-items <value>",
+            "description": "--max-items (integer) The total number of items to return in the command's output. If the total number of items available is more than the value specified, a NextToken is provided in the command's output. To resume pagination, provide the NextToke"
           },
           {
             "name": "--cli-input-json | --cli-input-yaml",
-            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the..."
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the"
+          },
+          {
+            "name": "--starting-token <value>",
+            "description": "--starting-token (string) A token to specify where to start paginating. This is the NextToken from a previously truncated response. For usage examples, see _\bP_\ba_\bg_\bi_\bn_\ba_\bt_\bi_\bo_\bn in the _\bA_\bW_\bS _\bC_\bo_\bm_\bm_\ba_\bn_\bd _\bL_\bi_\bn_\be _\bI_\bn_\b"
+          },
+          {
+            "name": "--page-size <value>",
+            "description": "--page-size (integer) The size of each page to get in the AWS service call. This does not affect the number of items returned in the command's output. Setting a smaller page size results in more calls to the AWS service, retrieving fewer items in "
           },
           {
             "name": "--generate-cli-skeleton <value>",
-            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
           }
         ]
       },
       {
-        "name": "delete-group",
-        "description": "Deletes an IAM group",
+        "name": "list-saml-providers",
+        "description": "list-saml-providers command",
         "parameters": [
           {
-            "name": "--group-name <value>",
-            "description": "--group-name (string) [required] The name of the IAM group to delete. This parameter allows (through its _\br_\be_\bg_\be_\bx _\bp_\ba_\bt_\bt_\be_\br_\bn ) a string of characters consisting of upper and lowercase alphanumeric characters with no spaces. You c..."
-          },
-          {
             "name": "--cli-input-json | --cli-input-yaml",
-            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the..."
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the"
           },
           {
             "name": "--generate-cli-skeleton <value>",
-            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
           }
         ]
       },
       {
-        "name": "add-user-to-group",
-        "description": "Adds a user to a group",
+        "name": "list-server-certificate-tags",
+        "description": "list-server-certificate-tags command",
         "parameters": [
           {
-            "name": "--group-name <value>",
-            "description": "--group-name (string) [required] The name of the group to update. This parameter allows (through its _\br_\be_\bg_\be_\bx _\bp_\ba_\bt_\bt_\be_\br_\bn ) a string of characters consisting of upper and lowercase alphanumeric characters with no spaces. You can a..."
+            "name": "--server-certificate-name <value>",
+            "description": "--server-certificate-name (string) [required] The name of the IAM server certificate whose tags you want to see. This parameter allows (through its _\br_\be_\bg_\be_\bx _\bp_\ba_\bt_\bt_\be_\br_\bn ) a string of characters consisting of upper and lowercase al"
           },
+          {
+            "name": "--max-items <value>",
+            "description": "--max-items (integer) The total number of items to return in the command's output. If the total number of items available is more than the value specified, a NextToken is provided in the command's output. To resume pagination, provide the NextToke"
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the"
+          },
+          {
+            "name": "--starting-token <value>",
+            "description": "--starting-token (string) A token to specify where to start paginating. This is the NextToken from a previously truncated response. For usage examples, see _\bP_\ba_\bg_\bi_\bn_\ba_\bt_\bi_\bo_\bn in the _\bA_\bW_\bS _\bC_\bo_\bm_\bm_\ba_\bn_\bd _\bL_\bi_\bn_\be _\bI_\bn_\b"
+          },
+          {
+            "name": "--page-size <value>",
+            "description": "--page-size (integer) The size of each page to get in the AWS service call. This does not affect the number of items returned in the command's output. Setting a smaller page size results in more calls to the AWS service, retrieving fewer items in "
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          }
+        ]
+      },
+      {
+        "name": "list-server-certificates",
+        "description": "list-server-certificates command",
+        "parameters": [
+          {
+            "name": "--path-prefix <value>",
+            "description": "--path-prefix (string) The path prefix for filtering the results. For example: /company/servercerts would get all server certificates for which the path starts with /company/servercerts . This parameter is optional. If it is not included, it defau"
+          },
+          {
+            "name": "--max-items <value>",
+            "description": "--max-items (integer) The total number of items to return in the command's output. If the total number of items available is more than the value specified, a NextToken is provided in the command's output. To resume pagination, provide the NextToke"
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the"
+          },
+          {
+            "name": "--starting-token <value>",
+            "description": "--starting-token (string) A token to specify where to start paginating. This is the NextToken from a previously truncated response. For usage examples, see _\bP_\ba_\bg_\bi_\bn_\ba_\bt_\bi_\bo_\bn in the _\bA_\bW_\bS _\bC_\bo_\bm_\bm_\ba_\bn_\bd _\bL_\bi_\bn_\be _\bI_\bn_\b"
+          },
+          {
+            "name": "--page-size <value>",
+            "description": "--page-size (integer) The size of each page to get in the AWS service call. This does not affect the number of items returned in the command's output. Setting a smaller page size results in more calls to the AWS service, retrieving fewer items in "
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          }
+        ]
+      },
+      {
+        "name": "list-service-specific-credentials",
+        "description": "list-service-specific-credentials command",
+        "parameters": [
           {
             "name": "--user-name <value>",
-            "description": "--user-name (string) [required] The name of the user to add. This parameter allows (through its _\br_\be_\bg_\be_\bx _\bp_\ba_\bt_\bt_\be_\br_\bn ) a string of characters consisting of upper and lowercase alphanumeric characters with no spaces. You can also i..."
+            "description": "--user-name (string) The name of the user whose service-specific credentials you want information about. If this value is not specified, then the operation assumes the user whose credentials are used to call the operation. This parameter allows (t"
+          },
+          {
+            "name": "--service-name <value>",
+            "description": "--service-name (string) Filters the returned results to only those for the specified Amazon Web Services service. If not specified, then Amazon Web Services returns service-specific credentials for all services."
+          },
+          {
+            "name": "--all-users | --no-all-users",
+            "description": "--all-users | --no-all-users (boolean) A flag indicating whether to list service specific credentials for all users. This parameter cannot be specified together with UserName. When true, returns all credentials associated with the specified servic"
+          },
+          {
+            "name": "--marker <value>",
+            "description": "--marker (string) Use this parameter only when paginating results and only after you receive a response indicating that the results are truncated. Set it to the value of the Marker from the response that you received to indicate where the next cal"
+          },
+          {
+            "name": "--max-items <value>",
+            "description": "--max-items (integer) Use this only when paginating results to indicate the maximum number of items you want in the response. If additional items exist beyond the maximum you specify, the IsTruncated response element is true. Constraints: +\bo min:"
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          }
+        ]
+      },
+      {
+        "name": "list-signing-certificates",
+        "description": "list-signing-certificates command",
+        "parameters": [
+          {
+            "name": "--user-name <value>",
+            "description": "--user-name (string) The name of the IAM user whose signing certificates you want to examine. This parameter allows (through its _\br_\be_\bg_\be_\bx _\bp_\ba_\bt_\bt_\be_\br_\bn ) a string of characters consisting of upper and lowercase alphanumeric characte"
+          },
+          {
+            "name": "--max-items <value>",
+            "description": "--max-items (integer) The total number of items to return in the command's output. If the total number of items available is more than the value specified, a NextToken is provided in the command's output. To resume pagination, provide the NextToke"
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the"
+          },
+          {
+            "name": "--starting-token <value>",
+            "description": "--starting-token (string) A token to specify where to start paginating. This is the NextToken from a previously truncated response. For usage examples, see _\bP_\ba_\bg_\bi_\bn_\ba_\bt_\bi_\bo_\bn in the _\bA_\bW_\bS _\bC_\bo_\bm_\bm_\ba_\bn_\bd _\bL_\bi_\bn_\be _\bI_\bn_\b"
+          },
+          {
+            "name": "--page-size <value>",
+            "description": "--page-size (integer) The size of each page to get in the AWS service call. This does not affect the number of items returned in the command's output. Setting a smaller page size results in more calls to the AWS service, retrieving fewer items in "
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          }
+        ]
+      },
+      {
+        "name": "list-ssh-public-keys",
+        "description": "list-ssh-public-keys command",
+        "parameters": [
+          {
+            "name": "--user-name <value>",
+            "description": "--user-name (string) The name of the IAM user to list SSH public keys for. If none is specified, the UserName field is determined implicitly based on the Amazon Web Services access key used to sign the request. This parameter allows (through its _"
+          },
+          {
+            "name": "--max-items <value>",
+            "description": "--max-items (integer) The total number of items to return in the command's output. If the total number of items available is more than the value specified, a NextToken is provided in the command's output. To resume pagination, provide the NextToke"
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the"
+          },
+          {
+            "name": "--starting-token <value>",
+            "description": "--starting-token (string) A token to specify where to start paginating. This is the NextToken from a previously truncated response. For usage examples, see _\bP_\ba_\bg_\bi_\bn_\ba_\bt_\bi_\bo_\bn in the _\bA_\bW_\bS _\bC_\bo_\bm_\bm_\ba_\bn_\bd _\bL_\bi_\bn_\be _\bI_\bn_\b"
+          },
+          {
+            "name": "--page-size <value>",
+            "description": "--page-size (integer) The size of each page to get in the AWS service call. This does not affect the number of items returned in the command's output. Setting a smaller page size results in more calls to the AWS service, retrieving fewer items in "
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          }
+        ]
+      },
+      {
+        "name": "list-user-policies",
+        "description": "list-user-policies command",
+        "parameters": [
+          {
+            "name": "--user-name <value>",
+            "description": "--user-name (string) [required] The name of the user to list policies for. This parameter allows (through its _\br_\be_\bg_\be_\bx _\bp_\ba_\bt_\bt_\be_\br_\bn ) a string of characters consisting of upper and lowercase alphanumeric characters with no spaces. "
+          },
+          {
+            "name": "--max-items <value>",
+            "description": "--max-items (integer) The total number of items to return in the command's output. If the total number of items available is more than the value specified, a NextToken is provided in the command's output. To resume pagination, provide the NextToke"
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the"
+          },
+          {
+            "name": "--starting-token <value>",
+            "description": "--starting-token (string) A token to specify where to start paginating. This is the NextToken from a previously truncated response. For usage examples, see _\bP_\ba_\bg_\bi_\bn_\ba_\bt_\bi_\bo_\bn in the _\bA_\bW_\bS _\bC_\bo_\bm_\bm_\ba_\bn_\bd _\bL_\bi_\bn_\be _\bI_\bn_\b"
+          },
+          {
+            "name": "--page-size <value>",
+            "description": "--page-size (integer) The size of each page to get in the AWS service call. This does not affect the number of items returned in the command's output. Setting a smaller page size results in more calls to the AWS service, retrieving fewer items in "
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          }
+        ]
+      },
+      {
+        "name": "list-user-tags",
+        "description": "list-user-tags command",
+        "parameters": [
+          {
+            "name": "--user-name <value>",
+            "description": "--user-name (string) [required] The name of the IAM user whose tags you want to see. This parameter allows (through its _\br_\be_\bg_\be_\bx _\bp_\ba_\bt_\bt_\be_\br_\bn ) a string of characters consisting of upper and lowercase alphanumeric characters with n"
+          },
+          {
+            "name": "--max-items <value>",
+            "description": "--max-items (integer) The total number of items to return in the command's output. If the total number of items available is more than the value specified, a NextToken is provided in the command's output. To resume pagination, provide the NextToke"
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the"
+          },
+          {
+            "name": "--starting-token <value>",
+            "description": "--starting-token (string) A token to specify where to start paginating. This is the NextToken from a previously truncated response. For usage examples, see _\bP_\ba_\bg_\bi_\bn_\ba_\bt_\bi_\bo_\bn in the _\bA_\bW_\bS _\bC_\bo_\bm_\bm_\ba_\bn_\bd _\bL_\bi_\bn_\be _\bI_\bn_\b"
+          },
+          {
+            "name": "--page-size <value>",
+            "description": "--page-size (integer) The size of each page to get in the AWS service call. This does not affect the number of items returned in the command's output. Setting a smaller page size results in more calls to the AWS service, retrieving fewer items in "
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          }
+        ]
+      },
+      {
+        "name": "list-users",
+        "description": "Lists the IAM users",
+        "parameters": [
+          {
+            "name": "--path-prefix <value>",
+            "description": "--path-prefix (string) The path prefix for filtering the results. For example: /division_abc/subdivision_xyz/ , which would get all user names whose path starts with /division_abc/subdivision_xyz/ . This parameter is optional. If it is not include..."
+          },
+          {
+            "name": "--max-items <value>",
+            "description": "--max-items (integer) The total number of items to return in the command's output. If the total number of items available is more than the value specified, a NextToken is provided in the command's output. To resume pagination, provide the NextToke..."
           },
           {
             "name": "--cli-input-json | --cli-input-yaml",
             "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the..."
           },
           {
+            "name": "--starting-token <value>",
+            "description": "--starting-token (string) A token to specify where to start paginating. This is the NextToken from a previously truncated response. For usage examples, see _\bP_\ba_\bg_\bi_\bn_\ba_\bt_\bi_\bo_\bn in the _\bA_\bW_\bS _\bC_\bo_\bm_\bm_\ba_\bn_\bd _\bL_\bi_\bn_\be _\bI_\bn_\b..."
+          },
+          {
+            "name": "--page-size <value>",
+            "description": "--page-size (integer) The size of each page to get in the AWS service call. This does not affect the number of items returned in the command's output. Setting a smaller page size results in more calls to the AWS service, retrieving fewer items in ..."
+          },
+          {
             "name": "--generate-cli-skeleton <value>",
             "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+          }
+        ]
+      },
+      {
+        "name": "list-virtual-mfa-devices",
+        "description": "list-virtual-mfa-devices command",
+        "parameters": [
+          {
+            "name": "--assignment-status <value>",
+            "description": "--assignment-status (string) The status (Unassigned or Assigned ) of the devices to list. If you do not specify an AssignmentStatus , the operation defaults to Any , which lists both assigned and unassigned virtual MFA devices., Possible values: +"
+          },
+          {
+            "name": "--max-items <value>",
+            "description": "--max-items (integer) The total number of items to return in the command's output. If the total number of items available is more than the value specified, a NextToken is provided in the command's output. To resume pagination, provide the NextToke"
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the"
+          },
+          {
+            "name": "--starting-token <value>",
+            "description": "--starting-token (string) A token to specify where to start paginating. This is the NextToken from a previously truncated response. For usage examples, see _\bP_\ba_\bg_\bi_\bn_\ba_\bt_\bi_\bo_\bn in the _\bA_\bW_\bS _\bC_\bo_\bm_\bm_\ba_\bn_\bd _\bL_\bi_\bn_\be _\bI_\bn_\b"
+          },
+          {
+            "name": "--page-size <value>",
+            "description": "--page-size (integer) The size of each page to get in the AWS service call. This does not affect the number of items returned in the command's output. Setting a smaller page size results in more calls to the AWS service, retrieving fewer items in "
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          }
+        ]
+      },
+      {
+        "name": "put-group-policy",
+        "description": "put-group-policy command",
+        "parameters": [
+          {
+            "name": "--group-name <value>",
+            "description": "--group-name (string) [required] The name of the group to associate the policy with. This parameter allows (through its _\br_\be_\bg_\be_\bx _\bp_\ba_\bt_\bt_\be_\br_\bn ) a string of characters consisting of upper and lowercase alphanumeric characters with n"
+          },
+          {
+            "name": "--policy-name <value>",
+            "description": "--policy-name (string) [required] The name of the policy document. This parameter allows (through its _\br_\be_\bg_\be_\bx _\bp_\ba_\bt_\bt_\be_\br_\bn ) a string of characters consisting of upper and lowercase alphanumeric characters with no spaces. You can "
+          },
+          {
+            "name": "--policy-document <value>",
+            "description": "--policy-document (string) [required] The policy document. You must provide policies in JSON format in IAM. However, for CloudFormation templates formatted in YAML, you can provide the policy in JSON or YAML format. CloudFormation always converts "
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          }
+        ]
+      },
+      {
+        "name": "put-role-permissions-boundary",
+        "description": "put-role-permissions-boundary command",
+        "parameters": [
+          {
+            "name": "--role-name <value>",
+            "description": "--role-name (string) [required] The name (friendly name, not ARN) of the IAM role for which you want to set the permissions boundary. Constraints: +\bo min: 1 +\bo max: 64 +\bo pattern: [\\w+=,.@-]+"
+          },
+          {
+            "name": "--permissions-boundary <value>",
+            "description": "--permissions-boundary (string) [required] The ARN of the managed policy that is used to set the permissions boundary for the role. A permissions boundary policy defines the maximum permissions that identity-based policies can grant to an entity, "
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          }
+        ]
+      },
+      {
+        "name": "put-role-policy",
+        "description": "put-role-policy command",
+        "parameters": [
+          {
+            "name": "--role-name <value>",
+            "description": "--role-name (string) [required] The name of the role to associate the policy with. This parameter allows (through its _\br_\be_\bg_\be_\bx _\bp_\ba_\bt_\bt_\be_\br_\bn ) a string of characters consisting of upper and lowercase alphanumeric characters with no "
+          },
+          {
+            "name": "--policy-name <value>",
+            "description": "--policy-name (string) [required] The name of the policy document. This parameter allows (through its _\br_\be_\bg_\be_\bx _\bp_\ba_\bt_\bt_\be_\br_\bn ) a string of characters consisting of upper and lowercase alphanumeric characters with no spaces. You can "
+          },
+          {
+            "name": "--policy-document <value>",
+            "description": "--policy-document (string) [required] The policy document. You must provide policies in JSON format in IAM. However, for CloudFormation templates formatted in YAML, you can provide the policy in JSON or YAML format. CloudFormation always converts "
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          }
+        ]
+      },
+      {
+        "name": "put-user-permissions-boundary",
+        "description": "put-user-permissions-boundary command",
+        "parameters": [
+          {
+            "name": "--user-name <value>",
+            "description": "--user-name (string) [required] The name (friendly name, not ARN) of the IAM user for which you want to set the permissions boundary. Constraints: +\bo min: 1 +\bo max: 64 +\bo pattern: [\\w+=,.@-]+"
+          },
+          {
+            "name": "--permissions-boundary <value>",
+            "description": "--permissions-boundary (string) [required] The ARN of the managed policy that is used to set the permissions boundary for the user. A permissions boundary policy defines the maximum permissions that identity-based policies can grant to an entity, "
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          }
+        ]
+      },
+      {
+        "name": "put-user-policy",
+        "description": "put-user-policy command",
+        "parameters": [
+          {
+            "name": "--user-name <value>",
+            "description": "--user-name (string) [required] The name of the user to associate the policy with. This parameter allows (through its _\br_\be_\bg_\be_\bx _\bp_\ba_\bt_\bt_\be_\br_\bn ) a string of characters consisting of upper and lowercase alphanumeric characters with no "
+          },
+          {
+            "name": "--policy-name <value>",
+            "description": "--policy-name (string) [required] The name of the policy document. This parameter allows (through its _\br_\be_\bg_\be_\bx _\bp_\ba_\bt_\bt_\be_\br_\bn ) a string of characters consisting of upper and lowercase alphanumeric characters with no spaces. You can "
+          },
+          {
+            "name": "--policy-document <value>",
+            "description": "--policy-document (string) [required] The policy document. You must provide policies in JSON format in IAM. However, for CloudFormation templates formatted in YAML, you can provide the policy in JSON or YAML format. CloudFormation always converts "
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          }
+        ]
+      },
+      {
+        "name": "reject-delegation-request",
+        "description": "reject-delegation-request command",
+        "parameters": [
+          {
+            "name": "--delegation-request-id <value>",
+            "description": "--delegation-request-id (string) [required] The unique identifier of the delegation request to reject. Constraints: +\bo min: 16 +\bo max: 128 +\bo pattern: [\\w-]+"
+          },
+          {
+            "name": "--notes <value>",
+            "description": "--notes (string) Optional notes explaining the reason for rejecting the delegation request. Constraints: +\bo max: 500 +\bo pattern: [\\u0009\\u000A\\u000D\\u0020-\\u007E\\u00A1-\\u00FF]*"
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          }
+        ]
+      },
+      {
+        "name": "remove-client-id-from-open-id-connect-provider",
+        "description": "remove-client-id-from-open-id-connect-provider command",
+        "parameters": [
+          {
+            "name": "--open-id-connect-provider-arn <value>",
+            "description": "--open-id-connect-provider-arn (string) [required] The Amazon Resource Name (ARN) of the IAM OIDC provider resource to remove the client ID from. You can get a list of OIDC provider ARNs by using the _\bL_\bi_\bs_\bt_\bO_\bp_\be_\bn_\bI_\bD_\bC_\bo_\bn_\bn_\be_\b"
+          },
+          {
+            "name": "--client-id <value>",
+            "description": "--client-id (string) [required] The client ID (also known as audience) to remove from the IAM OIDC provider resource. For more information about client IDs, see _\bC_\br_\be_\ba_\bt_\be_\bO_\bp_\be_\bn_\bI_\bD_\bC_\bo_\bn_\bn_\be_\bc_\bt_\bP_\br_\bo_\bv_\bi_\bd_\be_\br . Co"
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          }
+        ]
+      },
+      {
+        "name": "remove-role-from-instance-profile",
+        "description": "remove-role-from-instance-profile command",
+        "parameters": [
+          {
+            "name": "--instance-profile-name <value>",
+            "description": "--instance-profile-name (string) [required] The name of the instance profile to update. This parameter allows (through its _\br_\be_\bg_\be_\bx _\bp_\ba_\bt_\bt_\be_\br_\bn ) a string of characters consisting of upper and lowercase alphanumeric characters wit"
+          },
+          {
+            "name": "--role-name <value>",
+            "description": "--role-name (string) [required] The name of the role to remove. This parameter allows (through its _\br_\be_\bg_\be_\bx _\bp_\ba_\bt_\bt_\be_\br_\bn ) a string of characters consisting of upper and lowercase alphanumeric characters with no spaces. You can als"
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
           }
         ]
       },
@@ -62294,42 +65520,1276 @@ export const awsServices: Service[] = [
         ]
       },
       {
-        "name": "create-access-key",
-        "description": "Creates a new access key for a user",
+        "name": "reset-service-specific-credential",
+        "description": "reset-service-specific-credential command",
         "parameters": [
           {
             "name": "--user-name <value>",
-            "description": "--user-name (string) The name of the IAM user that the new key will belong to. This parameter allows (through its _\br_\be_\bg_\be_\bx _\bp_\ba_\bt_\bt_\be_\br_\bn ) a string of characters consisting of upper and lowercase alphanumeric characters with no spac..."
+            "description": "--user-name (string) The name of the IAM user associated with the service-specific credential. If this value is not specified, then the operation assumes the user whose credentials are used to call the operation. This parameter allows (through its"
+          },
+          {
+            "name": "--service-specific-credential-id <value>",
+            "description": "--service-specific-credential-id (string) [required] The unique identifier of the service-specific credential. This parameter allows (through its _\br_\be_\bg_\be_\bx _\bp_\ba_\bt_\bt_\be_\br_\bn ) a string of characters that can consist of any upper or lower"
           },
           {
             "name": "--cli-input-json | --cli-input-yaml",
-            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the..."
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the"
           },
           {
             "name": "--generate-cli-skeleton <value>",
-            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
           }
         ]
       },
       {
-        "name": "delete-access-key",
-        "description": "Deletes an access key",
+        "name": "resync-mfa-device",
+        "description": "resync-mfa-device command",
         "parameters": [
           {
             "name": "--user-name <value>",
-            "description": "--user-name (string) The name of the user whose access key pair you want to delete. This parameter allows (through its _\br_\be_\bg_\be_\bx _\bp_\ba_\bt_\bt_\be_\br_\bn ) a string of characters consisting of upper and lowercase alphanumeric characters with no..."
+            "description": "--user-name (string) [required] The name of the user whose MFA device you want to resynchronize. This parameter allows (through its _\br_\be_\bg_\be_\bx _\bp_\ba_\bt_\bt_\be_\br_\bn ) a string of characters consisting of upper and lowercase alphanumeric chara"
           },
           {
-            "name": "--access-key-id <value>",
-            "description": "--access-key-id (string) [required] The access key ID for the access key ID and secret access key you want to delete. This parameter allows (through its _\br_\be_\bg_\be_\bx _\bp_\ba_\bt_\bt_\be_\br_\bn ) a string of characters that can consist of any upper o..."
+            "name": "--serial-number <value>",
+            "description": "--serial-number (string) [required] Serial number that uniquely identifies the MFA device. This parameter allows (through its _\br_\be_\bg_\be_\bx _\bp_\ba_\bt_\bt_\be_\br_\bn ) a string of characters consisting of upper and lowercase alphanumeric characters "
+          },
+          {
+            "name": "--authentication-code1 <value>",
+            "description": "--authentication-code1 (string) [required] An authentication code emitted by the device. The format for this parameter is a sequence of six digits. Constraints: +\bo min: 6 +\bo max: 6 +\bo pattern: [\\d]+"
+          },
+          {
+            "name": "--authentication-code2 <value>",
+            "description": "--authentication-code2 (string) [required] A subsequent authentication code emitted by the device. The format for this parameter is a sequence of six digits. Constraints: +\bo min: 6 +\bo max: 6 +\bo pattern: [\\d]+"
           },
           {
             "name": "--cli-input-json | --cli-input-yaml",
-            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the..."
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the"
           },
           {
             "name": "--generate-cli-skeleton <value>",
-            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if..."
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          }
+        ]
+      },
+      {
+        "name": "send-delegation-token",
+        "description": "send-delegation-token command",
+        "parameters": [
+          {
+            "name": "--delegation-request-id <value>",
+            "description": "--delegation-request-id (string) [required] The unique identifier of the delegation request for which to send the token. Constraints: +\bo min: 16 +\bo max: 128 +\bo pattern: [\\w-]+"
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          }
+        ]
+      },
+      {
+        "name": "set-default-policy-version",
+        "description": "set-default-policy-version command",
+        "parameters": [
+          {
+            "name": "--policy-arn <value>",
+            "description": "--policy-arn (string) [required] The Amazon Resource Name (ARN) of the IAM policy whose default version you want to set. For more information about ARNs, see _\bA_\bm_\ba_\bz_\bo_\bn _\bR_\be_\bs_\bo_\bu_\br_\bc_\be _\bN_\ba_\bm_\be_\bs _\b(_\bA_\bR_\bN_\bs_\b) in the _\bA"
+          },
+          {
+            "name": "--version-id <value>",
+            "description": "--version-id (string) [required] The version of the policy to set as the default (operative) version. For more information about managed policy versions, see _\bV_\be_\br_\bs_\bi_\bo_\bn_\bi_\bn_\bg _\bf_\bo_\br _\bm_\ba_\bn_\ba_\bg_\be_\bd _\bp_\bo_\bl_\bi_\bc_\bi_\be_\bs i"
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          }
+        ]
+      },
+      {
+        "name": "set-security-token-service-preferences",
+        "description": "set-security-token-service-preferences command",
+        "parameters": [
+          {
+            "name": "--global-endpoint-token-version <value>",
+            "description": "--global-endpoint-token-version (string) [required] The version of the global endpoint token. Version 1 tokens are valid only in Amazon Web Services Regions that are available by default. These tokens do not work in manually enabled Regions, such "
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          }
+        ]
+      },
+      {
+        "name": "simulate-custom-policy",
+        "description": "simulate-custom-policy command",
+        "parameters": [
+          {
+            "name": "--policy-input-list <value>",
+            "description": "--policy-input-list (list) [required] A list of policy documents to include in the simulation. Each document is specified as a string containing the complete, valid JSON text of an IAM policy. Do not include any resource-based policies in this par"
+          },
+          {
+            "name": "--permissions-boundary-policy-input-list <value>",
+            "description": "--permissions-boundary-policy-input-list (list) The IAM permissions boundary policy to simulate. The permissions boundary sets the maximum permissions that an IAM entity can have. You can input only one permissions boundary when you pass a policy "
+          },
+          {
+            "name": "--action-names <value>",
+            "description": "--action-names (list) [required] A list of names of API operations to evaluate in the simulation. Each operation is evaluated against each resource. Each operation must include the service identifier, such as iam:CreateUser . This operation does n"
+          },
+          {
+            "name": "--resource-arns <value>",
+            "description": "--resource-arns (list) A list of ARNs of Amazon Web Services resources to include in the simulation. If this parameter is not provided, then the value defaults to * (all resources). Each API in the ActionNames parameter is evaluated for each resou"
+          },
+          {
+            "name": "--resource-arns <value>",
+            "description": "--resource-arns (list) A list of ARNs of Amazon Web Services resources to include in the simulation. If this parameter is not provided, then the value defaults to * (all resources). Each API in the ActionNames parameter is evaluated for each resou"
+          },
+          {
+            "name": "--resource-policy <value>",
+            "description": "--resource-policy (string) A resource-based policy to include in the simulation provided as a string. Each resource in the simulation is treated as if it had this policy attached. You can include only one resource-based policy in a simulation. The"
+          },
+          {
+            "name": "--resource-policy <value>",
+            "description": "--resource-policy (string) A resource-based policy to include in the simulation provided as a string. Each resource in the simulation is treated as if it had this policy attached. You can include only one resource-based policy in a simulation. The"
+          },
+          {
+            "name": "--resource-owner <value>",
+            "description": "--resource-owner (string) An ARN representing the Amazon Web Services account ID that specifies the owner of any simulated resource that does not identify its owner in the resource ARN. Examples of resource ARNs include an S3 bucket or object. If "
+          },
+          {
+            "name": "--caller-arn <value>",
+            "description": "--caller-arn (string) The ARN of the IAM user that you want to use as the simulated caller of the API operations. CallerArn is required if you include a ResourcePolicy so that the policy's Principal element has a value to use in evaluating the pol"
+          },
+          {
+            "name": "--context-entries <value>",
+            "description": "--context-entries (list) A list of context keys and corresponding values for the simulation to use. Whenever a context key is evaluated in one of the simulated IAM permissions policies, the corresponding value is supplied. (structure) Shorthand Sy"
+          },
+          {
+            "name": "--resource-handling-option <value>",
+            "description": "--resource-handling-option (string) Specifies the type of simulation to run. Different API operations that support resource-based policies require different combinations of resources. By specifying the type of simulation to run, you enable the pol"
+          },
+          {
+            "name": "--max-items <value>",
+            "description": "--max-items (integer) The total number of items to return in the command's output. If the total number of items available is more than the value specified, a NextToken is provided in the command's output. To resume pagination, provide the NextToke"
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the"
+          },
+          {
+            "name": "--starting-token <value>",
+            "description": "--starting-token (string) A token to specify where to start paginating. This is the NextToken from a previously truncated response. For usage examples, see _\bP_\ba_\bg_\bi_\bn_\ba_\bt_\bi_\bo_\bn in the _\bA_\bW_\bS _\bC_\bo_\bm_\bm_\ba_\bn_\bd _\bL_\bi_\bn_\be _\bI_\bn_\b"
+          },
+          {
+            "name": "--page-size <value>",
+            "description": "--page-size (integer) The size of each page to get in the AWS service call. This does not affect the number of items returned in the command's output. Setting a smaller page size results in more calls to the AWS service, retrieving fewer items in "
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          }
+        ]
+      },
+      {
+        "name": "simulate-principal-policy",
+        "description": "simulate-principal-policy command",
+        "parameters": [
+          {
+            "name": "--policy-source-arn <value>",
+            "description": "--policy-source-arn (string) [required] The Amazon Resource Name (ARN) of a user, group, or role whose policies you want to include in the simulation. If you specify a user, group, or role, the simulation includes all policies that are associated "
+          },
+          {
+            "name": "--policy-input-list <value>",
+            "description": "--policy-input-list (list) An optional list of additional policy documents to include in the simulation. Each document is specified as a string containing the complete, valid JSON text of an IAM policy. The _\br_\be_\bg_\be_\bx _\bp_\ba_\bt_\bt_\be_\br_\bn us"
+          },
+          {
+            "name": "--permissions-boundary-policy-input-list <value>",
+            "description": "--permissions-boundary-policy-input-list (list) The IAM permissions boundary policy to simulate. The permissions boundary sets the maximum permissions that the entity can have. You can input only one permissions boundary when you pass a policy to "
+          },
+          {
+            "name": "--action-names <value>",
+            "description": "--action-names (list) [required] A list of names of API operations to evaluate in the simulation. Each operation is evaluated for each resource. Each operation must include the service identifier, such as iam:CreateUser . (string) Syntax: \"string\""
+          },
+          {
+            "name": "--resource-arns <value>",
+            "description": "--resource-arns (list) A list of ARNs of Amazon Web Services resources to include in the simulation. If this parameter is not provided, then the value defaults to * (all resources). Each API in the ActionNames parameter is evaluated for each resou"
+          },
+          {
+            "name": "--resource-arns <value>",
+            "description": "--resource-arns (list) A list of ARNs of Amazon Web Services resources to include in the simulation. If this parameter is not provided, then the value defaults to * (all resources). Each API in the ActionNames parameter is evaluated for each resou"
+          },
+          {
+            "name": "--resource-policy <value>",
+            "description": "--resource-policy (string) A resource-based policy to include in the simulation provided as a string. Each resource in the simulation is treated as if it had this policy attached. You can include only one resource-based policy in a simulation. The"
+          },
+          {
+            "name": "--resource-policy <value>",
+            "description": "--resource-policy (string) A resource-based policy to include in the simulation provided as a string. Each resource in the simulation is treated as if it had this policy attached. You can include only one resource-based policy in a simulation. The"
+          },
+          {
+            "name": "--resource-owner <value>",
+            "description": "--resource-owner (string) An Amazon Web Services account ID that specifies the owner of any simulated resource that does not identify its owner in the resource ARN. Examples of resource ARNs include an S3 bucket or object. If ResourceOwner is spec"
+          },
+          {
+            "name": "--caller-arn <value>",
+            "description": "--caller-arn (string) The ARN of the IAM user that you want to specify as the simulated caller of the API operations. If you do not specify a CallerArn , it defaults to the ARN of the user that you specify in PolicySourceArn , if you specified a u"
+          },
+          {
+            "name": "--context-entries <value>",
+            "description": "--context-entries (list) A list of context keys and corresponding values for the simulation to use. Whenever a context key is evaluated in one of the simulated IAM permissions policies, the corresponding value is supplied. (structure) Shorthand Sy"
+          },
+          {
+            "name": "--resource-handling-option <value>",
+            "description": "--resource-handling-option (string) Specifies the type of simulation to run. Different API operations that support resource-based policies require different combinations of resources. By specifying the type of simulation to run, you enable the pol"
+          },
+          {
+            "name": "--max-items <value>",
+            "description": "--max-items (integer) The total number of items to return in the command's output. If the total number of items available is more than the value specified, a NextToken is provided in the command's output. To resume pagination, provide the NextToke"
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the"
+          },
+          {
+            "name": "--starting-token <value>",
+            "description": "--starting-token (string) A token to specify where to start paginating. This is the NextToken from a previously truncated response. For usage examples, see _\bP_\ba_\bg_\bi_\bn_\ba_\bt_\bi_\bo_\bn in the _\bA_\bW_\bS _\bC_\bo_\bm_\bm_\ba_\bn_\bd _\bL_\bi_\bn_\be _\bI_\bn_\b"
+          },
+          {
+            "name": "--page-size <value>",
+            "description": "--page-size (integer) The size of each page to get in the AWS service call. This does not affect the number of items returned in the command's output. Setting a smaller page size results in more calls to the AWS service, retrieving fewer items in "
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          }
+        ]
+      },
+      {
+        "name": "tag-instance-profile",
+        "description": "tag-instance-profile command",
+        "parameters": [
+          {
+            "name": "--instance-profile-name <value>",
+            "description": "--instance-profile-name (string) [required] The name of the IAM instance profile to which you want to add tags. This parameter allows (through its _\br_\be_\bg_\be_\bx _\bp_\ba_\bt_\bt_\be_\br_\bn ) a string of characters consisting of upper and lowercase alp"
+          },
+          {
+            "name": "--tags <value>",
+            "description": "--tags (list) [required] The list of tags that you want to attach to the IAM instance profile. Each tag consists of a key name and an associated value. Constraints: +\bo max: 50 (structure) Shorthand Syntax: Key=string,Value=string ... JSON Syntax:"
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          }
+        ]
+      },
+      {
+        "name": "tag-mfa-device",
+        "description": "tag-mfa-device command",
+        "parameters": [
+          {
+            "name": "--serial-number <value>",
+            "description": "--serial-number (string) [required] The unique identifier for the IAM virtual MFA device to which you want to add tags. For virtual MFA devices, the serial number is the same as the ARN. This parameter allows (through its _\br_\be_\bg_\be_\bx _\bp_\ba_\bt"
+          },
+          {
+            "name": "--tags <value>",
+            "description": "--tags (list) [required] The list of tags that you want to attach to the IAM virtual MFA device. Each tag consists of a key name and an associated value. Constraints: +\bo max: 50 (structure) Shorthand Syntax: Key=string,Value=string ... JSON Synta"
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          }
+        ]
+      },
+      {
+        "name": "tag-open-id-connect-provider",
+        "description": "tag-open-id-connect-provider command",
+        "parameters": [
+          {
+            "name": "--open-id-connect-provider-arn <value>",
+            "description": "--open-id-connect-provider-arn (string) [required] The ARN of the OIDC identity provider in IAM to which you want to add tags. This parameter allows (through its _\br_\be_\bg_\be_\bx _\bp_\ba_\bt_\bt_\be_\br_\bn ) a string of characters consisting of upper an"
+          },
+          {
+            "name": "--tags <value>",
+            "description": "--tags (list) [required] The list of tags that you want to attach to the OIDC identity provider in IAM. Each tag consists of a key name and an associated value. Constraints: +\bo max: 50 (structure) Shorthand Syntax: Key=string,Value=string ... JSO"
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          }
+        ]
+      },
+      {
+        "name": "tag-policy",
+        "description": "tag-policy command",
+        "parameters": [
+          {
+            "name": "--policy-arn <value>",
+            "description": "--policy-arn (string) [required] The ARN of the IAM customer managed policy to which you want to add tags. This parameter allows (through its _\br_\be_\bg_\be_\bx _\bp_\ba_\bt_\bt_\be_\br_\bn ) a string of characters consisting of upper and lowercase alphanum"
+          },
+          {
+            "name": "--tags <value>",
+            "description": "--tags (list) [required] The list of tags that you want to attach to the IAM customer managed policy. Each tag consists of a key name and an associated value. Constraints: +\bo max: 50 (structure) Shorthand Syntax: Key=string,Value=string ... JSON "
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          }
+        ]
+      },
+      {
+        "name": "tag-role",
+        "description": "tag-role command",
+        "parameters": [
+          {
+            "name": "--role-name <value>",
+            "description": "--role-name (string) [required] The name of the IAM role to which you want to add tags. This parameter accepts (through its _\br_\be_\bg_\be_\bx _\bp_\ba_\bt_\bt_\be_\br_\bn ) a string of characters that consist of upper and lowercase alphanumeric characters "
+          },
+          {
+            "name": "--tags <value>",
+            "description": "--tags (list) [required] The list of tags that you want to attach to the IAM role. Each tag consists of a key name and an associated value. Constraints: +\bo max: 50 (structure) Shorthand Syntax: Key=string,Value=string ... JSON Syntax: [ ]"
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          }
+        ]
+      },
+      {
+        "name": "tag-saml-provider",
+        "description": "tag-saml-provider command",
+        "parameters": [
+          {
+            "name": "--saml-provider-arn <value>",
+            "description": "--saml-provider-arn (string) [required] The ARN of the SAML identity provider in IAM to which you want to add tags. This parameter allows (through its _\br_\be_\bg_\be_\bx _\bp_\ba_\bt_\bt_\be_\br_\bn ) a string of characters consisting of upper and lowercase"
+          },
+          {
+            "name": "--tags <value>",
+            "description": "--tags (list) [required] The list of tags that you want to attach to the SAML identity provider in IAM. Each tag consists of a key name and an associated value. Constraints: +\bo max: 50 (structure) Shorthand Syntax: Key=string,Value=string ... JSO"
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          }
+        ]
+      },
+      {
+        "name": "tag-server-certificate",
+        "description": "tag-server-certificate command",
+        "parameters": [
+          {
+            "name": "--server-certificate-name <value>",
+            "description": "--server-certificate-name (string) [required] The name of the IAM server certificate to which you want to add tags. This parameter allows (through its _\br_\be_\bg_\be_\bx _\bp_\ba_\bt_\bt_\be_\br_\bn ) a string of characters consisting of upper and lowercase"
+          },
+          {
+            "name": "--tags <value>",
+            "description": "--tags (list) [required] The list of tags that you want to attach to the IAM server certificate. Each tag consists of a key name and an associated value. Constraints: +\bo max: 50 (structure) Shorthand Syntax: Key=string,Value=string ... JSON Synta"
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          }
+        ]
+      },
+      {
+        "name": "tag-user",
+        "description": "tag-user command",
+        "parameters": [
+          {
+            "name": "--user-name <value>",
+            "description": "--user-name (string) [required] The name of the IAM user to which you want to add tags. This parameter allows (through its _\br_\be_\bg_\be_\bx _\bp_\ba_\bt_\bt_\be_\br_\bn ) a string of characters consisting of upper and lowercase alphanumeric characters wit"
+          },
+          {
+            "name": "--tags <value>",
+            "description": "--tags (list) [required] The list of tags that you want to attach to the IAM user. Each tag consists of a key name and an associated value. Constraints: +\bo max: 50 (structure) Shorthand Syntax: Key=string,Value=string ... JSON Syntax: [ ]"
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          }
+        ]
+      },
+      {
+        "name": "untag-instance-profile",
+        "description": "untag-instance-profile command",
+        "parameters": [
+          {
+            "name": "--instance-profile-name <value>",
+            "description": "--instance-profile-name (string) [required] The name of the IAM instance profile from which you want to remove tags. This parameter allows (through its _\br_\be_\bg_\be_\bx _\bp_\ba_\bt_\bt_\be_\br_\bn ) a string of characters consisting of upper and lowercas"
+          },
+          {
+            "name": "--tag-keys <value>",
+            "description": "--tag-keys (list) [required] A list of key names as a simple array of strings. The tags with matching keys are removed from the specified instance profile. Constraints: +\bo max: 50 (string) Syntax: \"string\" \"string\" ..."
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          }
+        ]
+      },
+      {
+        "name": "untag-mfa-device",
+        "description": "untag-mfa-device command",
+        "parameters": [
+          {
+            "name": "--serial-number <value>",
+            "description": "--serial-number (string) [required] The unique identifier for the IAM virtual MFA device from which you want to remove tags. For virtual MFA devices, the serial number is the same as the ARN. This parameter allows (through its _\br_\be_\bg_\be_\bx _\bp_"
+          },
+          {
+            "name": "--tag-keys <value>",
+            "description": "--tag-keys (list) [required] A list of key names as a simple array of strings. The tags with matching keys are removed from the specified instance profile. Constraints: +\bo max: 50 (string) Syntax: \"string\" \"string\" ..."
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          }
+        ]
+      },
+      {
+        "name": "untag-open-id-connect-provider",
+        "description": "untag-open-id-connect-provider command",
+        "parameters": [
+          {
+            "name": "--open-id-connect-provider-arn <value>",
+            "description": "--open-id-connect-provider-arn (string) [required] The ARN of the OIDC provider in IAM from which you want to remove tags. This parameter allows (through its _\br_\be_\bg_\be_\bx _\bp_\ba_\bt_\bt_\be_\br_\bn ) a string of characters consisting of upper and lo"
+          },
+          {
+            "name": "--tag-keys <value>",
+            "description": "--tag-keys (list) [required] A list of key names as a simple array of strings. The tags with matching keys are removed from the specified OIDC provider. Constraints: +\bo max: 50 (string) Syntax: \"string\" \"string\" ..."
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          }
+        ]
+      },
+      {
+        "name": "untag-policy",
+        "description": "untag-policy command",
+        "parameters": [
+          {
+            "name": "--policy-arn <value>",
+            "description": "--policy-arn (string) [required] The ARN of the IAM customer managed policy from which you want to remove tags. This parameter allows (through its _\br_\be_\bg_\be_\bx _\bp_\ba_\bt_\bt_\be_\br_\bn ) a string of characters consisting of upper and lowercase alp"
+          },
+          {
+            "name": "--tag-keys <value>",
+            "description": "--tag-keys (list) [required] A list of key names as a simple array of strings. The tags with matching keys are removed from the specified policy. Constraints: +\bo max: 50 (string) Syntax: \"string\" \"string\" ..."
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          }
+        ]
+      },
+      {
+        "name": "untag-role",
+        "description": "untag-role command",
+        "parameters": [
+          {
+            "name": "--role-name <value>",
+            "description": "--role-name (string) [required] The name of the IAM role from which you want to remove tags. This parameter accepts (through its _\br_\be_\bg_\be_\bx _\bp_\ba_\bt_\bt_\be_\br_\bn ) a string of characters that consist of upper and lowercase alphanumeric charac"
+          },
+          {
+            "name": "--tag-keys <value>",
+            "description": "--tag-keys (list) [required] A list of key names as a simple array of strings. The tags with matching keys are removed from the specified role. Constraints: +\bo max: 50 (string) Syntax: \"string\" \"string\" ..."
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          }
+        ]
+      },
+      {
+        "name": "untag-saml-provider",
+        "description": "untag-saml-provider command",
+        "parameters": [
+          {
+            "name": "--saml-provider-arn <value>",
+            "description": "--saml-provider-arn (string) [required] The ARN of the SAML identity provider in IAM from which you want to remove tags. This parameter allows (through its _\br_\be_\bg_\be_\bx _\bp_\ba_\bt_\bt_\be_\br_\bn ) a string of characters consisting of upper and lowe"
+          },
+          {
+            "name": "--tag-keys <value>",
+            "description": "--tag-keys (list) [required] A list of key names as a simple array of strings. The tags with matching keys are removed from the specified SAML identity provider. Constraints: +\bo max: 50 (string) Syntax: \"string\" \"string\" ..."
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          }
+        ]
+      },
+      {
+        "name": "untag-server-certificate",
+        "description": "untag-server-certificate command",
+        "parameters": [
+          {
+            "name": "--server-certificate-name <value>",
+            "description": "--server-certificate-name (string) [required] The name of the IAM server certificate from which you want to remove tags. This parameter allows (through its _\br_\be_\bg_\be_\bx _\bp_\ba_\bt_\bt_\be_\br_\bn ) a string of characters consisting of upper and lowe"
+          },
+          {
+            "name": "--tag-keys <value>",
+            "description": "--tag-keys (list) [required] A list of key names as a simple array of strings. The tags with matching keys are removed from the specified IAM server certificate. Constraints: +\bo max: 50 (string) Syntax: \"string\" \"string\" ..."
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          }
+        ]
+      },
+      {
+        "name": "untag-user",
+        "description": "untag-user command",
+        "parameters": [
+          {
+            "name": "--user-name <value>",
+            "description": "--user-name (string) [required] The name of the IAM user from which you want to remove tags. This parameter allows (through its _\br_\be_\bg_\be_\bx _\bp_\ba_\bt_\bt_\be_\br_\bn ) a string of characters consisting of upper and lowercase alphanumeric character"
+          },
+          {
+            "name": "--tag-keys <value>",
+            "description": "--tag-keys (list) [required] A list of key names as a simple array of strings. The tags with matching keys are removed from the specified user. Constraints: +\bo max: 50 (string) Syntax: \"string\" \"string\" ..."
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          }
+        ]
+      },
+      {
+        "name": "update-access-key",
+        "description": "update-access-key command",
+        "parameters": [
+          {
+            "name": "--user-name <value>",
+            "description": "--user-name (string) The name of the user whose key you want to update. This parameter allows (through its _\br_\be_\bg_\be_\bx _\bp_\ba_\bt_\bt_\be_\br_\bn ) a string of characters consisting of upper and lowercase alphanumeric characters with no spaces. You"
+          },
+          {
+            "name": "--access-key-id <value>",
+            "description": "--access-key-id (string) [required] The access key ID of the secret access key you want to update. This parameter allows (through its _\br_\be_\bg_\be_\bx _\bp_\ba_\bt_\bt_\be_\br_\bn ) a string of characters that can consist of any upper or lowercased letter"
+          },
+          {
+            "name": "--status <value>",
+            "description": "--status (string) [required] The status you want to assign to the secret access key. Active means that the key can be used for programmatic calls to Amazon Web Services, while Inactive means that the key cannot be used. Possible values: +\bo Active"
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          }
+        ]
+      },
+      {
+        "name": "update-account-password-policy",
+        "description": "update-account-password-policy command",
+        "parameters": [
+          {
+            "name": "--minimum-password-length <value>",
+            "description": "--minimum-password-length (integer) The minimum number of characters allowed in an IAM user password. If you do not specify a value for this parameter, then the operation uses the default value of 6 . Constraints: +\bo min: 6 +\bo max: 128"
+          },
+          {
+            "name": "--require-symbols | --no-require-symbols",
+            "description": "--require-symbols | --no-require-symbols (boolean) Specifies whether IAM user passwords must contain at least one of the following non-alphanumeric characters: ! @ # $ % ^ & * ( ) _ + - = [ ] { } | ' If you do not specify a value for this paramete"
+          },
+          {
+            "name": "--require-numbers | --no-require-numbers",
+            "description": "--require-numbers | --no-require-numbers (boolean) Specifies whether IAM user passwords must contain at least one numeric character (0 to 9). If you do not specify a value for this parameter, then the operation uses the default value of false . Th"
+          },
+          {
+            "name": "--require-uppercase-characters | --no-require-uppercase-characters",
+            "description": "--require-uppercase-characters | --no-require-uppercase-characters (boolean) Specifies whether IAM user passwords must contain at least one uppercase character from the ISO basic Latin alphabet (A to Z). If you do not specify a value for this para"
+          },
+          {
+            "name": "--require-lowercase-characters | --no-require-lowercase-characters",
+            "description": "--require-lowercase-characters | --no-require-lowercase-characters (boolean) Specifies whether IAM user passwords must contain at least one lowercase character from the ISO basic Latin alphabet (a to z). If you do not specify a value for this para"
+          },
+          {
+            "name": "--allow-users-to-change-password | --no-allow-users-to-change-password",
+            "description": "--allow-users-to-change-password | --no-allow-users-to-change-password (boolean) Allows all IAM users in your account to use the Amazon Web Services Management Console to change their own passwords. For more information, see _\bP_\be_\br_\bm_\bi_\bt_\bt_"
+          },
+          {
+            "name": "--max-password-age <value>",
+            "description": "--max-password-age (integer) The number of days that an IAM user password is valid. If you do not specify a value for this parameter, then the operation uses the default value of 0 . The result is that IAM user passwords never expire. Constraints:"
+          },
+          {
+            "name": "--password-reuse-prevention <value>",
+            "description": "--password-reuse-prevention (integer) Specifies the number of previous passwords that IAM users are prevented from reusing. If you do not specify a value for this parameter, then the operation uses the default value of 0 . The result is that IAM u"
+          },
+          {
+            "name": "--hard-expiry | --no-hard-expiry",
+            "description": "--hard-expiry | --no-hard-expiry (boolean) Prevents IAM users who are accessing the account via the Amazon Web Services Management Console from setting a new console password after their password has expired. The IAM user cannot access the console"
+          },
+          {
+            "name": "--hard-expiry | --no-hard-expiry",
+            "description": "--hard-expiry | --no-hard-expiry (boolean) Prevents IAM users who are accessing the account via the Amazon Web Services Management Console from setting a new console password after their password has expired. The IAM user cannot access the console"
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          }
+        ]
+      },
+      {
+        "name": "update-assume-role-policy",
+        "description": "update-assume-role-policy command",
+        "parameters": [
+          {
+            "name": "--role-name <value>",
+            "description": "--role-name (string) [required] The name of the role to update with the new policy. This parameter allows (through its _\br_\be_\bg_\be_\bx _\bp_\ba_\bt_\bt_\be_\br_\bn ) a string of characters consisting of upper and lowercase alphanumeric characters with no"
+          },
+          {
+            "name": "--policy-document <value>",
+            "description": "--policy-document (string) [required] The policy that grants an entity permission to assume the role. You must provide policies in JSON format in IAM. However, for CloudFormation templates formatted in YAML, you can provide the policy in JSON or Y"
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          }
+        ]
+      },
+      {
+        "name": "update-delegation-request",
+        "description": "update-delegation-request command",
+        "parameters": [
+          {
+            "name": "--delegation-request-id <value>",
+            "description": "--delegation-request-id (string) [required] The unique identifier of the delegation request to update. Constraints: +\bo min: 16 +\bo max: 128 +\bo pattern: [\\w-]+"
+          },
+          {
+            "name": "--notes <value>",
+            "description": "--notes (string) Additional notes or comments to add to the delegation request. Constraints: +\bo max: 500 +\bo pattern: [\\u0009\\u000A\\u000D\\u0020-\\u007E\\u00A1-\\u00FF]*"
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          }
+        ]
+      },
+      {
+        "name": "update-group",
+        "description": "update-group command",
+        "parameters": [
+          {
+            "name": "--group-name <value>",
+            "description": "--group-name (string) [required] Name of the IAM group to update. If you're changing the name of the group, this is the original name. This parameter allows (through its _\br_\be_\bg_\be_\bx _\bp_\ba_\bt_\bt_\be_\br_\bn ) a string of characters consisting of "
+          },
+          {
+            "name": "--new-path <value>",
+            "description": "--new-path (string) New path for the IAM group. Only include this if changing the group's path. This parameter allows (through its _\br_\be_\bg_\be_\bx _\bp_\ba_\bt_\bt_\be_\br_\bn ) a string of characters consisting of either a forward slash (/) by itself or"
+          },
+          {
+            "name": "--new-group-name <value>",
+            "description": "--new-group-name (string) New name for the IAM group. Only include this if changing the group's name. IAM user, group, role, and policy names must be unique within the account. Names are not distinguished by case. For example, you cannot create re"
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          }
+        ]
+      },
+      {
+        "name": "update-login-profile",
+        "description": "update-login-profile command",
+        "parameters": [
+          {
+            "name": "--user-name <value>",
+            "description": "--user-name (string) [required] The name of the user whose password you want to update. This parameter allows (through its _\br_\be_\bg_\be_\bx _\bp_\ba_\bt_\bt_\be_\br_\bn ) a string of characters consisting of upper and lowercase alphanumeric characters wit"
+          },
+          {
+            "name": "--password <value>",
+            "description": "--password (string) The new password for the specified IAM user. The _\br_\be_\bg_\be_\bx _\bp_\ba_\bt_\bt_\be_\br_\bn used to validate this parameter is a string of characters consisting of the following: +\bo Any printable ASCII character ranging from the sp"
+          },
+          {
+            "name": "--password-reset-required | --no-password-reset-required",
+            "description": "--password-reset-required | --no-password-reset-required (boolean) Allows this new password to be used only once by requiring the specified IAM user to set a new password on next sign-in."
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          }
+        ]
+      },
+      {
+        "name": "update-open-id-connect-provider-thumbprint",
+        "description": "update-open-id-connect-provider-thumbprint command",
+        "parameters": [
+          {
+            "name": "--open-id-connect-provider-arn <value>",
+            "description": "--open-id-connect-provider-arn (string) [required] The Amazon Resource Name (ARN) of the IAM OIDC provider resource object for which you want to update the thumbprint. You can get a list of OIDC provider ARNs by using the _\bL_\bi_\bs_\bt_\bO_\bp_\be_\bn_"
+          },
+          {
+            "name": "--thumbprint-list <value>",
+            "description": "--thumbprint-list (list) [required] A list of certificate thumbprints that are associated with the specified IAM OpenID Connect provider. For more information, see _\bC_\br_\be_\ba_\bt_\be_\bO_\bp_\be_\bn_\bI_\bD_\bC_\bo_\bn_\bn_\be_\bc_\bt_\bP_\br_\bo_\bv_\bi_\bd_\be_\br ."
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          }
+        ]
+      },
+      {
+        "name": "update-role",
+        "description": "update-role command",
+        "parameters": [
+          {
+            "name": "--role-name <value>",
+            "description": "--role-name (string) [required] The name of the role that you want to modify. Constraints: +\bo min: 1 +\bo max: 64 +\bo pattern: [\\w+=,.@-]+"
+          },
+          {
+            "name": "--description <value>",
+            "description": "--description (string) The new description that you want to apply to the specified role. Constraints: +\bo max: 1000 +\bo pattern: [\\u0009\\u000A\\u000D\\u0020-\\u007E\\u00A1-\\u00FF]*"
+          },
+          {
+            "name": "--max-session-duration <value>",
+            "description": "--max-session-duration (integer) The maximum session duration (in seconds) that you want to set for the specified role. If you do not specify a value for this setting, the default value of one hour is applied. This setting can have a value from 1"
+          },
+          {
+            "name": "--max-session-duration <value>",
+            "description": "--max-session-duration (integer) The maximum session duration (in seconds) that you want to set for the specified role. If you do not specify a value for this setting, the default value of one hour is applied. This setting can have a value from 1"
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          }
+        ]
+      },
+      {
+        "name": "update-role-description",
+        "description": "update-role-description command",
+        "parameters": [
+          {
+            "name": "--role-name <value>",
+            "description": "--role-name (string) [required] The name of the role that you want to modify. Constraints: +\bo min: 1 +\bo max: 64 +\bo pattern: [\\w+=,.@-]+"
+          },
+          {
+            "name": "--description <value>",
+            "description": "--description (string) [required] The new description that you want to apply to the specified role. Constraints: +\bo max: 1000 +\bo pattern: [\\u0009\\u000A\\u000D\\u0020-\\u007E\\u00A1-\\u00FF]*"
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          }
+        ]
+      },
+      {
+        "name": "update-saml-provider",
+        "description": "update-saml-provider command",
+        "parameters": [
+          {
+            "name": "--saml-metadata-document <value>",
+            "description": "--saml-metadata-document (string) An XML document generated by an identity provider (IdP) that supports SAML 2.0. The document includes the issuer's name, expiration information, and keys that can be used to validate the SAML authentication respon"
+          },
+          {
+            "name": "--saml-provider-arn <value>",
+            "description": "--saml-provider-arn (string) [required] The Amazon Resource Name (ARN) of the SAML provider to update. For more information about ARNs, see _\bA_\bm_\ba_\bz_\bo_\bn _\bR_\be_\bs_\bo_\bu_\br_\bc_\be _\bN_\ba_\bm_\be_\bs _\b(_\bA_\bR_\bN_\bs_\b) in the _\bA_\bm_\ba_\bz_\bo_\bn _\b"
+          },
+          {
+            "name": "--assertion-encryption-mode <value>",
+            "description": "--assertion-encryption-mode (string) Specifies the encryption setting for the SAML provider. Possible values: +\bo Required +\bo Allowed"
+          },
+          {
+            "name": "--add-private-key <value>",
+            "description": "--add-private-key (string) Specifies the new private key from your external identity provider. The private key must be a .pem file that uses AES-GCM or AES-CBC encryption algorithm to decrypt SAML assertions. Constraints: +\bo min: 1 +\bo max: 16384"
+          },
+          {
+            "name": "--remove-private-key <value>",
+            "description": "--remove-private-key (string) The Key ID of the private key to remove. Constraints: +\bo min: 22 +\bo max: 64 +\bo pattern: [A-Z0-9]+"
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          }
+        ]
+      },
+      {
+        "name": "update-server-certificate",
+        "description": "update-server-certificate command",
+        "parameters": [
+          {
+            "name": "--server-certificate-name <value>",
+            "description": "--server-certificate-name (string) [required] The name of the server certificate that you want to update. This parameter allows (through its _\br_\be_\bg_\be_\bx _\bp_\ba_\bt_\bt_\be_\br_\bn ) a string of characters consisting of upper and lowercase alphanume"
+          },
+          {
+            "name": "--new-path <value>",
+            "description": "--new-path (string) The new path for the server certificate. Include this only if you are updating the server certificate's path. This parameter allows (through its _\br_\be_\bg_\be_\bx _\bp_\ba_\bt_\bt_\be_\br_\bn ) a string of characters consisting of eithe"
+          },
+          {
+            "name": "--new-server-certificate-name <value>",
+            "description": "--new-server-certificate-name (string) The new name for the server certificate. Include this only if you are updating the server certificate's name. The name of the certificate cannot contain any spaces. This parameter allows (through its _\br_\be_\b"
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          }
+        ]
+      },
+      {
+        "name": "update-service-specific-credential",
+        "description": "update-service-specific-credential command",
+        "parameters": [
+          {
+            "name": "--user-name <value>",
+            "description": "--user-name (string) The name of the IAM user associated with the service-specific credential. If you do not specify this value, then the operation assumes the user whose credentials are used to call the operation. This parameter allows (through i"
+          },
+          {
+            "name": "--service-specific-credential-id <value>",
+            "description": "--service-specific-credential-id (string) [required] The unique identifier of the service-specific credential. This parameter allows (through its _\br_\be_\bg_\be_\bx _\bp_\ba_\bt_\bt_\be_\br_\bn ) a string of characters that can consist of any upper or lower"
+          },
+          {
+            "name": "--status <value>",
+            "description": "--status (string) [required] The status to be assigned to the service-specific credential. Possible values: +\bo Active +\bo Inactive +\bo Expired"
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          }
+        ]
+      },
+      {
+        "name": "update-signing-certificate",
+        "description": "update-signing-certificate command",
+        "parameters": [
+          {
+            "name": "--user-name <value>",
+            "description": "--user-name (string) The name of the IAM user the signing certificate belongs to. This parameter allows (through its _\br_\be_\bg_\be_\bx _\bp_\ba_\bt_\bt_\be_\br_\bn ) a string of characters consisting of upper and lowercase alphanumeric characters with no s"
+          },
+          {
+            "name": "--certificate-id <value>",
+            "description": "--certificate-id (string) [required] The ID of the signing certificate you want to update. This parameter allows (through its _\br_\be_\bg_\be_\bx _\bp_\ba_\bt_\bt_\be_\br_\bn ) a string of characters that can consist of any upper or lowercased letter or digi"
+          },
+          {
+            "name": "--status <value>",
+            "description": "--status (string) [required] The status you want to assign to the certificate. Active means that the certificate can be used for programmatic calls to Amazon Web Services Inactive means that the certificate cannot be used. Possible values: +\bo Act"
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          }
+        ]
+      },
+      {
+        "name": "update-ssh-public-key",
+        "description": "update-ssh-public-key command",
+        "parameters": [
+          {
+            "name": "--user-name <value>",
+            "description": "--user-name (string) [required] The name of the IAM user associated with the SSH public key. This parameter allows (through its _\br_\be_\bg_\be_\bx _\bp_\ba_\bt_\bt_\be_\br_\bn ) a string of characters consisting of upper and lowercase alphanumeric character"
+          },
+          {
+            "name": "--ssh-public-key-id <value>",
+            "description": "--ssh-public-key-id (string) [required] The unique identifier for the SSH public key. This parameter allows (through its _\br_\be_\bg_\be_\bx _\bp_\ba_\bt_\bt_\be_\br_\bn ) a string of characters that can consist of any upper or lowercased letter or digit. Co"
+          },
+          {
+            "name": "--status <value>",
+            "description": "--status (string) [required] The status to assign to the SSH public key. Active means that the key can be used for authentication with an CodeCommit repository. Inactive means that the key cannot be used. Possible values: +\bo Active +\bo Inactive +"
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          }
+        ]
+      },
+      {
+        "name": "update-user",
+        "description": "update-user command",
+        "parameters": [
+          {
+            "name": "--user-name <value>",
+            "description": "--user-name (string) [required] Name of the user to update. If you're changing the name of the user, this is the original user name. This parameter allows (through its _\br_\be_\bg_\be_\bx _\bp_\ba_\bt_\bt_\be_\br_\bn ) a string of characters consisting of up"
+          },
+          {
+            "name": "--new-path <value>",
+            "description": "--new-path (string) New path for the IAM user. Include this parameter only if you're changing the user's path. This parameter allows (through its _\br_\be_\bg_\be_\bx _\bp_\ba_\bt_\bt_\be_\br_\bn ) a string of characters consisting of either a forward slash ("
+          },
+          {
+            "name": "--new-user-name <value>",
+            "description": "--new-user-name (string) New name for the user. Include this parameter only if you're changing the user's name. IAM user, group, role, and policy names must be unique within the account. Names are not distinguished by case. For example, you cannot"
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          }
+        ]
+      },
+      {
+        "name": "upload-server-certificate",
+        "description": "upload-server-certificate command",
+        "parameters": [
+          {
+            "name": "--path <value>",
+            "description": "--path (string) The path for the server certificate. For more information about paths, see _\bI_\bA_\bM _\bi_\bd_\be_\bn_\bt_\bi_\bf_\bi_\be_\br_\bs in the _\bI_\bA_\bM _\bU_\bs_\be_\br _\bG_\bu_\bi_\bd_\be . This parameter is optional. If it is not included, it defaults t"
+          },
+          {
+            "name": "--path <value>",
+            "description": "--path (string) The path for the server certificate. For more information about paths, see _\bI_\bA_\bM _\bi_\bd_\be_\bn_\bt_\bi_\bf_\bi_\be_\br_\bs in the _\bI_\bA_\bM _\bU_\bs_\be_\br _\bG_\bu_\bi_\bd_\be . This parameter is optional. If it is not included, it defaults t"
+          },
+          {
+            "name": "--server-certificate-name <value>",
+            "description": "--server-certificate-name (string) [required] The name for the server certificate. Do not include the path in this value. The name of the certificate cannot contain any spaces. This parameter allows (through its _\br_\be_\bg_\be_\bx _\bp_\ba_\bt_\bt_\be_\br_"
+          },
+          {
+            "name": "--certificate-body <value>",
+            "description": "--certificate-body (string) [required] The contents of the public key certificate in PEM-encoded format. The _\br_\be_\bg_\be_\bx _\bp_\ba_\bt_\bt_\be_\br_\bn used to validate this parameter is a string of characters consisting of the following: +\bo Any print"
+          },
+          {
+            "name": "--private-key <value>",
+            "description": "--private-key (string) [required] The contents of the private key in PEM-encoded format. The _\br_\be_\bg_\be_\bx _\bp_\ba_\bt_\bt_\be_\br_\bn used to validate this parameter is a string of characters consisting of the following: +\bo Any printable ASCII chara"
+          },
+          {
+            "name": "--certificate-chain <value>",
+            "description": "--certificate-chain (string) The contents of the certificate chain. This is typically a concatenation of the PEM-encoded public key certificates of the chain. The _\br_\be_\bg_\be_\bx _\bp_\ba_\bt_\bt_\be_\br_\bn used to validate this parameter is a string of"
+          },
+          {
+            "name": "--tags <value>",
+            "description": "--tags (list) A list of tags that you want to attach to the new IAM server certificate resource. Each tag consists of a key name and an associated value. For more information about tagging, see _\bT_\ba_\bg_\bg_\bi_\bn_\bg _\bI_\bA_\bM _\br_\be_\bs_\bo_\bu_\br_\bc"
+          },
+          {
+            "name": "--tags <value>",
+            "description": "--tags (list) A list of tags that you want to attach to the new IAM server certificate resource. Each tag consists of a key name and an associated value. For more information about tagging, see _\bT_\ba_\bg_\bg_\bi_\bn_\bg _\bI_\bA_\bM _\br_\be_\bs_\bo_\bu_\br_\bc"
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          }
+        ]
+      },
+      {
+        "name": "upload-signing-certificate",
+        "description": "upload-signing-certificate command",
+        "parameters": [
+          {
+            "name": "--user-name <value>",
+            "description": "--user-name (string) The name of the user the signing certificate is for. This parameter allows (through its _\br_\be_\bg_\be_\bx _\bp_\ba_\bt_\bt_\be_\br_\bn ) a string of characters consisting of upper and lowercase alphanumeric characters with no spaces. Y"
+          },
+          {
+            "name": "--certificate-body <value>",
+            "description": "--certificate-body (string) [required] The contents of the signing certificate. The _\br_\be_\bg_\be_\bx _\bp_\ba_\bt_\bt_\be_\br_\bn used to validate this parameter is a string of characters consisting of the following: +\bo Any printable ASCII character rang"
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          }
+        ]
+      },
+      {
+        "name": "upload-ssh-public-key",
+        "description": "upload-ssh-public-key command",
+        "parameters": [
+          {
+            "name": "--user-name <value>",
+            "description": "--user-name (string) [required] The name of the IAM user to associate the SSH public key with. This parameter allows (through its _\br_\be_\bg_\be_\bx _\bp_\ba_\bt_\bt_\be_\br_\bn ) a string of characters consisting of upper and lowercase alphanumeric charact"
+          },
+          {
+            "name": "--ssh-public-key-body <value>",
+            "description": "--ssh-public-key-body (string) [required] The SSH public key. The public key must be encoded in ssh-rsa format or PEM format. The minimum bit-length of the public key is 2048 bits. For example, you can generate a 2048-bit key, and the resulting PE"
+          },
+          {
+            "name": "--cli-input-json | --cli-input-yaml",
+            "description": "--cli-input-json | --cli-input-yaml (string) Reads arguments from the JSON string provided. The JSON string follows the format provided by --generate-cli-skeleton. If other arguments are provided on the command line, those values will override the"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
+          },
+          {
+            "name": "--generate-cli-skeleton <value>",
+            "description": "--generate-cli-skeleton (string) Prints a JSON skeleton to standard output without sending an API request. If provided with no value or the value input, prints a sample input JSON that can be used as an argument for --cli-input-json. Similarly, if"
           }
         ]
       }
